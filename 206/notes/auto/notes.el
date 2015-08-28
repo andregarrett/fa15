@@ -11,6 +11,7 @@
     "art12"
     "mathptmx"
     "mathpazo"
+    "mathrsfs"
     "amsfonts"
     "amsmath"
     "amssymb"

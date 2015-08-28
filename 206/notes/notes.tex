@@ -2,6 +2,7 @@
 
 \usepackage{mathptmx}
 \usepackage{mathpazo}
+\usepackage{mathrsfs}
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -40,7 +41,7 @@ $\|\alpha x\| = |\alpha|\|x\|$ (for $\alpha \in F$)
 $\|x + y\| \leq \|x\| + \|y\|$
 
 \noindent
-An \textit{algebra} $\mathcal{A}$ over $\mathds{F}$ is a vector space with distributive $\cdot$ satisfying
+An \textit{algebra} $\mathscr{A}$ over $\mathds{F}$ is a vector space with distributive $\cdot$ satisfying
 
 $cx \cdot y = c(x \cdot y)$
 
@@ -48,25 +49,25 @@ $x \cdot cy = c(x \cdot y)$ for all $c \in F$
 
 
 \noindent
-A \textit{normed algebra} over $\mathds{R}$ or $\mathds{C}$ is an algebra $\mathcal{A}$ equipped with (vector space) norm satisfying
+A \textit{normed algebra} over $\mathds{R}$ or $\mathds{C}$ is an algebra $\mathscr{A}$ equipped with (vector space) norm satisfying
 
-$\|ab\| \leq \|a\|\|b\|$ for all $a,b \in \mathcal{A}$
+$\|ab\| \leq \|a\|\|b\|$ for all $a,b \in \mathscr{A}$
 
 \noindent
-A norm on $\mathcal{A}$ induces a metric 
+A norm on $\mathscr{A}$ induces a metric 
 
-$d(a, b) = \|a - b\|$ on $\mathcal{A}$ and therefore a topology
+$d(a, b) = \|a - b\|$ on $\mathscr{A}$ and therefore a topology
 
-if $\mathcal{A}$ is complete for this norm, it is a \textit{Banach algebra}
+if $\mathscr{A}$ is complete for this norm, it is a \textit{Banach algebra}
 
 \subsection{To figure out (use https://www.math.ksu.edu/~nagy/real-an/2-05-b-alg.pdf)}
 
 \noindent
-Supposing $\mathcal{A}$ is not necessarily complete
+Supposing $\mathscr{A}$ is not necessarily complete
 
 $\|ab\| \leq \|a\|\|b\|$ gives uniform continuity on the product
 
-hence the norm can be extended to the completion $\bar{\mathcal{A}}$ to form a Banach algebra
+hence the norm can be extended to the completion $\bar{\mathscr{A}}$ to form a Banach algebra
 
 \noindent
 A metric space M is complete if all Cauchy sequences converge to an element of M
@@ -76,8 +77,192 @@ The completion M is all equivalence classes of Cauchy sequences where
 
 $\{a_n\} \sim \{b_n\}$ iff $\lim\limits_{x \to \infty}d(a_n - b_n) = 0$
 
+\subsection{Examples}
 
+\noindent
+For M a compact space, $C(M)$
 
+the set of continuous $\mathds{R}/\mathds{C}$-valued functions on M
+
+pointwise operations
+
+$\|f\|_\infty = sup \{|f(x)| : x \in M\}$
+
+\noindent
+For M locally compact, $C_\infty(M)$
+
+the set of continuous $\mathds{R}/\mathds{C}$-valued functions on M vanishing at $\infty$
+
+vanishing at $\infty$: $\forall \epsilon \exists$ a compact subset of M, outside of which $f < \epsilon$
+
+note that this is non-unital (lacks an identity)
+
+\noindent
+For $\mathscr{O} \subset \mathds{C}^n$ open
+
+$H^\infty(\mathscr{O})$ the set of all bounded holomorphic functions on $\mathscr{O}$
+
+\noindent
+(M, d) metric space and $f \in C(M)$
+
+Lipschitz constant (which can be $+\infty$) $L_d(f) = sup\{\frac{|f(x) - f(y)|}{d(x, y)} : x, y \in M, x \neq y\}$
+
+The \textit{Lipschitz functions} $\mathscr{L}_d(M, d) = \{f: L(f) < \infty\}$
+
+These form a dense subalgebra of C(M) and are in fact a *-subalgebra
+
+$\|f\|_d$ := $\|f\|_\infty + L_d(f)$, can be shown as a normed-algebra norm
+
+$L_d(M, d)$ is complete for this norm
+
+so $L_d(M, d)$ is a Banach algebra
+
+$L_d$ is a seminorm on $\mathscr{L}_d(M, d)$ since it takes value 0 on the constant functions
+
+can recover d from $L_d$
+
+\noindent
+M a differentiable manifold (e.g. $T = \mathds{R}\slash\mathds{Z}$ the circle)
+
+C(M) $\supseteq C^{(1)}(M)$ the singly-differentiable functions
+
+$f \in C^{(2)}(T) \to Df: T_xM \to \mathds{R}, \mathds{C}$
+
+with $Df$ the derivative and $T_x$ the tangent space
+
+If we put on a Riemmannian metric, define $\|f\|^{(1)} = \|f\|_\infty + \|Df\|_\infty$
+
+If $f \in C^{(1)}(T): \|f\|^{(1)} = \|f\|_\infty + \|f'\|_\infty$
+
+Banach algebra norm, for which this space of functions is complete
+
+\noindent
+For the circle, $C^{(2)}(T) \to \|f\|^{(2)} = \|f\|_\infty + \|f'\|_\infty + \frac{1}{2}\|f''\|_\infty$
+
+the factor $\frac{1}{2}$ ensures that this satisfies the normed algebra condition
+
+$C^{(n)}(T) = \sum\limits_{k=0}^n\frac{1}{k!}\|f^{(k)}\|_\infty$
+
+For $C^\infty(T)$ using the collection of norms $\{\|\|^{(n)}\}^\infty_{n=1}$ yields a Fr\'{e}chet algebra
+
+A Fr\'{e}chet algebra has a topology defined by a countable family of seminorms
+
+that respect the algebra structure and is complete \textbf{(clarify)}
+
+\noindent
+non-commutative algebras
+
+X a Banach space
+
+$\mathscr{B}(X)$ the algebra of bounded operators on X
+
+$\|\|$ operator norm $\to$ Banach algebra
+
+Any closed subalgebra of $\mathscr{B}(X)$ is a Banach algebra
+
+\section{8/28}
+
+\noindent
+Sketch of the course
+
+\noindent
+X a Banach space, $B(X)$ bounded functions on the space
+
+\noindent
+$\mathscr{H}$ a Hilbert space, $\mathscr{B}(\mathscr{H})$ bounded operators on the space
+
+for $T \in \mathscr{B}(\mathscr{H}) \exists$ adjoint operator $T^* \in \mathscr{B}(\mathscr{H})$
+
+$<T\xi, \eta> = <\eta, T^*\xi>$ for $\xi, \eta \in \mathscr{H}$
+
+adjoint is additive, conjugate linear, $T^{**} = T$, $(ST)^* = T^*S^*$
+
+\noindent
+An algebra $A$ over $\mathds{R}$ or $\mathds{C}$ is a \textit{*-algebra} if it has a $*: A \to A$ satisfying
+
+certain properties (look up)
+
+\noindent
+A \textit{*-normal algebra} is a normal *-algebra such that
+
+$(\forall a \in A)\|a^*\| = \|a\|$
+
+\noindent A \textit{Banach *-algebra} is a *-normal algebra that is a Banach algebra.
+
+\noindent
+For any $T \in \mathscr{B}(\mathscr{H})$, have $\|T^*T\| = \|T\|^2$ \textbf{(check: parse through defns)}
+
+\noindent
+For M a locally compact space, $A = C_\infty(M, \mathds{C})$, $f^*:= \bar{f}$ is a Banach *-algebra
+
+Also have $\|f^*f\| = \|f\|^2$ \textbf{(verify: should be easier than the other)}
+
+\noindent Little Gelfand-Naimark theorem:
+
+Let $A$ be a commutative Banach *-algebra satisfying $\|a^*a\| = \|a\|^2$.
+
+Then $A \cong C_\infty(M)$ for some locally compact M.
+
+\noindent
+One view of the ``spectral theorem''
+
+Let $T \in \mathscr{B}(\mathscr{H})$ with $T^* = T$
+
+Let $A$ be the closed subalgebra of $\mathscr{B}(\mathscr{H})$ generated by T and I (i.e. $p(T) := \Sigma \alpha_kT^K$)
+
+Polynomials closed or stable under *
+
+If $S \in A$ then $S^* \in A$ (i.e. $A$ is a *-subalgebra of $\mathscr{B}(\mathscr{H})$
+
+So $A$ is a Banach *-suubalgebra satisfying $\|S^*S\| = \|S\|^2$
+
+Moreover, $A$ is commutative.  (unital, since generated by I)
+
+Then by the Little Gelfand-Naimark theorem, $A \cong C(M)$
+
+Indeed $M \subset \mathds{R}$, the spectrum of T
+
+If $\mathscr{H}$ is finite dimensional, then $M$ is the set of eigenvalues of T
+
+T is normal if $TT^* = T^*T$
+
+\noindent
+A C*-algebra is a Banach *-algebra over $\mathds{C}$ satisfying
+
+$\|a^*a\| = \|a\|^2$
+
+\noindent
+Theorem: A commutative C*-algebra is $\cong C_\infty(M)$.
+
+\noindent
+Big Gelfand-Naimark Theorem: (\textit{Math 208, C*-algebras})
+
+Any C*-algebra is $\cong$ to a closed *-subalgebra of $\mathscr{B}(\mathscr{H})$ for some Hilbert space $\mathscr{H}$.
+
+\noindent
+Tangent
+
+algebraic topology, differential geometry, Riemann manifolds, ``non-commutative geometry'' (Connes)
+
+\noindent
+A \textit{von-Neumann algebra} is a *-subalgebra of $\mathscr{B}(\mathscr{H})$
+
+which is closed under the strong operator topology.
+
+Every commutative von-Neumann algebra is $\cong L^\infty(X, S, \mu)$ (measure spaces) acting on $L^2(X, S, \mu)$ by positive sldkjfalksdjf
+
+\noindent
+For group G, $\alpha: G \to Auto(X) \subseteq \mathscr{B}(X)$
+
+$Auto(X)$ a Banach space
+
+Look at subalgebra of $\mathscr{B}(X)$ generated by $\alpha(G)$.
+
+Leads to considering $l'(G)$ with product $(f \star g)(x) = \Sigma f(y)g(y^{-1}x)$ convolution
+
+$f^*(x) = \overline{f(x^{-1})}$
+
+Banach *-algebra, G commuatative $\to$ Fourier transform
 
 \end{document}
 
