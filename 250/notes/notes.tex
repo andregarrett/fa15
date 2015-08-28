@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathptmx}
+\usepackage{mathpazo}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{dsfont}
+
+\topmargin -0.5in %topmargin=1in+\topmargin
+\textheight 9in % default is letter % so 11-2=9in
+\textwidth 6.5in % and 8.5-2in=6.5in
+\oddsidemargin 0in %left margin = % 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\setcounter{secnumdepth}{0}
+
+\title{Math 250A}
+\date{\normalsize Fall 2015}
+
+
+\begin{document}
+\maketitle
+
+\section{8/27}
+
+\subsection{Group Action}
+\noindent
+A group G acts on a set S:
+
+$G \times S \to S$
+
+$(g, s) \mapsto g \cdot s$
+
+$e \cdot s = s$
+
+$(g g') \cdot s = g \cdot (g' \cdot s)$
+
+\noindent
+Alternatively,
+
+$\phi: G \to Perm(S)$
+
+$\phi$ is a homomorphism (gives the corresponding properties)
+
+$(\phi(g))(s) = g \cdot s$
+
+\subsection{Examples of Group Actions}
+
+\noindent
+The trivial action:
+
+$G \to Perm(S)$ where $g \mapsto e_{Perm(S)}$
+
+\noindent
+G acting on self by left/right translation, conjugation
+
+\noindent
+G acting on the set of subgroups of G by conjugation:
+
+$g \cdot H = gHg^{-1} = \{ghg^{-1} | h \in H\}$
+
+\noindent
+Normal subgroup $N \trianglelefteq G$
+
+G acting on N, $g \cdot n := gng^{-1} \in N$
+
+\noindent
+$G = S_3$ where S is the set of subgroups of G of order 2.
+
+S = \{\{1, (1 2)\}, \{1, (1 3)\}, \{1, (2 3)\}\}
+
+\noindent recall
+$\sigma (a_1, a_2, a_3, ... a_k) \sigma^{-1} = (\sigma a_1, \sigma a_2, \sigma a_3, ... \sigma a_k)$
+
+\noindent
+V vector space over a field K
+
+G = GL(V) = group of invertible linear maps $V \to V$
+
+e.g. if $V = K^n$ then G = GL(n, K)
+
+G acts on V (rather simply) by $L \cdot v = L(v)$
+
+\subsection{Orbits and Stabilizers}
+
+\noindent
+Given G acting on S by $G \times S \to S$ there is an obvious relation on S:
+
+s, s': $s \thicksim s' \leftrightarrow \exists g \in G, s' = gs $
+
+the orbit of s is just the equivalence class of s under this relation
+
+i.e., $G \cdot s = \{g \cdot s | g \in G\}$
+
+\noindent
+The conjugacy classes of s are the orbits of S under the group action of G by conjugation
+
+the orbit of s, $O(s) = \{s\} \leftrightarrow s = gsg^{-1} \forall g$
+
+$\leftrightarrow (\forall g)gs = sg$
+
+$\leftrightarrow s \in Z(G)$ the center of the group
+
+\noindent
+Example, for $G = S_3$
+
+the orbit of 1 is \{1\}
+
+the orbit of (1 2) = \{(1 2), (1 3), (2 3)\}
+
+the orbit of (1 2 3) = \{(1 2 3), (1 3 2)\}
+
+\noindent
+Stabilizer (isotropy group) of a given element $s \in S := G_s$
+
+$G_s = \{g \in G |g \cdot s = s\}$
+
+stabilizer is closed under inverses: $g \in G_s \to g \cdot s = s \to g^{-1}gs = g^{-1}s \to s = g^{-1}s$
+
+\subsection{large stabilizer$\leftrightarrow$ small orbit}
+
+\noindent
+there exists a natural bijection $\alpha: G/G_s \to O(s)$ defined $gG_s \mapsto g \cdot s$
+
+
+\noindent
+well-definition:
+
+if $g_1G_s = g_2G_s$
+then $\exists g \in G_s, g_1 = g_2g$
+and $\alpha(g_1G_s) = g_1 \cdot s = g_2 g s = g_2 s = \alpha(g_2G_s)$
+
+\noindent
+injectivity:
+
+if $\alpha(g_1G_s) = g_1 \cdot s = g_2 \cdot s = \alpha(g_2G_s)$
+then $g_2^{-1}g_1 \cdot s = s$, $g_2^{-1}g_1 \in G_s$ and $g_1G_s = g_2G_s$
+
+\section{Lang 1.1-1.5}
+
+
+
+
+\end{document}
+
+
