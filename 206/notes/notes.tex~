@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathptmx}
+\usepackage{mathpazo}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{dsfont}
+
+\topmargin -0.5in %topmargin=1in+\topmargin
+\textheight 9in % default is letter % so 11-2=9in
+\textwidth 6.5in % and 8.5-2in=6.5in
+\oddsidemargin 0in %left margin = % 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\setcounter{secnumdepth}{0}
+
+\title{Math 206}
+\date{\normalsize Fall 2015}
+
+
+\begin{document}
+\maketitle
+
+\section{8/26}
+
+\subsection{Definitions}
+
+\noindent
+A \textit{norm} on a vector space X (over $\mathds{F}$) is a function $\| \|:X \rightarrow \mathds{R}^+$ such that
+
+$\|x\| = 0$ iff $x = 0$
+
+$\|\alpha x\| = |\alpha|\|x\|$ (for $\alpha \in F$)
+
+$\|x + y\| \leq \|x\| + \|y\|$
+
+\noindent
+An \textit{algebra} $\mathcal{A}$ over $\mathds{F}$ is a vector space with distributive $\cdot$ satisfying
+
+$cx \cdot y = c(x \cdot y)$
+
+$x \cdot cy = c(x \cdot y)$ for all $c \in F$
+
+
+\noindent
+A \textit{normed algebra} over $\mathds{R}$ or $\mathds{C}$ is an algebra $\mathcal{A}$ equipped with (vector space) norm satisfying
+
+$\|ab\| \leq \|a\|\|b\|$ for all $a,b \in \mathcal{A}$
+
+\noindent
+A norm on $\mathcal{A}$ induces a metric 
+
+$d(a, b) = \|a - b\|$ on $\mathcal{A}$ and therefore a topology
+
+if $\mathcal{A}$ is complete for this norm, it is a \textit{Banach algebra}
+
+\noindent
+Supposing $\mathcal{A}$ is not necessarily complete
+
+$\|ab\| \leq \|a\|\|b\|$ gives uniform continuity on the product
+
+hence the norm can be extended to the completion $\bar{\mathcal{A}}$ to form a Banach algebra
+
+\noindent
+A metric space M is complete if all Cauchy sequences converge to an element of M
+
+\noindent
+The completion M is all equivalence classes of Cauchy sequences where 
+
+$\{a_n\} \sim \{b_n\}$ iff $\lim\limits_{x \to \infty}d(a_n - b_n) = 0$
+
+\end{document}
+
+

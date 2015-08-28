@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathptmx}
+\usepackage{mathpazo}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{dsfont}
+
+\topmargin -0.5in %topmargin=1in+\topmargin
+\textheight 9in % default is letter % so 11-2=9in
+\textwidth 6.5in % and 8.5-2in=6.5in
+\oddsidemargin 0in %left margin = % 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\setcounter{secnumdepth}{0}
+
+\title{Math 245A}
+\date{\normalsize Fall 2015}
+
+
+\begin{document}
+\maketitle
+
+\section{Chapter 2}
+
+A group G is a 4-tuple $G = (|G|, \mu, \iota, e)$ with
+
+underlying set $|G|$
+
+law of composition $\mu$
+
+inverse function $\iota$
+
+neutral element e
+
+\noindent
+(Exercise 2.2:1) A homomorphism from a group G to a group H is a function $\phi : G \to H$ satisfying the following for $a, b \in G$:
+
+$\phi(e_G) = e_H$
+
+$\phi(\iota_G(a)) = \iota_H(\phi(a))$
+
+$\phi(\mu_G(a, b)) = \mu_H(\phi(a), \phi(b))$
+
+\noindent
+A more common representation of a group uses symbols $G = (|G|, \cdot, ^{-1}, e)$
+
+\noindent
+(2.2.1) The conditions for a 4-tuple to be a group are as follows
+
+$(\forall x, y , z \in |G|)\;(x \cdot y) \cdot z =  x \cdot (y \cdot z)$
+
+$(\forall x \in |G|)\;e \cdot x = x = x \cdot e$
+
+$(\forall x \in |G|)\;x^{-1} \cdot x = e = x \cdot x^{-1}$
+
+\noindent
+(2.2.2) We may also say that a set $|G|$ with a map $|G| \times |G| \to |G|$ constitudes a group if
+
+$(\forall x, y , z \in |G|)\;(x \cdot y) \cdot z =  x \cdot (y \cdot z)$
+
+there exists $e \in |G|$ such that $(\forall x) e \cdot x = x = x \cdot e$ and $(\forall x \in |G|)(\exists y \in |G|) y \cdot x = e = x \cdot y$
+
+\noindent
+(2.2.1) consists of identities (universally quantified equations) and (2.2.2) does not
+
+note: universal quantification is a "for all" quantification
+
+\noindent
+(Exercise 2.2:2)
+
+(i)
+
+(ii)
+
+\noindent
+(Exercise 2.2:3)
+
+\noindent
+
+
+
+\end{document}
+
+

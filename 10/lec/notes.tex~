@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathptmx} % Times font
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+
+\topmargin -0.5in %topmargin=1in+\topmargin
+\textheight 9in % default is letter % so 11-2=9in
+\textwidth 6.5in % and 8.5-2in=6.5in
+\oddsidemargin 0in %left margin = % 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\setcounter{secnumdepth}{0}
+
+\title{Notes/PSets}
+\author{Andre Garrett}
+\date{\normalsize The date today}
+
+
+\begin{document}
+\maketitle
+
+\section{Section 1}
+
+\begin{equation}
+1\slash{2} = \frac{1}{2}
+\end{equation}
+
+$1\slash{2} = \frac{1}{2}$
+
+\end{document}
+
+
