@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  28 AUG 2015 12:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  31 AUG 2015 12:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1919,13 +1919,22 @@ Overfull \hbox (7.44339pt too wide) in paragraph at lines 63--63
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 150.
- [2] [3] (./notes.aux) ) 
+ [2] [3]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 277.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 277.
+ [4] [5] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 11416 strings out of 495028
- 249525 string characters out of 6181498
- 291860 words of memory out of 5000000
- 14439 multiletter control sequences out of 15000+600000
- 39575 words of font info for 118 fonts, out of 8000000 for 9000
+ 11437 strings out of 495028
+ 249853 string characters out of 6181498
+ 292860 words of memory out of 5000000
+ 14454 multiletter control sequences out of 15000+600000
+ 41005 words of font info for 122 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,8n,42p,10425b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
@@ -1938,10 +1947,10 @@ t/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pala
 tino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on notes.pdf (3 pages, 105958 bytes).
+Output written on notes.pdf (5 pages, 114395 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

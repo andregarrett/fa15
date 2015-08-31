@@ -264,6 +264,118 @@ $f^*(x) = \overline{f(x^{-1})}$
 
 Banach *-algebra, G commuatative $\to$ Fourier transform
 
+\section{8/31}
+
+\noindent
+K a field, X a set, $\mathscr{F}(X, K)$ the set of all K-valued functions on X with pointwise operations
+
+Given $f \in \mathscr{F}(X, K)$.
+
+Let $\lambda \in K$.  Then $\lambda \in$ range(f) exactly if $(f - \lambda 1)$ is not invertible.
+
+\noindent
+For any $a \in A$, the \textit{spectrum} of a is $\{\lambda \in K: a - \lambda 1_A$ is not invertible in A\}.
+
+The spectrum depends on the containing algebra
+
+Assuming that this algebra A  (over the field K) has an identity $1_A$
+
+\noindent
+Example: Let A = C([0, 1]), and B = polynomials, viewed as a dense subalgebra of A.
+
+Let p be a polynomial of degree $\geq 2$.  Then
+
+$\sigma_a(p) = p([0, 1])$.
+
+$\sigma_B(p) = \mathds{R}, \mathds{C}$
+
+\noindent
+Let A be a Banach algebra with 1 ($\|1\| = 1$), and $a \in A$.
+
+If $\|a\| < 1$, then 1 - a is invertible, and $\|(1 - a)^{-1}\| \leq \frac{1}{1 - \|a\|}$
+
+\noindent
+Proof:
+
+$\frac{1}{1 - a} = \sum_{n = 0}^{\infty} a^n$ ($a^0 := 1_A$)
+
+For any $n > 0$, let $s_n = \sum_{k = 0}^na^k$.
+
+Show that $\{s_n\}$ is a Cauchy sequence.
+
+If $n > m$, $\|s_n - s_m\| = \|\sum_{k = m + 1}^na^k\| \leq \sum_{k = m + 1}^n \|a\|^k$.
+
+Given $\epsilon > 0 \exists N$ such that if $m, n \geq N$ then $\sum_{k = m + 1}^n \|a\|^k \leq \epsilon$
+
+So $\{s_n\}$ is a Cauchy sequence.
+
+By completeness there is a $b \in A$ with $s_n \to b$ as $n \to \infty$.
+
+Want to show $b = (1 - a)^{-1}$.
+
+$b(1 - a) = lim_{n \to \infty}(s_n(1 - a))$
+
+$ = lim_{n \to \infty}(1 + a + a^2 + a^3 + \cdots+a^n - (a + a^2 + a^3 + \cdots + a^{n + 1}))$
+
+$= lim_{n \to \infty}(1 - a^{n + 1}) = 1$
+
+Then $1 - (1 - a)$ is invertible, i.e. a is invertible.
+
+$\|(1 - a)^{-1}\| = \lim\|s_n\| \leq \lim\sum_{k = 0}^n\|a^k\| = \frac{1}{1 - \|a\|}$  ($\|1\| = 1$)
+
+\noindent
+$\|ab\| \leq \|a\|\|b\|$: can very easily check that multiplication is cts (do this?)
+
+\noindent
+Corollary: If $a \in A$ and $\|1 - a\| < 1$ then a is invertible, and $\|a^{-1}\| \leq \frac{1}{1 - \|1 - a\|}$
+
+I.e. the open unit ball about 1 consists of invertible elements.
+
+\noindent
+Let $a \in A$. Let $L_a$, $R_a$ be the operators of left and right multiplication by a on A.
+
+$a \to L_a$ is an algebra homomorphism of A into $\mathscr{L}(A)$ (linear operators on A)
+
+$L_aL_b = L_{ab}$, $R_aR_b = R_{ba}$ (R is an antihomomorphism)
+
+$1 \in A$
+
+If a is invertible, then so is $L_a$, $L_aL_{a^-1} = I_a$
+
+Then if A is a normed algebra, $\|L_a\| = \|a\|$
+
+$\|L_{ab}\| = \|ab\| \leq \|a\|\|b\|$
+
+$\|L_a1_a\| = \|a\|$
+
+so if $a \in A$ is invertible, then $L_a$ is a homeomorphism of A onto itself.
+
+Thus if $A$ is a Banach algebra, with 1, and a is invertible:
+
+$\{L_{a}b : \|1 - b\| < 1\}$ is an open neighborhood of a consisting of invertible elements
+
+\noindent
+Let GL(A) be the set of invertible elements of A. (general linear group)
+
+Then (for A a unital Banach algebra) GL(A) is an open subset of A.
+
+(Fails for Poly $\subseteq$ C([0, 1]))
+
+\noindent
+Two Fr\'{e}chet algebras, for one, GL(A) is an open subset, for another it isn't.
+
+\textbf{ask about this?}: not sure what he was talking about
+
+$C^\infty(T)$, $\|f^{(n)}\|$
+
+C(R) cont fns on $\mathds{R}$ (or $\mathds{C}$) maybe unbounded
+
+For each n let $\|f\|_n = $ sup$\{|f(t)|: |t| \leq n\}$
+
+
+\noindent
+Corollary: For A a Banach algebra with 1 and $a \in A$, $\sigma(a)$ is a closed subset of $\mathds{C}$
+
 \end{document}
 
 
