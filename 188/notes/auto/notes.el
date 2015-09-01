@@ -17,5 +17,6 @@
     "siunitx"
     "fixltx2e"
     "multirow"
-    "dsfont")))
+    "dsfont"
+    "indentfirst")))
 
