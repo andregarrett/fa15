@@ -141,7 +141,7 @@ injectivity:
 if $\alpha(g_1G_s) = g_1 \cdot s = g_2 \cdot s = \alpha(g_2G_s)$
 then $g_2^{-1}g_1 \cdot s = s$, $g_2^{-1}g_1 \in G_s$ and $g_1G_s = g_2G_s$
 
-\section{Lang 1.1-1.5}
+\section{Lang 1.1-1.4}
 
 \subsection{1.1: Monoids}
 
@@ -396,15 +396,160 @@ G a finite group, order $> 1$, $a \in G$, $a \neq e$, then the period of a divid
 G cyclic: every subgroup of G is cyclic, and for f a homomorphism on G, $Im(f)$ is cyclic
 
 \noindent
-\textbf{Page 24}
+Proposition:
+
+(i) An infinite cyclic group has exactly two generators (if $a$ is one, $a^-1$ is the other)
+
+(ii) G finite cyclic of order n, x a generator; the set of generators is $\{x^v| gcd(v, n) = 1\}$
+
+(iii) G cyclic, a and b two generators: $\exists f \in Aut(G)$, $f(a) = b$
+
+(iii) conversely, if $f \in Aut(G)$, $f(a)$ is some generator of G
+
+(iv) G cyclic of order n, d positive divisor of n $\to \exists ! H \leq G$, $\#H = d$
+
+(v) $G_1$, $G_2$ cyclic, $\#G_1 = m$, $\#G_2 = n$.  If $gcd(m, n) = 1$, then $G_1 \times G_2$ is cyclic.
+
+(vi) G finite abelian, noncyclic $\to \exists p$ prime and $H \leq G$, $H \cong C \times C$, C cyclic of order p
+
+\section{9/1}
+
+\subsection{Group Actions $\to$ Sylow theorems}
+
+Recall:
+
+the stabilizer $G_s = \{g \in G | g \cdot s = s\}$
+
+the orbit $O(s) = \{g \cdot s | g \in G\}$
+
+$G\slash G_s \cong O(s)$ and $\#(G\slash G_s) = \#O(s)$
+
+\noindent
+Let $\Sigma =$ set of representatives for $s \sim s' \leftrightarrow O(s) = O(s')$
+
+$\#S = \sum_{s \in \Sigma}\#O(s) = \sum_s(G:G_s)$
+
+G finite $(G:G_s) = \frac{\#G}{\#G_s}$
+
+Mass formula $\#S = (\sum_s\frac{1}{\#(G_s)})(\#G)$
+
+\noindent
+A subgroup H of G acting upon G has as orbits, cosets, and trivial stabilizer.
+
+Hence from the above $\#H_s = \#H$, and $\#G = (G:H) \cdot \#H$.
+
+This is a statement of Lagrange's Theorem, $(G:H) = \frac{\#G}{\#H}$.
+
+\noindent
+We can relate the stabilizers of points in the same orbit.
+
+$G_s' = G_{g \cdot s} = gG_sg^{-1}$
+
+See $(gxg^{-1})s' = (gxg^{-1})gs = g(xs)$ 
+
+The stabilizer of $s'$ is a conjugate of the stabilizer of $s$.
+
+\noindent
+The kernel of the action $$K = \{g\in \bigcap_{s \in S}G_s\}$$
+
+This is just the kernel of $G \xrightarrow{\phi} Perm(S)$.
+
+\noindent
+Assume $x \in G_s$.  Claim $gxg^{-1} \in G_{gs}$, showing $gG_sg^{-1} \subset G_{gs}$
+
+Since $x \in G_s$, $(gxg^{-1})s' = (gxg^{-1})gs = g(xs) = gs$.
+
+Applying this relation with $g \to g^{-1}$ and $s \to gs$, $G_{gs} \subset gG_sg^{-1}$
+
+\subsection{Applications}
+
+p : prime
+
+\noindent
+p-group: a finite group G, $\#G = p^n, n \geq 1$
+
+\noindent
+``A p-group has a non-trivial center.''
+
+(Recall: the center $Z(G) = Z = \{g \in G | gs = sg \forall s\in G\}$).
+
+Since $gs = sg \to s = gsg^{-1}$, will be useful to consider action on self by conjugation.
+
+G a p-group, S a finite set.  Then $\#O(s) = \frac{\#G}{\#G_s} = \frac{p^n}{p^k}$.
+
+Two cases: 1) $\#O(s) = 1$ s is fixed by G, $s \in S^G$ (set of fixed points of S)
+
+2) ($k < n$), thus $\#O(s)$ is divisible by p.
+
+$\#S =$ sum of \# of elements in the orbits $\equiv_{mod p} \#$ of orbits of size 1 $= \#(S^G)$.
+
+Take S = G, with action $g: s \mapsto gsg^{-1}$.  Then $S^G = Z(G)$.
+
+Thus, $\#Z(G) \equiv_{mod p} p^n \equiv_{mod p} 0$. Center has order divisible by p.
+
+\noindent
+$H \leq G$ a finite group, $(G : H) = p$, p the smallest prime dividing \#G $\to H \trianglelefteq G$
+
+Let $S = G\slash H$; $\#(S) = (G : H) = p$, and let G act on S by left translation.
+
+This induces $\varphi: G \to S_P$; recall $\#S_p = p!$
+
+The stabillizer of H, $G_H = \{x \in G | xH = H\} = H$.
+
+By inspection, we can see that $G_{gH} = gHg^{-1}$.
+
+Let $K = \bigcap_{g \in G}gHg^{-1}$, the largest normal subgroup contained in H.
+
+Note that $K = ker(\varphi)$ induced above; by the First Isomorphism Theorem $\varphi(G) \leq S_p$.
+
+$(G : K) = \#(G\slash K) = \#(\varphi(G))$, which divides $\#(S_p) = p!$
+
+Further, since $K \leq H \leq G$, $(G : K) = (G : H)(H : K)$.
+
+Since $(G : K)$ divides $p!$ and $(G : H)$ divides p, $(H : K)$ divides $(p - 1)!$.
+
+But p is the smallest prime dividing $\#G$, so $(H : K)$ = 1, $K = H$ and H is normal.
+
+\noindent
+A familiar embedding of a group into a larger group; ``Cauchy's Theorem''
+
+$G \hookrightarrow Perm(G)$ by letting G act on itself by left-translation.
+
+Its kernel $K = \{g \in G | gs=s \forall s\} = \{e\}$ (consider $s = e$), hence is an injection.
+
+Since an injection, an embedding.
+
+\noindent
+Recall $S_n \subset$ group of $n \times n$ invertible matrices. $\sigma \mapsto M(\sigma)$ a permutation matrix.
+
+Need to be careful in the construction to ensure $M(\sigma\tau)=M(\sigma)M(\tau)$!
+
+E.g. $\sigma = (1 3 2)$ does $M(\sigma)$ have 1 in the 1st column, 3rd row?
+
+Or in the 1st row, 3rd column?  One of these yields $M(\sigma\tau) = M(\tau)M(\sigma)$.
+
+\noindent
+G finite of order n; V the vector space of functions $G \xrightarrow{f} \mathds{Z}$; note $V \cong \mathds{Z}^n$
+
+Linear maps $V \to V \leftrightarrow n \times n$ matrices over $\mathds{Z}$; this is $GL(V) \approx GL(n, \mathds{Z})$.
+
+Similarly, invertible linear maps correspond to $n \times n$ invertible matrices over $\mathds{Z}$.
+
+We can embed G in $GL(n, \mathds{Z})$ by using a left action of G on $GL(n, \mathds{Z}) = \{\phi: V \to V\}$
+
+Recall that $V = \{f : G \to \mathds{Z}\}$.
+
+This left action takes the form $L_g: f(x) \mapsto f(xg)$
+
+\textbf{Verify for yourself} that $L_{gg'} = L_g \circ L_{g'}$ and $g \mapsto L_g$ is a homomorphism $G \to GL(V)$
+
+Using $\mathds{F}_p$ instead of $\mathds{Z}$, get $G \hookrightarrow GL(n, \mathds{F}_p)$, an embedding into a finite group
+
+\section{Lang 1.5-1.6}
 
 \subsection{1.5: Operations of a group on a set}
 
 
 
-\section{9/1}
-
 
 \end{document}
-
-
