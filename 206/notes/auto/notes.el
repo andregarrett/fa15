@@ -18,5 +18,7 @@
     "siunitx"
     "fixltx2e"
     "multirow"
-    "dsfont")))
+    "dsfont")
+   (TeX-add-symbols
+    "inv")))
 

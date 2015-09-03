@@ -12,6 +12,8 @@
 \usepackage{multirow}
 \usepackage{dsfont}
 
+\newcommand{\inv}{^{-1}}
+
 \topmargin -0.5in %topmargin=1in+\topmargin
 \textheight 9in % default is letter % so 11-2=9in
 \textwidth 6.5in % and 8.5-2in=6.5in
@@ -376,6 +378,132 @@ For each n let $\|f\|_n = $ sup$\{|f(t)|: |t| \leq n\}$
 \noindent
 Corollary: For A a Banach algebra with 1 and $a \in A$, $\sigma(a)$ is a closed subset of $\mathds{C}$
 
+\section{9/2}
+
+\noindent
+Proposition: Let A be a unital Banach algebra and $a \in A$.
+
+Then $\sigma(a)$ is a closed subset of $\mathds{C}$ or $\mathds{R}$.  If $\lambda \in \sigma(a)$ then $\|\lambda\| \leq \|a\|$.
+
+\noindent
+Proof: $\sigma(a) = \{\lambda : (a - \lambda)$ is not invertible\}
+
+Its complement, the \textit{resolvant set}, of a is $\{ \lambda: (a - \lambda) \in GL(A)\}$, is open.
+
+If $|\lambda| > \|a\|$ then $(\lambda - a) = \lambda(1 - \frac{a}{\lambda})$, $\|a\slash \lambda \| < 1$
+
+so $(\lambda - a)$ is invertible, ie $\lambda \in \sigma(a)$.
+
+Over $\mathds{R}$, can have $\sigma(a) = \emptyset$, e.g. (2x2 matrix (0 -1 1 0))
+
+\noindent
+``If $a \in GL(A)$ and b is close to a then $b^{-1}$ is not much bigger than $a^{-1}$''.
+
+Let $\mathscr{O} = \{c : \|1 - c\| < 1\slash 2 \}$
+
+So c is invertible, and $\|c^{-1}\| \leq \frac{1}{1 - \|1-c\|} \leq 2\}$
+
+Let $b \in a\mathscr{O}$, so $b = ac$ for $c \in \mathscr{O}$, then $\|b^{-1}\| = \|c^{-1}a^{-1}\| \leq 2\|a^{-1}\|$.
+
+For $a, b \in GL(A)$.
+
+$b^{-1} - a^{-1} = b^{-1}(a - b)a^{-1}$
+
+Thus $\|b^{-1} - a^{-1}\| \leq \|b^{-1}\|\|a - b\|\|a^{-1}\|$.
+
+So $b \to b^{-1}$ is continuous for the norm.
+
+So $GL(A)$ is a topological group for topology from norm.
+
+$b^{-1} = (1 + b^{-1}(a - b))a^{-1}$
+
+\noindent
+On $\rho (a)$ (the resolvant set, complement of the spectrum) define the resolvant of a
+
+This is the function $R(a, \lambda) = (\lambda - a)^{-1}$
+
+\noindent
+$R(a, \lambda)$ is an analytic function on $\rho (a)$.
+
+\noindent
+Proof: Let $f(z) = R(a, z)$.
+
+$f'(z) = \lim_{h \to 0} \frac{f(z + h) - f(z)}{h} = \frac{(z + h - a)^{-1} - (z - a)^{-1}}{h}$ 
+
+$ = \lim_{h \to 0}\frac{1}{h} (z + h - a)^{-1} ((z - a) - (z + h - a))(z - a)^{-1}$
+
+$= \lim_{h \to 0} -(z + h - a)^{-1}(z - a)^{-1} = -(z - a)^{-2}$
+
+$f'' = +z(z - a)^{-3}$
+
+Given $z_0 \in \rho (a)$
+
+Will use $b^{-1} = (1 + b^{-1}(a - b))a^{-1}$ and $f(z) = (z - a)^{-1} = \sum c_n(z - z_0)^n$
+
+$f(z) = (z - a)^{-1}$
+
+$b \to z - a$
+
+$f(z) = (1 + (z - a)^{-1}((z_0 - a) - (z - a)) (z_0 - a)^{-1}$
+
+$=(1 + (z - a)^{-1}(z_0 - z))(z_0 - a)^{-1}$
+
+where $(z - a)^{-1}(z_0 - z) \leq 1$ then the above
+
+$=\sum(-1)^{n}(z - a)^{-n}(z - z_0)^n = \sum(-1)^n(z-a)^{-n-1}(z-z_0)^n$
+
+a proper power series expansion.
+
+\noindent
+Examine $R(a, z)$ at $\infty$.
+
+$R(a, z^{-1}) = (z^{-1} - a)^{-1} = \frac{1}{z^{-1} - a}$ 
+
+$ =z(1 - za)^{-1}$ (for small z, ie $\|za\| < 1$)
+
+$R(a, z^{-1})$ approaches 0 as $z \to 0$.
+
+defn $R(a, 0^{-1}) = 0$, see $R(a, z)$ is analytic at $\infty$.
+
+\noindent
+Theorem: For a Banach algebra over $\mathds{C}$ with 1, and for any $a \in A$,
+
+$\sigma(a) \neq \emptyset$, that is, the spectrum is non-empty.
+
+\noindent
+Proof: Suppose that $\sigma(a) = \emptyset$.
+
+Then $R(a, z)$ is defined on all of $\mathds{C}$ and is bounded.
+
+By Liouville's, $R(a, z)$ is constant, $= 0$, $(a - z)^{-1} = 0$ $ \forall z$
+
+Why can we use Liouville's in this Banach space case?
+
+Let A' be the dual Banach space to A.
+
+For $\varphi \in A'$, $z \mapsto \varphi(R(a, z))$ is a $\mathds{C}$-valued analytic function.
+
+So set $\varphi(R(a, z)) = 0$ $\forall z$, $\forall \varphi$
+
+so $R(a, z) = 0$.
+
+Knowing that there is anything in here is the Hahn-Banach Theorem, depending on the axiom of choice.
+
+\noindent
+Theorem (Gelfand-Mayer)
+
+Let A be a unital Banach algebra over $\mathds{C}$.
+
+If every nonzero element is invertible, then $z \to z1_A$ is an isomorphism from $\mathds{C}$ onto A.
+
+\noindent
+Proof:
+
+Given $a \in A$ let $z \in \sigma (a) \neq \emptyset$.
+
+So $(z - a)$ is not invertible so $z - a = 0$.
+
+Fails over $\mathds{R}$ since have $\mathds{R}$, $\mathds{C}$, quaternions
 \end{document}
 
 
