@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  2 SEP 2015 09:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  3 SEP 2015 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1854,24 +1854,25 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./notes.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 11045 strings out of 495028
- 245076 string characters out of 6181498
+ 11047 strings out of 495028
+ 245089 string characters out of 6181498
  289151 words of memory out of 5000000
  14113 multiletter control sequences out of 15000+600000
- 33120 words of font info for 87 fonts, out of 8000000 for 9000
+ 35363 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,6n,42p,10425b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/s
-hare/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb>
-Output written on notes.pdf (2 pages, 36920 bytes).
+{/u
+sr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on notes.pdf (3 pages, 49530 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

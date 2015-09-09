@@ -53,7 +53,20 @@ A \textit{rational agent} maximizes the expected value of the performance measur
 
 PEAS model: performance measure, environment, actuators, sensors.
 
-Environment characteristics: observable (fully/partial), number of agents, deterministic/stochastic, static/dynamic, discrete/continuous, known/unknown (e.g. don't know the dynamics of the system, but still try to maximize utility)
+An \textit{autonomous} agent has behavior determined by its own percepts and experience, with the ability to adapt and learn, without depending solely on built-in knowledge.
+
+\noindent
+Environment characteristics:
+
+observable (fully/partial): the proportion of the environment the agent's sensors give it access to
+
+number of agents
+
+deterministic/stochastic: the degree to which the environment's state may fluctuate, given a particular action (an environment which is deterministic, except for the actions of other agents, is \textit{strategic})
+
+static/dynamic: the degree to which the environment changes while the agent is deliberating
+
+discrete/continuous, known/unknown (e.g. don't know the dynamics of the system, but still try to maximize utility)
 
 \noindent
 Effects of the environment on agent design:
@@ -80,8 +93,58 @@ utility-based agents
 \noindent
 Two of these are reflexive, the next two are planning-based.
 
+\section{9/3}
+
+Planning agents predict consequences of actions $\to$ transition model.
+
+Deliberativeness: can generate a complex plan or a simple one and correct rapidly.
+
+A \textit{search problem} consists of a state space, a set of allowable actions, a transition model (corresponding to results), a step cost function, a $t_0$ and a goal test.
+
+Solution: ${A_n}$ that transforms a $t_0$ into a goal state.
+
+A \textit{real world state} is highly general.
+
+A \textit{search state} is specific to the problem, focusing on the vital details of the environment.
+
+Can describe the state space using a directed graph.  Note that each state appears only once in the graph.  Edges can have costs associated with them.
+
+Search trees incorporate temporal direction.
+
+Implement nodes with state, parent, action, cost of action (path-cost)
+
+Depth-first-search, breadth-first-search, iterative deepening (DFS with limit 1, DFS with limit 2, etc.)
+
+Uniform-cost-search: expand frontier at cheapest node first. A* can prove is optimal. However, uses no information about goal.
+
+Tree searches can often lead to excess/repeated work.  Can correct by making a check whether or not potential actions lead to an explored state.
+
+Graph search exists in a finite space, memory $\propto$ runtime.
+
+\section{9/8}
+
+Heuristic estimates how close a state is to the goal
+
+Greedy search expands nodes based upon a given heuristic
+
+Uniform-cost search orders by path cost, i.e. \textit{backwards cost}, g(n)
+
+Greedy search orders by proximity to goal, i.e. \textit{forward cost}, h(n)
+
+An $A^*$ algorithm orders by $f(n) = g(n) + h(n)$
+
+Key point: an $A^*$ search must have an effective heuristic to work
+
+An admissible heuristic satisfies $0 \leq h(n) \leq h^*(n)$, with $h^*(n)$ the true cost
+
+$A^*$ search with an admissible heuristic is optimal
+
+A heuristic $h_a$ is dominant over $h_c$, $h_a \geq h_c$ if $\forall n$ $h_a(n) \geq h_c(n)$
+
+A dominant heuristic of an admissible heuristic, if still admissible, is preferable
+
+A maximum over admissible heuristics is a dominant heuristic, and still admissible
 
 
 \end{document}
-
 

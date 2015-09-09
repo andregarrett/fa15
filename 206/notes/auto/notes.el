@@ -20,5 +20,6 @@
     "multirow"
     "dsfont")
    (TeX-add-symbols
-    "inv")))
+    "inv"
+    "n")))
 

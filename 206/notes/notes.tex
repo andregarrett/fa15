@@ -13,6 +13,7 @@
 \usepackage{dsfont}
 
 \newcommand{\inv}{^{-1}}
+\newcommand{\n}{\noindent}
 
 \topmargin -0.5in %topmargin=1in+\topmargin
 \textheight 9in % default is letter % so 11-2=9in
@@ -394,7 +395,7 @@ If $|\lambda| > \|a\|$ then $(\lambda - a) = \lambda(1 - \frac{a}{\lambda})$, $\
 
 so $(\lambda - a)$ is invertible, ie $\lambda \in \sigma(a)$.
 
-Over $\mathds{R}$, can have $\sigma(a) = \emptyset$, e.g. (2x2 matrix (0 -1 1 0))
+Over $\mathds{R}$, can have $\sigma(a) = \emptyset$, e.g. $\begin{pmatrix} 0 & -1 \\ 1 & 0 \\ \end{pmatrix}$
 
 \noindent
 ``If $a \in GL(A)$ and b is close to a then $b^{-1}$ is not much bigger than $a^{-1}$''.
@@ -490,7 +491,7 @@ so $R(a, z) = 0$.
 Knowing that there is anything in here is the Hahn-Banach Theorem, depending on the axiom of choice.
 
 \noindent
-Theorem (Gelfand-Mayer)
+Theorem (Gelfand-Mazer)
 
 Let A be a unital Banach algebra over $\mathds{C}$.
 
@@ -504,6 +505,189 @@ Given $a \in A$ let $z \in \sigma (a) \neq \emptyset$.
 So $(z - a)$ is not invertible so $z - a = 0$.
 
 Fails over $\mathds{R}$ since have $\mathds{R}$, $\mathds{C}$, quaternions
+
+\section{9/4}
+
+Let A be an algebra or ring.  Ideals $I$, left, right, 2-sided.
+
+$A\slash I$, for a left ideal get a left A-module, right ideal get a right A-module
+
+Two-sided get an algebra or ring.
+
+\noindent
+Let A be a normed algebra, and if $I$ is an ideal in A.
+
+Then $\overline{I}$ (the closure) is again an ideal in A.
+
+$\{a_n\} \subset I$, $a_n \to c \in A$ then $ba_n \to bc$
+
+\noindent
+Proposition: If A is a unital Banach algebra and if I is an proper ideal in A.
+
+Then $\overline{I}$ is proper.
+
+\noindent
+Proof:
+
+Use GL(A) is open.  The original ideal cannot contain any invertible elements.
+
+The complement of the invertible elements is going to be closed.
+
+The ideal is in its closure; the closure is in the complement of the invertible elements.
+
+So the closure will not contain any invertible elements.
+
+\noindent
+Counter-example: C locally compact, $C_c(\mathds{R}) \subset C_\infty(\mathds{R})$
+
+In fact $C_c(\mathds{R})$ is the minimal dense ideal in $C_\infty(\mathds{R})$
+
+Lack of identity element.
+
+\noindent
+Counter-example: Look at A the polynomials viewed as a subset of $C([0, 1])$
+
+Using the sup-norm.
+
+Lack of completeness.
+
+Let $I = \{p: p(2) = 0\}$ is an ideal, in fact a maximal proper ideal.
+
+This ideal of polynomials will be dense inside A and dense inside all polynomials.
+
+\noindent
+Counter-example: A = $C(\mathds{R})$, including unbounded, $I = C_C(\mathds{R})$, compact open topology
+
+Compact in here for the Fr\'{e}chet open topology.
+
+\noindent
+Corollary: Let A be a unital Banach algebra.
+
+Then every maximal ideal is closed.
+
+\noindent
+Taking ideals to form quotients.
+
+Recall that if X is a normed vector space and if Y is a vector subspace of X:
+
+Then we can form the quotient vector space $X \slash Y$.
+
+Have the evident $\pi: X \to X \slash Y$ by $\pi (x) = x + Y$.
+
+Set $\|\pi(x)\| = inf\{\|x - y\| : y \in Y\}$ i.e. the distance from x to the subspace Y.
+
+It is easily seen that this is a seminorm.
+
+Problem: if Y is not closed, then it is not a norm, since $\|\pi(y)\| = 0$ for $y \in \overline{Y}$.
+
+Therefore, if Y is closed, then $\|\|_{X \slash Y}$ is a norm.
+
+\noindent
+(Should know from $202B$) If X is a Banach space and Y is a closed subspace.
+
+Then $X \slash Y$ with the norm defined above is a Banach space.
+
+Trickier to prove, but a true statement.
+
+\noindent
+Proposition: Let A be a normed algebra and let I be a closed ideal in A.
+
+(can be left or right or two-sided)
+
+Then if I is a two-sided ideal, then $A \slash I$ with $\|\|_{A \slash I}$ is a normed algebra.
+
+That is $\|\pi(a)\pi(b)\| \leq \|\pi(a)\|\|\pi(b)\|$.
+
+Then if I is a left ideal, so that $A \slash I$ with $\|\|_{A \slash I}$ is a left A-module.
+
+$\|a\pi(b)\|_{A \slash I} \leq \|a\|_A\|\pi(b)\|_{A\slash I}$
+
+And if I is a right ideal, so that $A \slash I$ with $\|\|_{A \slash I}$ is a right A-module, similar.
+
+\noindent
+Proof:
+
+For I a two-sided ideal.
+
+If $c, d \in I$, then $\|\pi(a)\pi(b)\|_{A \slash I} \leq \|(a - c)(b - d)\| = \|(ab - (cb + ad - cd)\|$
+
+where $cb + ad - cd \in I$.
+
+Take inf over $c, d \in I$.
+
+$\leq \|a - c\| \|b - d\|$
+
+\noindent
+Proposition: If a is a Banach algebra and I is a closed 2-sided ideal, then $A\slash I$ is a Banach algebra.
+
+\noindent
+An algebra or ring is \textit{simple} if it contains no proper 2-sided ideals.
+
+e.g. $M_n(\mathds{R})$, $M_n(\mathds{C})$, $M_n(K)$ for $K$ a field.
+
+\n
+Proposition: Let A be an algebra or ring and let I be a maximal 2-sided ideal in A.
+
+The $A \slash I$ is a simple algebra/ring.
+
+\n
+Corollary: If A is a Banach algebra and if I is a maximal closed 2-sided ideal.
+
+Then $A \slash I$ is a simple Banach algebra.
+
+\n
+Let A be a commutative algebra/ring with 1.
+
+If $a \in A$ and a is not invertible, then $Aa$ is a two-sided ideal.
+
+And $1 \not\in Aa$ (else it would be invertible).
+
+Thus $Aa$ is a proper ideal.
+
+\n
+Corollary: If A is a commutative algebra/ring with 1 and if A is simple, then A is a field.
+
+A is simple: every nonzero element is invertible.
+
+Since if one weren't we would have a proper ideal.
+
+\n
+Theorem: Let A be a commutative Banach algebra with 1.
+
+Let I be a maximal ideal in A (which of course is necessarily closed).
+
+Then $A \slash I \cong$ either $\mathds{C}$ (isomorphic in every sense).
+
+\n
+Proof:
+
+Banach-Mazer theorem applied to the previous discussion.
+
+\n
+$c \in A\slash I$, $z \in \sigma(c)$, $c - z1_{A}$ is noninvertible by def'n spectrum.
+
+Since it is a field, $c - z1_{A} = 0$.
+
+\n
+From a maximal ideal, $I$, get a homomorphism $\phi: A \to \mathds{C}$, unital
+
+($\phi(1) = 1$) such that $I = ker(\phi)$
+
+\n
+Let A be a Banach algebra with 1 and let $\phi: A \to \mathds{C}$ be a homomorphism.
+
+Then $\phi$ is continuous and $ker(\phi)$ is a maximal 2-sided ideal in A.
+
+$\|\phi\| = 1$
+
+\n
+Lemma: For any given $a \in A$, $\phi(a) \in \sigma(a)$
+
+Proof: $\phi(a - \phi(a)1_A) = 0$ so $a - \phi(a)1$ is not invertible.
+
+so $\phi(a) \in \sigma(a)$
+
+Then $\|\phi(a)\| \leq \|a\|$, so $\|phi\| \leq 1$ but $\phi(1) = 1$.
+
+
 \end{document}
-
-
