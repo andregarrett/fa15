@@ -689,5 +689,129 @@ so $\phi(a) \in \sigma(a)$
 
 Then $\|\phi(a)\| \leq \|a\|$, so $\|phi\| \leq 1$ but $\phi(1) = 1$.
 
+\section{9/9}
+
+\section{9/11}
+
+X a compact (hausd) space and $A = C(X)$.  What is $\hat{A}$? (the maximal ideal space)
+
+Each $x \in X$, $\phi_x(f) = f(x)$.  Multiplicative linear functional.
+
+Get map $X \to \hat{A}$, $x \mapsto \phi_x$.  Question: is this onto?
+
+\noindent
+Proposition: Let I be a proper ideal in $A = C(X)$.
+
+There is at least one $x \in X$ such that $f(x) = 0$ for all $f \in I$.
+
+\noindent
+Proof:
+
+Suppose no such x exists. (Goal: show that $I = A$.)
+
+Then for each $x \in X$ is $f_x \in I$ with $f_x(x) \neq 0$.
+
+Multiply it by $\overline{f_x}$, then we have $\overline{f_x}f_x$ non-negative and real.
+
+Let $U_x = \{y : f_x(y) > 0 \}$ open, $x \in U_x$.
+
+The $U_x$'s cover X, so there is a finite subcover, corresponding to $\{x_1, \cdots, x_n\}$
+
+Then let $f = \sum_{j = 1}^nf_{x_j}$.  Then $f(x) > 0$ all $x \in X$.
+
+Certainly $f \in I$.  In A, f is invertible.  Hence I = A.
+
+\noindent
+We can conclude that $X \to \overline{A}$ is onto, one-to-one, continuous (easy to see).
+
+Compact space to a Hausdorff space this is a homeomorphism.
+
+\noindent
+Proposition: $\overline{A}$ ``='' X.\\
+
+\noindent
+A commutative Banach algebra with 1.
+
+Have the Gelfand transform: $A \to C(\hat{A})$, where $a \mapsto \hat{a}$.
+
+\noindent
+If a is nilpotent, $a^n = 0$, for any $\phi \in \hat{A}$:
+
+$0 = \phi(a^n) = (\phi(a))^n$, so $\phi(a) = 0$.  Thus $\hat{a} \equiv 0$.  (0 on all elements)\\
+
+\noindent
+A comm. Banach, $1 \in A$. ($\mathds{C}$)
+
+We have ssen that $a \in A$, range($\hat{a}) \subset \sigma(a)$.
+
+\noindent
+Is the converse true? Yes, observe:
+
+If $\lambda \in \sigma(a)$, then $\lambda 1_a - a$ is not invertible so $(\lambda - a)A$ is a proper ideal (2-sided).
+
+From algebra: every ideal is contained in a maximal ideal; call it $M$.
+
+So there is $\phi \in \hat{A}$ having this maximal ideal as its kernel.
+
+Then $\phi(\lambda - a) = 0$ and $\phi(a) = \lambda$.
+
+\noindent
+Proposition: range$(\hat{a}) = \sigma_a(a)$.\\
+
+\noindent
+Let $A = C_b(\mathds{Z}^-)$ be the algebra of all bounded $\mathds{C}$-valued sequences $\| \|_\infty$.
+
+Let $I = C_\infty(\mathds{Z}^+)$ an ideal. (proper, norm-closed)
+
+Then $I$ is contained in a maximal ideal of A, so there is a $\phi \in \hat{A}$ with $\phi(I) = \{0\}$.
+
+Such maximal ideals are ``not constructive''.  (logician term)
+
+Consequence of the use of Zorn's Lemma to say that a maximal ideal exists.
+
+Let R be any unital ring, e.g. finite field, and $\mathscr{R} = \prod_{n=1}^\infty R$, $I = \bigoplus_{n=1}^\infty \mathscr{R}$.
+
+Then exists maximal ideal of R containing I, same difficulty/situation.
+
+I.e. does not have anything to do with Banach algebras.
+
+$\hat{A} = \beta \mathds{Z}^+$ the Stone-C\^{e}ch compactification of the positive integers\\
+
+\noindent
+The \textit{expected radius} of a is max$\{|\lambda|: \lambda \in \sigma(a)\}$
+
+Because of range$(\hat{a}) = \sigma(a)$ this is the same as $\|\hat{a}\|_\infty$.
+
+This definition works also for a non-commutative algebra A.
+
+But consequence applies only to commutative algebras. (Gelfand transform def'd)\\
+
+\noindent
+For A commutative Banach algebra with 1 and any $a, b \in A$.
+
+$r(ab) \leq r(a)r(b)$ and $r(a + b) \leq r(a) + r(b)$. ($ab \neq ba$ $\to$ can fail)
+
+\noindent
+Proof:
+
+$r(ab) = \|\hat{(ab)}\|_\infty = \|\hat{a}\hat{b}\|_\infty \leq \|\hat{a}\|_\infty\|\hat{b}\|_\infty = r(a)r(b)$.
+
+\noindent
+Note: the spectral radius is independent of the containing algebra.\\
+
+\noindent
+First form of ``holomorphic functional calculus''.
+
+\noindent
+Given $a \in A$ Banach algebra with 1.
+
+Let f be a function holomorphic on an open subset of $\mathds{C}$ containing $\{z : |z| \leq \|a\|\}$.
+
+Thus f has a power series expansion $f(z) = \sum_{n = 0}^\infty \alpha_nz^n$ that converges absolutely and uniformly on $\{z : |z| \leq \|a\|\}$.
+
+Thus can define $f(a) := \sum_{n = 0}^\infty\alpha_n a^n$.
+
+\noindent
+Proposition (proof next time): If $\lambda \in \sigma(a)$, then $f(\lambda) \in \sigma(f(a))$.
 
 \end{document}
