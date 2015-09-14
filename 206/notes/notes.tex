@@ -814,4 +814,121 @@ Thus can define $f(a) := \sum_{n = 0}^\infty\alpha_n a^n$.
 \noindent
 Proposition (proof next time): If $\lambda \in \sigma(a)$, then $f(\lambda) \in \sigma(f(a))$.
 
+\section{9/14}
+
+Let A be unital Banach algebra, let $a \in A$.
+
+\noindent
+Proposition: let f be analytic function with power series expansion that converges on some open subset of $\mathds{C}$ that contains $\{z : |z| \leq \|a\|\}$.  Then $f(a) = \sum \alpha_n a^n \in A$ and if $\lambda \in \sigma(a)$ then $f(\lambda) \in \sigma(f(a))$.
+
+\noindent
+Proof:
+
+$f(\lambda) = f(a) = \sum_{n=0}^\infty \alpha_n\lambda^n - \sum_{n=0}^\infty \alpha_na^n = \sum_{n = 1}^\infty \alpha_n(\lambda^n - a^n)$\\
+
+$ = \sum_{n = 1}^\infty \alpha_n(\lambda - a)(\lambda^{n - 1} + \lambda^{n - 2}a + \cdots + \lambda a^{n - 2} + a^{n - 1})$\\
+
+Call the telescoping sum $P_n(\lambda, a)$.\\
+
+Then $\|P_n(\lambda, a)\| \leq n\|a\|^{n - 1}$
+
+Continue, equals $(\lambda - a) \sum \alpha_n P_n(\lambda, a)$
+
+$f'(z) = \sum_{n = 1}^\infty \alpha_n n z^{n - 1}$, converges absolutely uniformly for $|z| \leq \|a\|$.
+
+$\sum_{n = 1}^\infty \alpha_nP_n(\lambda, a) = b \in A$.
+
+So $f(\lambda) - f(a) = (\lambda - a)b$
+
+If $(f(\lambda) - f(a))$ has inverse $c$, then $1 = (\lambda - a)bc$, so $\lambda - a)$ is invertible.
+
+Thus since $\lambda \in \sigma(a)$, $f(\lambda) = f(a)$ is not invertible so $f(\lambda) \in \sigma(f(a))$.
+
+\noindent
+This proof above is the beginnings of the spectral mapping theorem.\\
+
+Consider $f(z) = z^n$.
+
+Then if $\lambda \in \sigma(a)$ then $\lambda^n \in \sigma(a^n)$.
+
+Thus $|\lambda^n| \leq \|a^n\|$, so $|\lambda| \leq \|a^n\|^{1/n}$.
+
+Thus $|\lambda| \leq inf_n\{\|a^n\|^{1/n}\}$.
+
+\noindent
+Corollary: $r(a) \leq inf_n\{\|a^n\|^{1/n}\}$.
+
+This expression doesn't depend on the containing algebra.\\
+
+\noindent
+Consider the resolvant of a, at $\infty$.
+
+$R(a, z^{-1}) \frac{1}{z - a} = z(1 - az)\inv = z\sum_{n = 0}^\infty a^nz^n$ converges for $\|az\| < 1$ i.e. $|z| < \|a\|^{-1}$\\
+
+\noindent
+However since $R(a, z)$ is analytic for $|z| > r(a)$, $R(a, z^{-1})$ is analytic for $|z| < r(a)\inv$.
+
+Power series converges in the largest circle in which it's analytic.
+
+Should converge in the larger circle.  Note we are in Banach-algebra-valued functions.
+
+Right now we assume we don't know that, so use method from before.
+
+Composing with linear operators on the algebra.
+
+For any $\varphi \in A'$ the dual space of the algebra, $f_\varphi(z) = \varphi(z(1 - az)\inv)$.
+
+Then $f_\varphi$ is an ordinary holomorphic function, holomorphic in $\{z: |z| < r(a)\inv\}$.
+
+So the power series expansion of $f_\varphi$ about 0 converges for $|z| < r(a)\inv$.
+
+But the power series for $f_\varphi$ is $z\sum_{n = 0}^\infty \varphi(a^n)z^n$.
+
+This will converge for $|z| < r(a)\inv$.
+
+Thus for any $r > r(a)$, $z\sum_{n = 0}^\infty \varphi(a^n)z^n$ will converge absolutely and uniformly for $|z| \leq r\inv$.
+
+So there is $M_\varphi$ such that $|\phi(a^n)||z^n| \leq M_\varphi \forall n$, $\forall z$ with $|z| \leq r\inv$.
+
+So $|\varphi(a^n)r^{-n}| \leq M_\varphi$ for all $n$.
+
+For each $n$ define $F_n \in A''$ by $F_n(\varphi) = \varphi(a^n)r^{-n}$.
+
+Thus $|F_n(\varphi)| \leq M_\varphi$ for all $\varphi$.
+
+Recall the uniform boundedness theorem (consequence of the Baire category theorem).
+
+Says here that $\exists M$ such that $\|F_n\| \leq M$ $\forall n$.
+
+But it is clear that $\|F_n\| = \|a^n\|r^{-n}$.
+
+Thus $\|a^n\|r^{-n} \leq M$ i.e. $\|a^n\| \leq Mr^n \to \|a^n\|^{1/n} \leq M^{1/n}r$
+
+As $n \to \infty$, $M^{1/n} \to 1$.
+
+So the $\limsup_{n \to \infty} \|a^n\|^{1/n} \leq r$ $\forall r > r(a)$ (Box it!)
+
+Thus $\limsup_{n \to \infty}\|a^n\|^{1/n} \leq r(a)$.
+
+And we have $r(a) \leq \inf_n\{\|a^n\|^{1/n}\}$.
+
+\noindent
+Thus, Theorem: $r(a) = \lim\|a^n\|^{1/n}$.  In particular, this limit exists.
+
+(Gelfand's spectral radius formula).
+
+Just needed a unital Banach algebra over $\mathds{C}$.
+
+\noindent
+Corollary: $r(a)$ does not depend on the containing algebra.\\
+
+\noindent
+Corollary: Let A be a commutative Banach algebra with 1 over $\mathds{C}$.
+
+Then the Gelfand transform $a \mapsto \hat{a}$ from $A$ to $C(\hat{A})$ is isometric exactly if $\|a^2\| = \|a\|^2$ for all $a \in A$.
+
+\section{9/16}
+
+
+
 \end{document}
