@@ -837,6 +837,173 @@ A is isomorphic to NA by the mutliplication by n, since NA is free, A is free.
 
 \section{9/15}
 
+Abelian group, finitely generated.
 
+\noindent
+Last week:
+
+free group has to do with some correspondence to a $\mathds{Z}^n$
+
+subgroups of free finitely generated abelian groups are free and finitely generated
+
+subgroups of finitely generated abelian groups are finitely generated
+
+finitely generated, torsion free abelian group is a free abelian group
+
+recall torsion free: for all $n \geq 1$, mult by n, $n \cdot A$ is injective
+
+opposite A torsion: for all $a \in A$, $\exists n \geq 1$ such that $n \times a = 0$
+
+\noindent
+Example of a torsion abelian group: $\mathds{Q}/\mathds{Z}$
+
+element $p/q \mod{\mathds{Z}}, q \geq 1, p \in \mathds{Z}$; $q \times \frac{p}{q} = 0$ in $\mathds{Q}/\mathds{Z}$
+
+\noindent
+finitely generated abelian groups up to isomorphism
+
+A is a direct sum of a free part $\mathds{Z}^r$ and a torsion part (a direct sum of cyclic groups)
+
+\noindent
+Direct product of sets $A_i$ indexed by $S$: $$\bigoplus_{i \in S}A_i = \{f: S \to \cup_{i \in S}A_i : f(i) \in A_i\}$$
+
+where for all but finitely many i, $f(i) = 0$
+
+this is equivalent to the direct product when S is finite
+
+\noindent
+\textbf{Image 1}: a map from a $\bigoplus_{i \in S}A_i$ to B is determined by the mappings from the $A_i$
+
+The direct sum is a coproduct.
+
+\noindent
+\textbf{Image 2}: a map into a $\prod_{i \in S}A_i$ is determined by the mappings into the $A_i$
+
+The direct product is a product (in the categorical sense).
+
+\noindent
+$S$ countably infinite, $A_i = \mathds{Z}/2\mathds{Z}$
+
+$\bigoplus_{i \in s}A_i$ is countable, but $\prod_{i \in S}A_i$ is not
+
+\noindent
+Categories: products, coproducts, morphisms
+
+$Mor(?, B) = \prod Mor(A_i, B)$ $? =$ co-product
+
+The coproduct of sets is disjoint union.
+
+\noindent
+Abelian group A and subgroups X and Y
+
+we have inclusions from each into A
+
+$X \times Y = X \oplus Y \xrightarrow{h} A$, $(x, y) \mapsto x + y$
+
+$h$ is injective if every $a \in A$ is of the form $x + y$
+
+$h$ is one-to-one $\leftrightarrow$ you can't write $x + y = x' + y'$ unless $x = x'$, $y = y'$
+
+If true, say A is the direct sum of its submodules X and Y.
+
+\noindent
+Suppose A, $X \subset A$, $A/X$ is free (f.g. free): then X has a complement Y in A, $A \cong X \oplus A/X$
+
+$A \xrightarrow{\pi} A/X$
+
+$Y \subset A$, $\pi|_Y$ is an isom $Y \to A/X$.
+
+$\pi|_Y$ inj $\leftrightarrow Y \cap X = (0).$
+
+$\pi|_Y$ surjective: given $a + X \in A/X$ we can find $y \in Y$ s.t. $y + X = a + X$
+
+$x = y \cdot a \in X$
+
+$a = y \cdot x, x\in X, y\in Y$
+
+$A/X$ free, say $\cong \mathds{Z}^r$
+
+To map $A/X$ to $A$ is to choose images in $A$ of the generators of $A/X$ corresponding to the unit vectors of $\mathds{Z}^r$.
+
+There is a unique homomorphism $s: A/X \to A$ so that $s(q_i) = a_i$ for $i = 1, \cdots, r$
+
+$(\pi \cdot s)(q_i) = \pi(a_i) = q_i$
+
+$\pi \circ s = id_{A/X}$
+
+$Y =$ image of $S \subset A$.
+
+$\pi|_Y$ surjective.  $\pi(s(q)) = q$ for all $q \in A/X$
+
+$\pi|_Y$ is 1-1.  $/pi(s(q_0)) = 0$ but $s(q_0) = q_0$ so equals 0.
+
+\noindent
+A a finitely generated abelian group
+
+$X = A_{tors} = \{a \in A | na = 0$ for some $n \geq 1\}$.
+
+X f.g., tors $\to$ X finite abelian group.
+
+$A/X$ torsion free, f.g. $\to$ $A$ free $\approx \mathds{Z}^r$
+
+\noindent
+$A \approx \mathds{Z}^r \oplus A_{tors}$.  $A_{tors} = ???$
+
+it is a finite abelian group, let $B = A_{tors}$
+
+p prime, $B_p = \{b \in B | p^t \cdot b = 0$ for some $t \geq 0$\}.
+
+$B_P \subset B$.
+
+$\bigoplus_p B_p \xrightarrow{\iota} B$
+
+Proposition: $\iota$ is an isomorphism. (formal proof in Lang's book)
+
+\noindent
+Proof essence:
+
+suppose $60 \cdot b = 0$, $60 = 4 \cdot 3 \cdot 5 = 12 \cdot 5$
+
+$(12, 5) = 1$
+
+$1 = r5 + s12 = 25 - 24$
+
+$b = r \cdot 5 \cdot b + s \cdot 12 \cdot b$
+
+$12x = 0$, $5y = 0$
+
+Every element can be written as a sum of terms killed by a power of a prime
+
+\noindent
+$A = \mathds{Z}^r \oplus (\bigoplus_p B_p)$
+
+\noindent
+$\mathds{Z}^n \approx F \xrightarrow{\varphi} A$ $A$ finitely generated (by n elements)
+
+$Ker(\varphi) = X \subset F$.
+
+? understand A ! understand X inside F.
+
+\noindent
+Elementary division theorem
+
+There exists a basis of $F \approx \mathds{Z}^n$ s.t. ... $X = \bigoplus_{i \leq r}0 \oplus a_1\mathds{Z} \oplus a_2\mathds{Z} \oplus \cdots \oplus a_{n - r}\mathds{Z}$, $a_i \geq 1$
+
+$X \subset \mathds{Z}^n$
+
+$a_1 | a_2 | a_3 | \cdots | a_{n - r}$, increasing multiplicatively
+
+$A = F/X = \mathds{Z}^r \oplus \mathds{Z}/a_1\mathds{Z} \oplus \mathds{Z}/a_2\mathds{Z} \oplus \cdots$, $a_i | a_{i + 1}$
+
+A a finite abelian group $\to$ A is a direct sum of cyclic groups
+
+\noindent
+p prime, $\#A = p^4 = a_1a_2a_3\cdots$
+
+A is direct sum of cyclic groups of p-power order.
+
+$A \approx \mathds{Z}|p^i \oplus \mathds{Z}|p^j \oplus \mathds{Z}|p^k \oplus \mathds{Z}|p^l$ at most
+
+$i \leq j \leq k \leq l$, $i + j + k + l = 4$, $i, j, k, l, \geq 1$
 
 \end{document}
