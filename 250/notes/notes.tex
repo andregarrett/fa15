@@ -20,16 +20,16 @@
 
 \setcounter{secnumdepth}{0}
 
-\title{Math 250A}
+\title{\normalsizMath 250A}
 \date{\normalsize Fall 2015}
 
-
 \begin{document}
-\maketitle
+
+\noindent
+\textbf{Math 250A, Fall 2015}
 
 \section{8/27}
 
-\subsection{Group Action}
 \noindent
 A group G acts on a set S:
 
@@ -44,137 +44,71 @@ $(g g') \cdot s = g \cdot (g' \cdot s)$
 \noindent
 Alternatively,
 
-$\phi: G \to Perm(S)$
-
-$\phi$ is a homomorphism (gives the corresponding properties)
+$\phi: G \to Perm(S)$ is a homomorphism
 
 $(\phi(g))(s) = g \cdot s$
 
-\subsection{Examples of Group Actions}
-
 \noindent
-The trivial action:
+Examples
 
-$G \to Perm(S)$ where $g \mapsto e_{Perm(S)}$
+trivial action: $(\forall g)$ $g \mapsto e_{Perm(S)}$
 
-\noindent
 G acting on self by left/right translation, conjugation
 
-\noindent
-G acting on the set of subgroups of G by conjugation:
+G acting on the set of subgroups of G by conjugation: $g \cdot H = gHg^{-1} = \{ghg^{-1} | h \in H\}$
 
-$g \cdot H = gHg^{-1} = \{ghg^{-1} | h \in H\}$
+normal subgroup $N \trianglelefteq G$: all $g \in G$ fix $N$ under conjugation
 
-\noindent
-Normal subgroup $N \trianglelefteq G$
-
-G acting on N, $g \cdot n := gng^{-1} \in N$
+V vector space over a field K, GL(V) acts on V by $L \cdot v = L(v)$\\
 
 \noindent
-$G = S_3$ where S is the set of subgroups of G of order 2.
+The orbit of s, $O(s) := \{g \cdot s | g \in G\}$
 
-S = \{\{1, (1 2)\}, \{1, (1 3)\}, \{1, (2 3)\}\}
-
-\noindent recall
-$\sigma (a_1, a_2, a_3, ... a_k) \sigma^{-1} = (\sigma a_1, \sigma a_2, \sigma a_3, ... \sigma a_k)$
+constitutes an equivalence relation on S
 
 \noindent
-V vector space over a field K
+The stabilizer (isotropy group) of $s \in S$, $G_s := \{g \in G |g \cdot s = s\}$
 
-G = GL(V) = group of invertible linear maps $V \to V$
-
-e.g. if $V = K^n$ then G = GL(n, K)
-
-G acts on V (rather simply) by $L \cdot v = L(v)$
-
-\subsection{Orbits and Stabilizers}
+$G_s$ is closed under inverses: $g \in G_s \to g \cdot s = s \to g^{-1}gs = g^{-1}s \to s = g^{-1}s$
 
 \noindent
-Given G acting on S by $G \times S \to S$ there is an obvious relation on S:
+There exists a natural bijection $\alpha: G/G_s \to O(s)$, $gG_s \mapsto g \cdot s$
 
-s, s': $s \thicksim s' \leftrightarrow \exists g \in G, s' = gs $
+well-defined: $g_1G_s = g_2G_s \to \exists g \in G_s, g_1 = g_2g$, $\alpha(g_1G_s) = g_1s = g_2 g s = g_2 s = \alpha(g_2G_s)$
 
-the orbit of s is just the equivalence class of s under this relation
-
-i.e., $G \cdot s = \{g \cdot s | g \in G\}$
+injective: $\alpha(g_1G_s) = g_1 \cdot s = g_2 \cdot s = \alpha(g_2G_s) \to g_2^{-1}g_1 \cdot s = s$, $g_2^{-1}g_1 \in G_s$, so $g_1G_s = g_2G_s$\\
 
 \noindent
-The conjugacy classes of s are the orbits of S under the group action of G by conjugation
+Action under conjugation:
 
-the orbit of s, $O(s) = \{s\} \leftrightarrow s = gsg^{-1} \forall g$
+the conjugacy classes of a set are the orbits of the action
 
-$\leftrightarrow (\forall g)gs = sg$
+$O(g) = \{g\} \leftrightarrow g \in Z(G)$ the center of the group
 
-$\leftrightarrow s \in Z(G)$ the center of the group
-
-\noindent
-Example, for $G = S_3$
-
-the orbit of 1 is \{1\}
-
-the orbit of (1 2) = \{(1 2), (1 3), (2 3)\}
-
-the orbit of (1 2 3) = \{(1 2 3), (1 3 2)\}
-
-\noindent
-Stabilizer (isotropy group) of a given element $s \in S := G_s$
-
-$G_s = \{g \in G |g \cdot s = s\}$
-
-stabilizer is closed under inverses: $g \in G_s \to g \cdot s = s \to g^{-1}gs = g^{-1}s \to s = g^{-1}s$
-
-\subsection{large stabilizer$\leftrightarrow$ small orbit}
-
-\noindent
-there exists a natural bijection $\alpha: G/G_s \to O(s)$ defined $gG_s \mapsto g \cdot s$
-
-
-\noindent
-well-definition:
-
-if $g_1G_s = g_2G_s$
-then $\exists g \in G_s, g_1 = g_2g$
-and $\alpha(g_1G_s) = g_1 \cdot s = g_2 g s = g_2 s = \alpha(g_2G_s)$
-
-\noindent
-injectivity:
-
-if $\alpha(g_1G_s) = g_1 \cdot s = g_2 \cdot s = \alpha(g_2G_s)$
-then $g_2^{-1}g_1 \cdot s = s$, $g_2^{-1}g_1 \in G_s$ and $g_1G_s = g_2G_s$
-
+in a permutation group, $\sigma (a_1, a_2, a_3, ... a_k) \sigma^{-1} = (\sigma a_1, \sigma a_2, \sigma a_3, ... \sigma a_k)$
 
 \section{9/1}
 
-\subsection{Group Actions $\to$ Sylow theorems}
-
-Recall:
-
-the stabilizer $G_s = \{g \in G | g \cdot s = s\}$
-
-the orbit $O(s) = \{g \cdot s | g \in G\}$
-
-$G\slash G_s \cong O(s)$ and $\#(G\slash G_s) = \#O(s)$
-
 \noindent
-Let $\Sigma =$ set of representatives for $s \sim s' \leftrightarrow O(s) = O(s')$
+Let $\Sigma$ be a set of representative elements of the orbits of S.
+
+The index of a subgroup H is $(G : H) = \#(G/H)$
+
+For finite G, $(G:H) = \frac{\#G}{\#H}$ ($g \not \in H$, $\exists$ natural bijection $H \to gH$ (check text))
 
 $\#S = \sum_{s \in \Sigma}\#O(s) = \sum_s(G:G_s)$
 
-G finite $(G:G_s) = \frac{\#G}{\#G_s}$
-
-Mass formula $\#S = (\sum_s\frac{1}{\#(G_s)})(\#G)$
+defines a 'mass formula' $\#S = (\sum_s\frac{1}{\#(G_s)})(\#G)$
 
 \noindent
-A subgroup H of G acted upon by G has orbits, cosets, and trivial stabilizer.
+Let G act on a subgroup H by left translation.
 
-Hence from the above $\#H_s = \#H$, and $\#G = (G:H) \cdot \#H$.
+$\#H_s = \#H$ and from the above $\#G = (G:H) \cdot \#H$. 
 
-This is a statement of Lagrange's Theorem, $(G:H) = \frac{\#G}{\#H}$.
+this is a statement of Lagrange's Theorem, $(G:H) = \frac{\#G}{\#H}$.
 
 \noindent
-The kernel of the action $$K = \bigcap_{s \in S}G_s$$
-
-This is just the kernel of $G \xrightarrow{\phi} Perm(S)$.
+The kernel of the action $K = \bigcap_{s \in S}G_s$, which is just the kernel of $G \xrightarrow{\phi} Perm(S)$.
 
 \noindent
 We can relate the stabilizers of points in the same orbit.
@@ -198,10 +132,10 @@ So $g\inv G_{gs}g \subset G_s \to G_{gs} \subset gG_sg\inv$
 \noindent
 Thus, $gG_sg\inv = G_{gs} = G_{s'}$.
 
-The stabilizer of $s'=gs$ is a conjugate of the stabilizer of $s$.
+The stabilizer of $s'=gs$ is a conjugate of the stabilizer of $s$.\\
 
-\subsection{Applications}
 
+\noindent
 p : prime
 
 \noindent
@@ -902,5 +836,7 @@ Multiplication on A by a positive integer is injective.
 A is isomorphic to NA by the mutliplication by n, since NA is free, A is free.
 
 \section{9/15}
+
+
 
 \end{document}
