@@ -21,5 +21,7 @@
     "dsfont")
    (TeX-add-symbols
     "inv"
-    "n")))
+    "n"
+    "conj"
+    "sq")))
 

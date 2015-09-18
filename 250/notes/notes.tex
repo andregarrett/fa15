@@ -1006,4 +1006,267 @@ $A \approx \mathds{Z}|p^i \oplus \mathds{Z}|p^j \oplus \mathds{Z}|p^k \oplus \ma
 
 $i \leq j \leq k \leq l$, $i + j + k + l = 4$, $i, j, k, l, \geq 1$
 
+\section{9/17}
+
+A arbitrary finitely generated group that we want to understand
+
+Pick some generators $g_1, \cdots, g_n$
+
+Get a map from $Y = \mathds{Z}^n$ to $A$, has some kernel
+
+Considering $A = Y/X$, and how $X$ lies in $Y$ gives indication of structure of $A$
+
+Can think of $X$, $Y$, as lattices
+
+\noindent
+Theorem: $Y \cong \mathds{Z}^n$ exists $v_1, \cdots, v_n$ basis of Y
+
+such that in that basis $X = a_1\mathds{Z} \oplus a_2\mathds{Z} \oplus \cdots \oplus a_m\mathds{Z} \oplus 0 \oplus 0 \oplus \cdots \oplus 0.$
+
+$a_i \geq 1$, $a_1 | a_2, a_2 | a_3, \cdots a_{m - 1}|a_m$.
+
+\noindent
+Example: $A = \mathds{Z}/2\mathds{Z} \oplus \mathds{Z}/3\mathds{Z}$
+
+$Y = \mathds{Z} \oplus \mathds{Z}$
+
+$Y \supset X = 2\mathds{Z} \oplus 3\mathds{Z}$
+
+Not at all true that the integers divide each other.
+
+Puzzle.  Not the case as in the theorem.
+
+Need to prove to self that in some new basis, $Y = \mathds{Z} \oplus \mathds{Z}$, 
+
+and $X = \mathds{Z} \oplus 6/\mathds{Z}$, $Y/X = \mathds{Z}/6\mathds{Z}$.
+
+$a_1 = 1$, and $a_2 = 6$.\\
+
+\noindent
+$X \subset \mathds{Z}^n$.  Ask whether $X = (0)$ the zero submodule.  If so, simple.  So can assume nonzero.
+
+Consider linear forms, homomorphisms $\mathds{Z}^n \to \mathds{Z}$.
+
+For each $\lambda$ have $\lambda(X) \subset \mathds{Z}$.  e.g., $\lambda(X) = 3\mathds{Z}$.  Some $\lambda$s are nonzero since $X$ is nonzero.
+
+Choose $\lambda$ so that $\lambda(X)$ is maximal.
+
+Example: $X = 2\mathds{Z} \oplus 3\mathds{Z}$.  The first coordinate fn yields $2\mathds{Z}$, 
+
+the second coordinate fn yields $3\mathds{Z}$.
+
+But with $\lambda(u, v) = v - u$ we can get all of $\mathds{Z}$.
+
+possible to get $\lambda$s yielding images $2\mathds{Z}$, $3\mathds{Z}$, but not to get $\lambda$, $\lambda(X)$ containing both?
+
+In any case, take a maximal $\lambda$, fix that $\lambda$.
+
+$\lambda(X) = a\mathds{Z}$ maximal
+
+Pick $x \in X$ so that $\lambda(x) = a$.
+
+\noindent
+Claim: $\mu(x) = b$ is divisible by a for all $\mu \in Hom(\mathds{Z}^n, \mathds{Z})$
+
+$gcd(a, b) = g = ra + sb$
+
+$\tau := r\lambda + s\mu$, $\tau(x) = g$
+
+Now $\tau(X) \supset \mathds{Z}g \supset \mathds{Z}a$
+
+So $\tau(x) = \lambda(x)$, $\mathds{Z}g = \mathds{Z}a$
+
+$a | b$ for this reason of maximality
+
+\noindent
+``Executive session''
+
+R a commutative ring
+
+R-module: M
+
+1) abelian group
+
+2) endowed with a scalar multiplication $r \in R$, $m \in M$, $rm \in M$
+
+same as a vector space definition except $R$ is not assumed to be a field
+
+\noindent
+The context in which this elementary divisor theorem works.
+
+A a finitely generated abelian group replaced by a finitely generated R-module
+
+And there are 2 conditions on R.
+
+R is an integral domain: $rs = 0 \to r = 0$ or $s = 0$
+
+Ideals of R are principal $M \subset R \to M = R\cdot a$
+
+\noindent
+Digression: motivation.  Killer example.
+
+K a field, and R = K[t]. (very much like $\mathds{Z}$, can do Euclidean division by remainders)
+
+Have V and action of $K[t]$: (action of $K$ and action of $t$)
+
+V + action of K $\to$ K-vector space
+
+Action of t: $T: V \to V$ multiplication by t, $v \mapsto t \cdot v$, $T(v) = t \cdot v$
+
+Conversely, can form the corresponding polynomial in the linear transformation
+
+Principal Ideal domain.  Element of smallest degree, Euclidean algorithm.
+
+Suppose we have an R-module V.  This is a K-vector space V with action of t
+
+Multiplication by t gives a linear operator $T: V \to V$ (t commutes with K)
+
+\noindent
+Remark: if V is of finite dimension over K, then it is finitely generated as a K-module
+
+In particular, it's finitely generated over the ring $R = K[t]$
+
+\noindent
+A an abelian group.  If A is torsion, we are especially interested.
+
+\noindent
+Suppose we start with a linear operator on a finite-dimension vector space.
+
+There is a characteristic polynomial $h$ such that $h(T) = 0$.
+
+Cayley-Hamilton theorem.
+
+$h(t) \in R = K[t]$.  So $h(t) \cdot v = 0$.
+
+V is a torsion module because $h(t)$ annihilates V.
+
+\noindent
+Summary of what we have so far:
+
+$0 \neq X \subset Y = \mathds{Z}^n$, $\lambda: Y \to \mathds{Z}$, $\lambda(X)$ is maximal among $\mu(X)$s, $\lambda(X) = a\mathds{Z}$.
+
+Have shown that $a = \lambda(x)$, then $\mu(x)$ is divisible by a for all $\mu$.
+
+Take $\mu$ to be the $i^{th}$ coordinate function, $x = (x_1, \cdots, x_n) \in \mathds{Z}^n$, $a|x_i$ for all $i = 1, \cdots, n$, 
+
+$x = a \cdot y$, $y \in \mathds{Z}^n$, $\lambda(y) = \lambda(x)/a = 1$
+
+\noindent
+Think of Y: contains two submodules (subgroups)
+
+$Y \supset ker(\lambda)$, $Y \supset \mathds{Z} \cdot y$.
+
+Claim: $Y = ker(\lambda) \oplus \mathds{Z}y$
+
+1) each $z \in Y$ is: e.g. $(z - \lambda(z) \cdot y) + \lambda(z)y$
+
+2) if $my$ is in $ker(\lambda)$ then $0 = \lambda(my) = m\lambda(y) = m$ so $m = 0$, $my = 0$, intersection is 0
+
+\noindent
+The corresponding statement for X is that $X = (\ker(\lambda|_X)) \oplus \mathds{Z}_X$
+
+Kind of obvious that the intersection is 0.
+
+Each component is a submodule of the corresp. one in Y.
+
+$z \in X$, $\lambda(z) = m\lambda(x) = ma\lambda(y)$.
+
+$z = z - \lambda(z)y + \lambda(z)y$
+
+$\lambda(z)y = m\cdot a\cdot y = mx$
+
+$(z - \lambda(z)y) \in ker(\lambda) \cap X = ker(\lambda|_X)$
+
+\noindent
+$\mathds{Z}^n = Y = ker(\lambda) \oplus \mathds{Z}y$
+
+$Y \supset X = ker(\lambda|_X) \oplus \mathds{Z}ay$
+
+Apply inductively to portion of lower rank, having pulled off $\mathds{Z}a$
+
+\noindent
+$X = a_1\mathds{Z} \oplus a_2\mathds{Z} \oplus \cdots \oplus a_m\mathds{Z} \oplus 0 \cdots 0 \subset Y = \mathds{Z} \oplus \mathds{Z} \oplus \mathds{Z} \oplus \cdots \oplus \mathds{Z}$
+
+need to have some kind of divisibility among these $a$, need to be explained
+
+$a_1|a_2, \cdots$
+
+\noindent
+$Y = \mathds{Z} \oplus Y'$ and $X = a\mathds{Z} + X'$, working rightward
+
+start thinking of various linear maps $\lambda': Y' \to \mathds{Z}$, and how they restrict to X
+
+taking a maximal one, etc., etc.
+
+need to understand somehow that if we take this $\lambda'(X') = a'\mathds{Z}$
+
+we want $a | a'$, meaning $a'\mathds{Z} \subset a\mathds{Z}$, do this with some greatest common divisor argument
+
+\noindent
+Introduce $g = gcd(a, a')$ which we want to be $a$, write in form $ra + sa'$
+
+Need to find some interesting linear map from Y to Z
+
+Have a map $Y' \xrightarrow{\lambda'} \mathds{Z}$ and $\mathds{Z} \to \mathds{Z}$ the identity
+
+Both of these are linear maps that give linear maps $Y \to \mathds{Z}$.
+
+Choose $x' \in X'$ so that $\lambda'(x') = a'$
+
+Have $(a, 0)$ in X so that the second linear map (just taking the first coordinate)...
+
+...applied to $(a, 0)$ gives a
+
+\noindent
+Take $Y = \mathds{Z} \oplus Y'$
+
+$\mathds{Z} \oplus Y' \xrightarrow{f} \mathds{Z}$
+
+$\mathds{Z} \oplus Y' \to Y' \to Y' \xrightarrow{\lambda'} \mathds{Z}$, the composition of which call $g$
+
+$Y = \mathds{Z} \oplus Y' \ni (a, x') \in X$
+
+$f(a, x') = a$
+
+$g(a, x') = \lambda(x') = a'$
+
+$(rf + sg)(a, x') = G$, $rf + sg = \mu$
+
+\noindent
+$\mu(X) \supset \mathds{Z} \cdot G \supset \mathds{Z}a$
+
+Maximality $\to G = a$.
+
+Tells us that $a$ really divides $a'$ by maximality.
+
+\noindent
+The Y and the X really divide off into two separate worlds.
+
+$Y = \mathds{Z} \oplus Y'$ and $X = a\mathds{Z} \oplus X'$
+
+The world which we have already considered, and the trailing-off world of $Y'$ and $X'$
+
+New map $\mu$ defined on all of $Y$ and $X$, by leaving the first coordinate alone.
+
+\noindent
+Go back to the original example of the 2 and the 3.  $Y = \mathds{Z} \oplus \mathds{Z} \supset X = 2\mathds{Z} \oplus 3\mathds{Z}$
+
+$\lambda(u, v) = v - u$
+
+$x = (2, 3), \lambda(x) = 1$
+
+$a = 1, \lambda(X) = \mathds{Z}$, need to see how that line splits off in $\mathds{Z}$ and in X.
+
+$Y = \mathds{Z}\cdot y \oplus ker(\lambda)$
+
+$y = x/a = x$, $ker(\lambda) = \{(u, v) : u = v\} = \mathds{Z} \cdot (1, 1)$
+
+$Y = \mathds{Z} \cdot (2, 3) \oplus \mathds{Z} \cdot (1, 1) = \mathds{Z}^2$
+
+$X = \mathds{Z} \cdot (2, 3) \oplus \mathds{Z} \cdot (1, 1) \cap (2\mathds{Z} \oplus 3\mathds{Z})$
+
+so $X = \mathds{Z} \cdot (2, 3) \oplus 6 \cdot \mathds{Z}(1, 1)$
+
+$Y/X = \mathds{Z}/\mathds{Z} \oplus \mathds{Z}/6\mathds{Z} = \mathds{Z}/6\mathds{Z}$.
+
 \end{document}
