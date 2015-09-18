@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+
+\usepackage{mathptmx}
+\usepackage{mathpazo}
+\usepackage{mathrsfs}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{dsfont}
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\n}{\noindent}
+
+\topmargin -0.5in %topmargin=1in+\topmargin
+\textheight 9in % default is letter % so 11-2=9in
+\textwidth 6.5in % and 8.5-2in=6.5in
+\oddsidemargin 0in %left margin = % 1in + oddsidemargin
+\footskip 1cm % pagenumber to text
+
+\setcounter{secnumdepth}{0}
+
+\title{}
+\date{\normalsize Fall 2015}
+
+
+\begin{document}
+\noindent
+Knapp: Basic Real Analysis, Advanced Real Analysis
+
+
+
+\end{document}
