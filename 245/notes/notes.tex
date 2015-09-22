@@ -24,11 +24,10 @@
 
 
 \begin{document}
-\maketitle
+\noindent
+Math 245A Fall 2015
 
-\section{Chapter 2}
-
-\subsection{2.2 Groups}
+\subsection{Ch 2}
 
 A group G is a 4-tuple $G = (|G|, \mu, \iota, e)$ with
 
@@ -44,68 +43,36 @@ neutral element e
 A more common representation of a group uses symbols $G = (|G|, \cdot, ^{-1}, e)$
 
 \noindent
-(2.2.1) The conditions for a 4-tuple to be a group are as follows
-
-$(\forall x, y , z \in |G|)\;(x \cdot y) \cdot z =  x \cdot (y \cdot z)$
-
-$(\forall x \in |G|)\;e \cdot x = x = x \cdot e$
-
-$(\forall x \in |G|)\;x^{-1} \cdot x = e = x \cdot x^{-1}$
-
-\noindent
-(2.2.2) We may also say that a set $|G|$ with a map $|G| \times |G| \to |G|$ constitudes a group if
+We may also say that a set $|G|$ with a map $|G| \times |G| \to |G|$ constitutes a group if
 
 $(\forall x, y , z \in |G|)\;(x \cdot y) \cdot z =  x \cdot (y \cdot z)$
 
 there exists $e \in |G|$ such that $(\forall x) e \cdot x = x = x \cdot e$ and $(\forall x \in |G|)(\exists y \in |G|) y \cdot x = e = x \cdot y$
 
 \noindent
-(2.2.1) consists of identities (universally quantified equations) and (2.2.2) does not
+However, unlike the first, does not consist of identities (universally quantified equations)
 
-note: universal quantification is a "for all" quantification
-
-\noindent
-(Exercise 2.2:2)
-
-(i)
-
-(ii)
+note: universal quantification $\leftrightarrow$ "for all"
 
 \noindent
-(Exercise 2.2:3)
+An I-tuple of elements of X, $(x_i)_{i \in I}$ is an $f: I \to X$
+
+The set of all such $f$ is denoted $X^I$\\
 
 \noindent
-
-\subsection{2.3 Indexed Sets}
-
-An \textit{I-tuple} of elements of X, $(x_i)_{i \in I}$ is formally defined as an $f: I \to X$
-
-The set of all functions from I to X is denoted $X^I$
-
-\subsection{2.4 Arity}
-
-\noindent
-The \textit{arity} of an operation is, e.g., 1 if unary, 2 if binary, etc.
+The arity of an operation (e.g. 1 if unary, 2 if binary, etc.)
 
 An I-ary operation on S is a map $S^I \to S$
-
-Group: a set, a binary operation, a unary operation, and a distinguished element
 
 \noindent
 Can think of the identity as a 0-ary/zeroary operation of the structure
 
 $S^0$ has exactly one map, $\emptyset \to S$, so a map $S^0 \to S$ is determined by one element
 
-Note these are not strictly identical since one is a map and the other the element itself
-
-But they are in 1-to-1 correspondence and give equivalent information
-
-\subsection{2.5 Group-theoretic terms}
+Note that when $S = \emptyset$ there is a unique n-ary operation for $n > 0$ but \textit{no} 0-ary operation\\
 
 \noindent
-A \textit{group-theoretic relation} in $(\eta_i)_I$ is an equation $p(\eta_i) = q(\eta_i)$ holding in G
-
-p and q are are \textit{group-theoretic terms} which we formally define
+A group-theoretic relation in $(\eta_i)_I$ is an equation $p(\eta_i) = q(\eta_i)$ holding in G
 
 \noindent
 The terms in the elements of X under the formal group operations $\mu, \iota, e$ form a set T:
@@ -121,7 +88,7 @@ that is, T has no proper subset containing $symb_T(X)$ and closed under those op
 \noindent
 We can represent these terms, for groups, using strings of symbols
 
-We need full parentheses notating order of operations to ensure disjoint images
+We need full parentheses notating order of operations to ensure disjoint images\\
 
 \noindent
 A set-theoretic approach dispenses with strings and allows for infinite arities
@@ -137,9 +104,7 @@ for $s \in T$, $\iota_T(s) := (^{-1}, s)$
 
 and $e_T = (e)$
 
-and by set theory, no element can be written as such an n-tuple in more than one way
-
-\subsection{2.6 Evaluation}
+and by set theory, no element can be written as such an n-tuple in more than one way\\
 
 \noindent
 Given a set map $f: X \to |G|$ for a group G
@@ -163,7 +128,7 @@ Alternatively, fixing $s \in T$ gives a map $s_G: |G|^X \to |G|$
 
 these represent substitution into s
 
-these $s_G$ are the \textit{derived n-ary operations} (aka \textit{term operations}) of G
+these $s_G$ are the derived n-ary operations (aka term operations) of G
 
 distinct terms can induce the same derived operation
 
@@ -176,23 +141,10 @@ conjugation $\xi^{\eta}\ = \eta^{-1}\xi\eta$ (binary)
 
 commutator $[\xi, \eta] = \xi^{-1}\eta^{-1}\xi\eta$ (binary)
 
-squaring (unary)
-
-$\delta$ (Exercise 2.2:2)
-
-$\sigma$ (Exercise 2.2:3)
-
-\subsection{Class Question \#1}
-
-end of Section 2.6:
-Unimportant
-
-The last example of a derived operation on groups cited the trivial ``second component'' function, $p_{3, 2}(\xi, \eta, \zeta) = \eta$ induced by $y \in T_{\{x, y, z\}, ^{-1}, \cdot, e}$.  I wasn't entirely sure how this derived operation would be represented as an element of $T_{\{x, y, z\}, ^{-1}, \cdot, e}$.  Would $p_{3, 2}$ be the element $(*, y)$ (in the set-theoretic notation)?
-
-\subsection{Terms in other families of operations}
+squaring (unary)\\
 
 \noindent
-An \textit{$\Omega$-algebra} is a system $A = (|A|, (\alpha_A)_{\alpha \in |\Omega|})$
+An $\Omega$-algebra is a system $A = (|A|, (\alpha_A)_{\alpha \in |\Omega|})$
 
 here $|A|$ is some set, and for each $\alpha \in |\Omega|$, $\alpha_A : |A|^{ari(\alpha)} \to |A|$
 
@@ -200,101 +152,22 @@ note that often people will use $n(\alpha)$ (rather than $ari(\alpha)$) for the 
 
 e.g. for a group, $|\Omega| = \{\mu, \iota, e\}$, $ari(\mu) = 2$, $ari(\iota) = 1$, and $ari(e) = 0$
 
-\section{Lecture 8/28}
+\subsection{Ch 3}
 
-\subsection{Operations, terms, algebra}
-
-revisit the difficulty with distinguished elements as a zeroary operation when dealing with the empty set
-
-the idea behind distinguishing between terms is e.g. to have distinct objects that we can compare
-
-$(x \cdot y) \cdot z \neq x \cdot (y \cdot z)$ as terms, allowing
-
-$(x \cdot y) \cdot z = x \cdot (y \cdot z)$ to be a useful statement about groups
+\subsection{Ch 4}
 
 \noindent
-set-theoretic approach, infinite arity
-
-$(\mu, s, t)$
-
-$(\mu, (s, t))$
-
-$\alpha_T: T^X \to T$ using $(\alpha, (S_X)_{x \in X})$
-
-$X$ here shall be some cardinal
-
-\subsection{Next reading: free groups}
-
-\noindent
-$x, y, z \in G$ and $\xi, \eta, \zeta \in H$
-
-when can we have a homomorphism $G \to H$
-
-if and only if the relations that hold in G hold in H for the corresponding elements
-
-\subsection{Exercises in today's reading}
-
-\noindent
-2.7:3
-
-can't have $s( , , , , ,...) = s'( , , , , ...) = s''( , , , , ...)$ where the s'' term is the same as the s term
-
-\noindent
-2.2:2 and 2.2:3
-
-$\delta_G(x, y) = xy^{-1}$ and $\sigma_G(x, y) = xy^{-1}x$
-
-$G = \mathds{Z}$ knowledge of the identity
-
-$x *+ y = (x - 1) + (y - 1) + 1$
-
-\section{Chapter 3}
-
-\subsection{3.1 Motivation}
-
-
-
-\subsection{3.2 The logician's approach: construction from terms}
-
-\subsection{3.3 Free groups as subgroups of big enough direct products}
-
-\subsection{3.4 The classical construction: groups of words}
-
-
-\subsection{Class Question \#2}
-
-near 3.3.1
-Important
-
-The question concerns the set of all groups G (I'll call it X) whose underlying sets $|G|$ are subsets of S, some countably infinite set.  I wanted to clarify for myself why for any countable group H we can find an isomorphism from one of these groups to H.  Is it sufficient to justify the statement by declaring that X contains all countable groups up to isomorphism and hence for some $G' \in X$, $G'$ is isomorphic to H?  For some reason this feels like incomplete justification to me, and there may be some set-theoretic considerations that may need to be explicated more clearly.
-
-\section{Lecture 8/31}
-
-\subsection{Free Groups: the motivation}
-
-\noindent
-factor-set: given a set and an equivalence relation, the set of equivalence classes
-
-\subsection{... as subgroups of big products}
-
-\noindent
-If G generated by an X-tuple of elements then has cardinality $\leq max(card(X), \aleph_0)$
-
-
-\section{Chapter 4.1-4.5}
-
-\subsection{4.1 The subgroup and normal subgroup of G generated by $S \subset |G|$}
-
+the subgroup and normal subgroup of G generated by $S \subset |G|$
 
 $\langle S \rangle$ contains S and is contained in every subgroup which contains S
 
 $\forall x \in \langle S \rangle$ $x = e$ or $x = \prod s_i$, $s_i \in S$ or $s_i^{-1} \in S$
 
-$\langle S \rangle$ is also the image of the map into G of the free group F on S induced by the inclusion map $S \to |G|$
+is the image of the map into G of the free group F on S induced by the inclusion $S \to |G|$
 
-There is additionally a least \textit{normal} subgroup of G containing S.
+there is additionally a least normal subgroup of G containing S.\\
 
-\subsection{4.2 Imposing relations on a group. Quotient groups}
+\noindent relations on a group/quotient groups
 
 Quotient groups: homomorphisms causing certain elements to fall together.
 
@@ -331,9 +204,10 @@ $(\forall s \in |S|, g \in |G|)$ $a(gs) = g a (s)$
 \noindent
 The set of left cosets of H in G is $|G \slash H|$ and a typical coset $[g] = gH$.
 
-Then $|G\slash H|$ is the underlying set of a left G-set $G\slash H$ by $g[g'] = [gg']$
+Then $|G\slash H|$ is the underlying set of a left G-set $G\slash H$ by $g[g'] = [gg']$\\
 
-\subsection{4.3 Groups presented by generators and relations}
+\noindent
+groups presented by generators and relations
 
 Let X be a set, T the set of all group-theoretic terms in X, and $R \subset T \times T$.
 
@@ -371,69 +245,6 @@ Take a canonical map $q: F \to F \slash N$.
 Then the pair $(F\slash N, q \circ u_F)$ has the desired universal properties.
 
 As a consequence of the universal properties of free and quotient groups.
-
-\subsection{Class Question \#3}
-
-3.3 proof of a universal group satisfying relations
-Important
-
-I am unsure about the maps in the diagram describing the construction of the pair $(F\slash N, qu_F)$ using the free group on X and an appropriate quotient group.  The map $q: F \to G$ is a map between groups as indicated in the right-sided diagram, whereas it is composed to form a set map $u : X \to |G|$ as in the left-hand diagram.  What sort of distinctions between q as set-map and q as group-map do I need to consider here?  I feel that I might not be clearly expressing the source of my confusion, so I apologize for that, but maybe my question betrays some fundamental misunderstanding about the nature of free groups or quotient groups to be cleared up.
-
-P.S. I do not yet see how to show X contains all countable groups up to isomorphism, but hope to spend some more time thinking about it.
-
-
-\subsection{4.4 Abelian groups, free abelian groups, and abelianizations}
-
-\subsection{4.5 The Burnside Problem}
-
-\section{Chapter 4.6-4.9}
-
-\subsection{Class Question \#4}
-
-4.6.5 Proposition, use of the van der Waerden stratagem
-Unimportant
-
-What are the fundamental characteristics of groups of permutations on a set such as A that make them so useful for proofs that certain sets of reduced forms are composed of distinct elements?
-
-\section{9/4}
-
-\section{Chapter 4.10-4.12}
-
-\subsection{Class Question \#5}
-
-4.12.1 Lemma, paragraph immediately preceding
-Pro forma
-
-What does it mean to assume that having ``chosen'' a way to calculate in free abelian groups and having ``chosen'' a way of calculating in free monoids, we can now calculate in free rings?
-
-We have previously demonstrated a normal form for free abelian groups, with a consistent method of performing operations on terms in that normal form to obtain a new terms also in normal form, and similarly for free monoids.  The statement means simply that, in developing a similar procedure for terms in a free ring, since a ring structure may be explicitly defined in terms of monoid and abelian group structure, we may make prior use of this previous knowledge of free abelian groups and free monoids, and avoid reinventing the wheel, so to speak.
-
-\section{9/9}
-
-\section{Chapter 4.13-4.17}
-
-\subsection{Class Question \#6}
-
-Corollary 4.17.4
-Pro forma
-
-Why is it that the cardinality of the closure $v(X)$ is bounded by $2^{2^{card(X)}}$.
-
-The prior lemma distinguishes the set of open neighborhoods $N(k_1)$ of $k_1$ and the set of open neighborhoods $N(k_2)$ of $k_2$, distinct points in the closure of $v(X)$, that is, for $k_1 \neq k_2$, $N(k_1) \neq N(k_2)$ and $v^{-1}(N(k_1)) \neq v^{-1}(N(k_2))$.  Now, an open neighborhood N of $k \in \overline{v(X)}$ is a subset of the closure, so that its inverse image is a subset of X, hence $v^{-1}(N) \in \textbf{P}(X)$.  Hence the set of open neighborhoods of a given $k \in \overline{v(X)}$ is a subset of the set of subsets of X, i.e. $v^{-1}(N(k)) \in \textbf{P}(\textbf{P}(X))$.  Since these are distinct for each k, we have an injection $\overline{v(X)} \hookrightarrow \textbf{P}(\textbf{P}(X))$, which has cardinality $2^{2^{card(X)}}$.
-
-\subsection{Class Question \#7}
-
-Exercise 5.1:2
-Unimportant
-
-The given exercise has been assigned as a 2 + 5 problem on the assignment sheet, which bewilders me as both portions of the question seem straightforward to me.  I assume there are some complications in the proof of the converse, showing that a transitive antireflexive binary relation $<$ is induced by a unique partial ordering $\leq$, that I am completely missing, but for the moment, it appears to me that this unique partial ordering simply contains $x \leq y$ for each pair $x < y$ in the partial strict ordering as well as $x \leq x$ for all $x$ in the set X, and that there isn't much else to prove.  What's the major issue that I am overlooking here?
-
-\subsection{Class Question \#8}
-
-Lemma 5.3.4
-Unimportant
-
-The lemma states ``Let r [be] a function associating to every pair $(x, f_{<x})$ such that $x \in X$,''.  Is this clause incomplete or am I somehow misreading this statement of the lemma?
 
 \subsection{Class Question \#9}
 

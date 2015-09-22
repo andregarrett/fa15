@@ -1269,4 +1269,188 @@ so $X = \mathds{Z} \cdot (2, 3) \oplus 6 \cdot \mathds{Z}(1, 1)$
 
 $Y/X = \mathds{Z}/\mathds{Z} \oplus \mathds{Z}/6\mathds{Z} = \mathds{Z}/6\mathds{Z}$.
 
+\section{9/22}
+
+Rings R, A ($=$ 'anneau')
+
+definition: whether or not $1 \in R$ is can vary
+
+Lang: $1 \in R$, Hungerford: $1 \not \in R$
+
+In the former, $2\mathds{Z}$ is not a ring, in the latter, it is
+
+gold standard of a ring, the ring of integers $\mathds{Z}$
+
+\noindent
+Ring: has an addition and a multiplication, modeled off of the integers
+
+under +, ring is an abelian group with distinguished element 0
+
+associative product (not necessarily commutative) with distinguished element 1
+
+distributive laws $(x + y)z = \cdots$ and $z(x + y) = zx + zy$
+
+\noindent
+Example, given A an abelian group, the ring of endomorphisms
+
+$R = End(A) = Hom(A, A)$, $(f + g)(a) = f(a) + g(a)$, $fg = f \circ g$
+
+End(A) can be viewed as a ring of matrices under matrix multiplication if $A = \mathds{Z}^n$
+
+\noindent
+Example, any field e.g. $\mathds{Q}, \mathds{R}, \mathds{C}, \mathds{Z}/p\mathds{Z}, \mathds{Q}(i) = \{a + bi | a, b \in \mathds{Q}\}$
+
+Fields are commutative, and non-zero elements have multiplicative inverses
+
+\noindent
+To be explored: X a set, $R = P(X)$, $r + s =$ symmetric difference, $r \cdot s$ = intersection
+
+\noindent
+Hamilton quaternions over $\mathds{R}, \mathds{Q}$, $a + bi + cj + dk$ a ``skew field''
+
+An inverse is $\frac{a - bi - cj - dk}{a^2 + b^2 + c^2 + d^2}$
+
+\noindent
+G a group (written multiplicitavely), take $\mathds{Z}[G] = \mathds{Z}\langle G \rangle$ the free abelian group on G
+
+elements $\sum n_g \cdot g, n_g \in \mathds{Z}$ the sum finite
+
+can multiply
+
+$$(\sum n_g \cdot g)(\sum m_h \cdot h) = \sum_{x \in G} (\sum_{g, h, gh= x}n_g m_h)x$$
+
+$$c_x = \sum_g n_g m_{g^{-1}x}$$
+
+a convolution product
+
+\noindent
+$G = \{x^i | i \in \mathds{Z}\}$, $x^ix^j = x^{i + j}$
+
+typical element finite $\sum_i n_i x^i$, $n_i \in \mathds{Z}$
+
+e.g. $x^{-3} + 2x^{-2} + 7x^{-1} + 9x^{100}$ a polynomial in $x, x^{-1}$\\
+
+\noindent
+Ring Homomorphisms
+
+is a homomorphism of abelian groups, and respects the multiplication operation
+
+$\varphi(xy) = \varphi(x)\varphi(y)$, note $\varphi(1) \neq 1$ is possible
+
+$ker(\varphi) = \{r \in R | \varphi(r) = 0\}$
+
+Satisfies the property for being an ideal: $x \in R, r \in ker(\varphi) \to xr, rx \in ker(\varphi)$
+
+\noindent
+Ideals
+
+$xI \subset I$ left-sided , $Ix \subset I$ right-sided, 2-sided (bilateral)
+
+exact analogues of normal subgroups
+
+\noindent
+two-sided ideal: well-defined quotient multiplication
+
+$(r + I) \cdot (s + I) := rs + I$
+
+$(r + I)(s + I) = r(s + i) + I = rs + ri + I$ and similarly
+
+$(r + I)(s + I) = (r + i)s + I = rs + is + I$
+
+ideals are kernels of ring homomorphisms
+
+\noindent
+Principal Ideal $I = R \cdot a$ for some $a \in R$
+
+the Ideal that $a$ generates, $(a)$ (minimal ideal containing $a$)
+
+is exactly all multiples of $a$ in $R$
+
+for subset X, intersection of all ideals containing X (intersections of ideals are ideals)
+
+if $X = \{a_1, \cdots, a_t\}$, the ideal is $(a_1, \cdots, a_t)$
+
+\noindent
+the ideals of $\mathds{Z}$ are the additive subgroups of $\mathds{Z}$, $a\mathds{Z}$, $a \geq 0 = (a)$
+
+an ideal of R is an additive subgroup with ideal property
+
+\noindent
+K field, $R = K[x]$
+
+euclidean division
+
+all ideals of $R$ are principal
+
+\noindent
+$R = K[x, y]$ polynomials in x and y
+
+$R \xrightarrow{\varphi} K$, $f(x, y) \mapsto f(0, 0) \in K$ (the constant term of the polynomial)
+
+$(x, y) = ker(\varphi) = \{$polynomials with 0 constant term$\}$.
+
+this is \textit{not} principal
+
+elements look like $0 + ax + by + cx^2 + \cdots$
+
+\noindent
+Prime ideal $P \subset R$ shall be:
+
+proper
+
+if $rs \in P$ then $r \in P$ or $s \in P$
+
+If $P$ divides $rs$ then $P$ divides $r$ or $s$
+
+\noindent
+Prime ideals of $\mathds{Z}$
+
+$(0)$, $(p) = p\mathds{Z}$, p prime.
+
+\noindent
+If $\varphi: R \to S$ is a ring homomorphism and $S$ contains a prime ideal $P$
+
+then $\varphi^{-1}(P)$ is a prime ideal of $R$
+
+\noindent
+Proof:
+
+Let $x, y \in R$ and suppose $xy \in \varphi^{-1}(P) = P'$
+
+then $\varphi(x)\varphi(y) = \varphi(xy) \in P \to \varphi(x) \in P$ or $\varphi(y) \in P$ $\square$
+
+\noindent
+Corollary: Suppose $\varphi: R \to S$ a non-trivial homomorphism of rings and $(0)$ is prime in $S$
+
+Then the kernel of $\varphi$ is prime.\\
+
+\noindent
+S is called an integral domain if 
+
+$(0) \neq S$
+
+if $xy = 0$ then $x = 0$ or $y = 0$
+
+\noindent
+Proposition: $P \subset R$ is a prime ideal $\leftrightarrow R/P$ is an integral domain\\
+
+\noindent
+Maximal ideal $M \subset R$ if $M \neq R$ and $M \subset M'$ a proper ideal, $M = M'$
+
+\noindent
+Proposition: M is maximal $\leftrightarrow$ $R/M$ is a field
+
+\noindent
+Example: $\mathds{Z} \supset a\mathds{Z}$ maximal $\leftrightarrow a$ is prime
+
+\noindent
+Corollary: Maximal ideals are prime
+
+Pf: Fields are integral domains.
+
+\section{9/24: Midterm}
+
+\section{9/29}
+
+
 \end{document}

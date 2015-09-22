@@ -25,59 +25,89 @@
 
 
 \begin{document}
-\maketitle
+\noindent
+CS 188, Fall 2015\\
 
-\section{8/27}
-
-\textit{Rationality} is defined in terms of achieving maximum utility by some pre-defined metric or set of goals/intentions.  Rationality depends only on the usefulness of the choice reached rather than on any aspect of the process that led to that choice.  For example, a rational process for playing tic-tac-toe could be formed simply by creating a table for all game states; this would not have consist of any decision process whatsoever.
-
-AI, economics, statistics, operations research, etc. assume utility to be \textbf{exogenously specified}.  The difficulty of competent machines is a question of value misalignment.
-
-\section{9/1}
-
-\textit{Sensors} are preceptors of the environment and \textit{actuators} are methods by which it manipulates the environment through actions.
-
-An \textit{agent function} maps from percept histories to actions.
-
-$$f: P^* \to A$$
-
-An \textit{agent program} I runs on some machine M to implement f:
-
-$$f = Agent(I, M)$$
-
-Not all agent functions can be implemented by some agent program.  E.g. halting problems, NP-hard problems, chess (combinatorically large amounts of information needed to process)
-
-Use a \textit{performance measure} to evaluate effectiveness.  Care must be taken to ensure that the performance measure accurately measures the execution of the task designed.  A performance measure is a measure on the \textit{environment}.
-
-A \textit{rational agent} maximizes the expected value of the performance measure.  Rationality depends on prior knowledge of environment, action, previous percepts.
-
-PEAS model: performance measure, environment, actuators, sensors.
-
-An \textit{autonomous} agent has behavior determined by its own percepts and experience, with the ability to adapt and learn, without depending solely on built-in knowledge.
+\subsection{Intelligent Agents}
 
 \noindent
-Environment characteristics:
+Rationality: achieving maximum utility by some pre-defined metric or set of goals/intentions.
 
-observable (fully/partial): the proportion of the environment the agent's sensors give it access to
+depends on the usefulness of the choice and not on the process that led to that choice
 
-number of agents
+e.g., rational process for playing tic-tac-toe by tabulating game states
 
-deterministic/stochastic: the degree to which the environment's state may fluctuate, given a particular action (an environment which is deterministic, except for the actions of other agents, is \textit{strategic})
-
-static/dynamic: the degree to which the environment changes while the agent is deliberating
-
-discrete/continuous, known/unknown (e.g. don't know the dynamics of the system, but still try to maximize utility)
+has no decision process, but acts rationally
 
 \noindent
-Effects of the environment on agent design:
+An agent has sensors which take in percepts and actuators which effect actions
 
-partially observable $\to$ agent requires memory
+a percept is a set of perceptual inputs at a fixed point in time
 
-multi-agent $\to$ randomness may be necessary
+a percept sequence is composed of percepts
 
-static $\to$ can utilize time to implement a rational decision
+\noindent
+An agent function is $f: P^* \to A$ where $P^*$ is the percept sequence and $A$ the set of actions
 
-continuous time $\to$ will have some continuously operating controller
+the agent program is the specific architecture which implements this function
+
+not all agent functions can be implemented by some agent program
+
+e.g. halting problems, NP-hard problems, ``too-large'' problems (e.g. chess)
+
+\noindent
+Performance measure: an objective criterion for the success of behavior of an agent
+
+\noindent
+Rational agent: maximizes expected performance measure by its actions
+
+given the prior knowledge and percept sequence available to it
+
+e.g. vacuum world: 2 squares, could be dirty or clean
+
+action function: suck if dirty, move if clean
+
+under the measure of most clean squares/time period, this is rational
+
+if we seek to minimize movements as well, this is irrational
+
+\noindent
+Autonomy: the ability to function beyond the prior knowledge of the designer\\
+
+\noindent
+The task environment: performance measure, environment, actuators, and sensors
+
+partially vs. fully observable (perceive all aspects relevant to choice of action)
+
+stochastic vs. deterministic (next state a function only of current state, action)
+
+strategic: deterministic but for the actions of other agents
+
+episodic vs. sequential (current decision could affect future decisions)
+
+static vs. dynamic (environment can change while agent deliberates)
+
+semidynamic: environment doesn't change with time but performance score does
+
+semidynamic e.g. chess with a clock
+
+discrete vs. continuous (can apply to state, time, percepts/actions)
+
+single vs. multiagent: e.g. competitive multiagent, cooperative multiagent\\
+
+Agent structure
+
+the agent program only takes in the current percept
+
+the agent function maps from the entire percept history
+
+\noindent
+Simple reflex agents
+
+
+
+\noindent
+\textbf{This is where we at.}\\
 
 \noindent
 Agent types (increasing generality/complexity):
@@ -99,13 +129,13 @@ Planning agents predict consequences of actions $\to$ transition model.
 
 Deliberativeness: can generate a complex plan or a simple one and correct rapidly.
 
-A \textit{search problem} consists of a state space, a set of allowable actions, a transition model (corresponding to results), a step cost function, a $t_0$ and a goal test.
+A search problem consists of a state space, a set of allowable actions, a transition model (corresponding to results), a step cost function, a $t_0$ and a goal test.
 
 Solution: ${A_n}$ that transforms a $t_0$ into a goal state.
 
-A \textit{real world state} is highly general.
+A real world state is highly general.
 
-A \textit{search state} is specific to the problem, focusing on the vital details of the environment.
+A search state is specific to the problem, focusing on the vital details of the environment.
 
 Can describe the state space using a directed graph.  Note that each state appears only once in the graph.  Edges can have costs associated with them.
 
@@ -127,9 +157,9 @@ Heuristic estimates how close a state is to the goal
 
 Greedy search expands nodes based upon a given heuristic
 
-Uniform-cost search orders by path cost, i.e. \textit{backwards cost}, g(n)
+Uniform-cost search orders by path cost, i.e. backwards cost, g(n)
 
-Greedy search orders by proximity to goal, i.e. \textit{forward cost}, h(n)
+Greedy search orders by proximity to goal, i.e. forward cost, h(n)
 
 An $A^*$ algorithm orders by $f(n) = g(n) + h(n)$
 
