@@ -85,6 +85,8 @@ the conjugacy classes of a set are the orbits of the action
 
 $O(g) = \{g\} \leftrightarrow g \in Z(G)$ the center of the group
 
+$Z(G) = \{g \in G : xg = gx$ $\forall x \in G\}$
+
 in a permutation group, $\sigma (a_1, a_2, a_3, ... a_k) \sigma^{-1} = (\sigma a_1, \sigma a_2, \sigma a_3, ... \sigma a_k)$
 
 \section{9/1}
@@ -94,7 +96,7 @@ Let $\Sigma$ be a set of representative elements of the orbits of S.
 
 The index of a subgroup H is $(G : H) = \#(G/H)$
 
-For finite G, $(G:H) = \frac{\#G}{\#H}$ ($g \not \in H$, $\exists$ natural bijection $H \to gH$ (check text))
+For finite G, $(G:H) = \frac{\#G}{\#H}$ ($g \not \in H$, $\exists$ natural bijection $H \to gH$)
 
 $\#S = \sum_{s \in \Sigma}\#O(s) = \sum_s(G:G_s)$
 
@@ -144,26 +146,21 @@ p-group: a finite group G, $\#G = p^n, n \geq 1$\\
 \noindent
 ``A p-group has a non-trivial center''
 
-Recall: the center $Z(G) = Z = \{g \in G | gs = sg \forall s\in G\}$.
-
-Since $gs = sg \to s = gsg^{-1}$, will be useful to consider action on self by conjugation.
+Notation: $S^G$ is the set of points in S fixed under the group action. ($gs = s$ $\forall g \in G$)
 
 \noindent
-G a p-group, S a finite set.  Then $\#O(s) = \frac{\#G}{\#G_s} = \frac{p^n}{p^k}$.
+Let G act on itself by conjugation ($S = G$).  Then $S^G = Z(G)$.
 
-\noindent
-Two cases:
+For $s \in S (= G)$, $G_s$ is a subgroup, and its order divides the order of the group, $p^n$.
 
-1) $\#O(s) = 1$, s is fixed by G, $s \in S^G$ (set of fixed points of S)
-
-2) ($k < n$), thus $\#O(s)$ is divisible by p.
+Either $O(s)$ is trivial, and $s \in S^G = Z(G)$, otherwise $\#(O(s)) = p^k$ for $k > 0$
 
 \noindent
 $\#S =$ sum of \# of elements in the orbits $\equiv_{mod p} \#$ of orbits of size 1 $= \#(S^G)$.
 
-Take S = G, with action $g: s \mapsto gsg^{-1}$.  Then $S^G = Z(G)$.
-
 $\#Z(G) \equiv_{mod p} \#(S^G) \equiv_{mod p} \#S = \#G = p^n \equiv_{mod p} 0$.
+
+$Z(G)$ cannot be 1, since the identity of the group is in the center.
 
 Thus, the order of the center is divisible by p, and must be non-trivial.\\
 
@@ -174,13 +171,15 @@ Let $S = G\slash H$; $\#(S) = (G : H) = p$, and let G act on S by left translati
 
 This induces $\varphi: G \to S_P$; recall $\#S_p = p!$
 
-The stabillizer of H, $G_H = \{x \in G | xH = H\} = H$.
+The stabilizer of H, $G_H = \{x \in G | xH = H\}$, hence $G_H = H$.
 
 By inspection, we can see that $G_{gH} = gHg^{-1}$.
 
 Let $K = \bigcap_{g \in G}gHg^{-1}$, the largest normal subgroup contained in H.
 
-Note that $K = ker(\varphi)$ induced above; by the First Isomorphism Theorem $\varphi(G) \leq S_p$.
+For each coset $gH$, $K$ stabilizes that coset, hence $K$ is the kernel of $\varphi$.
+
+By the First Isomorphism Theorem $\varphi(G) \leq S_p$.
 
 $(G : K) = \#(G\slash K) = \#(\varphi(G))$, which divides $\#(S_p) = p!$
 
@@ -195,9 +194,7 @@ A familiar embedding of a group into a larger group; ``Cauchy's Theorem''
 
 $G \hookrightarrow Perm(G)$ by letting G act on itself by left-translation.
 
-Its kernel $K = \{g \in G | gs=s \forall s\} = \{e\}$ (consider $s = e$), hence is an injection.
-
-Since an injection, an embedding.
+Its kernel $K = \{g \in G | gs=s \forall s\} = \{e\}$ (consider $s = e$), so an injection $\to$ an embedding.\\
 
 \noindent
 Recall $S_n \subset$ group of $n \times n$ invertible matrices. $\sigma \mapsto M(\sigma)$ a permutation matrix.
@@ -217,15 +214,15 @@ Similarly, invertible linear maps correspond to $n \times n$ invertible matrices
 
 We can embed G in $GL(n, \mathds{Z})$ by using a left action of G on $GL(n, \mathds{Z}) = \{\phi: V \to V\}$
 
+Can think of this as an action on $\mathds{Z}^n \cong V$, whose permutation group is simply $GL(n, \mathds{Z})$.
+
 Recall that $V = \{f : G \to \mathds{Z}\}$.
 
 This left action takes the form $L_g \mapsto \phi$ where $\phi(f(x)) = f(xg)$
 
 $L_{gg'} = L_{g'} \circ L_{g}$ as desired? Verify for yourself.
 
-\textbf{Check this over.}
-
-$L_{gg'}(\varphi (x)) = \varphi(xgg') = L_{g'}(\varphi (xg)) = L_{g'} \circ L_g (\varphi(x))$
+Yes: $L_{gg'}(\varphi (x)) = \varphi(xgg') = L_{g'}(\varphi (xg)) = L_{g'} \circ L_g (\varphi(x))$
 
 $g \mapsto L_g$ is a homomorphism $G \to GL(V)$
 
@@ -237,84 +234,63 @@ Using $\mathds{F}_p$ instead of $\mathds{Z}$, get $G \hookrightarrow GL(n, \math
 
 Lagrange: If $H \leq G$ then $\#(H)|\#(G)$.
 
-$A_4$ with $n = 6$ gives the counterexample to the converse.
+$A_4$ with $n = 6$ gives the counterexample to the converse.\\
 
 \noindent
-Salvaging the converse: the case where $n = p^k$, p prime.
+If $|G| = p^k \cdot r$, $(p, r) = 1$, a p-Sylow subgroup of G is an $H \leq G$ such that $|H| = p^k$
 
 \noindent
-(Sylow I): If $|G| = p^k \cdot r$, $(p, r) = 1$
-
-$\exists H \leq G$ such that $|H| = p^k$
-
-Such an H is called a p-Sylow subgroup of G
-
-Generally assuming $k \neq 0$
+$\mathds{Z}_{12}$ has 2-sylow subgroup $\{0, 3, 6, 9\}$ and 3-sylow subgroup $\{0, 4, 8\}$
 
 \noindent
-Example : $\mathds{Z}_{12}$
-
-has 2-sylow subgroup $\{0, 3, 6, 9\}$ and 3-sylow subgroup $\{0, 4, 8\}$
-
-\noindent
-Example: $D_6$ generated by r, s subject to $rs = sr^{-1}$, $r^6 = e$, $s^2 = e$, has order 12
+$D_6$ generated by r, s subject to $rs = sr^{-1}$, $r^6 = e$, $s^2 = e$
 
 $\#(D_6) = 12$ so has 3-sylow subgroup $\{1, r^2, r^4\}$
 
 Also has 2-sylow subgroups $\{1, r^3, s, r^3s\}$, $\{1, r^3, rs, r^4s\}$, $\{1, r^3, r^2s, r^5s\}$
 
 \noindent
-Example: G = $GL_n(\mathds{F}_p)$, $n \times n$ linear transformations in $\mathds{F}_p$, equal to $Aut(\mathds{F}_p^n)$
+G = $GL_n(\mathds{F}_p)$, $n \times n$ linear transformations in $\mathds{F}_p$, equal to $Aut(\mathds{F}_p^n)$
 
 \noindent
-The order of $|G|$:  
+Approximating the order of $|G|$:  
 
 Asserting linear independence in each vector of an $n \times n$ matrix
 
-$|G| = (p^n - 1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1}) = p^{1 + 2 + 3 + \cdots + n - 1}\cdot r = p^{\frac{n^2 - n}{2}} \cdot r$
-
-$(p, r) = 1$
+$|G| = (p^n - 1)(p^n-p)(p^n-p^2)\cdots(p^n-p^{n-1}) = p^{1 + 2 + 3 + \cdots + n - 1}\cdot r = p^{\frac{n^2 - n}{2}} \cdot r$, $(p, r) = 1$
 
 Consider P the set of $n \times n$ upper triangular matrices with 1's on the diagonal.
 
 Then $|P| = p^{1 + 2 + 3 + \cdots + n - 1} = p^{\frac{n^2 - n}{2}}$, and P is a p-Sylow subgroup.
 
+Will use this fact in the subsequent proof.
+
 \noindent
-Theorem: (Sylow I) p-Sylow subgroups always exist.
+Theorem: (Sylow I) For $|H| = p^k \cdot r$, $(p, r) = 1$, H has a p-Sylow subgroup.
 
 \noindent
 Proof Sketch:
 
-Suppose $|H| = p^k \cdot r$, $(p, r) = 1$, $k > 0$
-
-Show $\exists G$, $H \leq G$, where G has a p-Sylow subgroup
+Show $\exists G$, $H \leq G$, such that G has a p-Sylow subgroup
 
 Show that if G has a p-Sylow subgroup and $H \leq G$, then H has a p-Sylow subgroup
 
 \noindent
 Proof:
 
-By Cayley's theorem, if $|H| = n$, then $H \leq S_n$.
-
-(H acts on itself by left translates.  This yields an embedding into $S_n$.)
+Cayley's theorem, can embed $H$ (of order n) in $S_n$ by acting on itself by translation.
 
 Additionally $S_n \leq GL_n(\mathds{F}_p)$ mapping to permutation matrices.
 
 Alternatively, consider $V \cong \mathds{F}_p^n$, the vector space of functions $\varphi : G \to \mathds{F}_p$.
 
-Embed H into $GL(V)$ by this action: $g \in H \mapsto$ automorphism taking $\varphi(x)$ to $\varphi(xg)$.
-
-(Recall end of previous lecture).
+Embed H into $GL(V)$ by the action $g \in H \mapsto$ automorphism taking $\varphi(x)$ to $\varphi(xg)$.
 
 We know that $GL_n(\mathds{F}_p)$ has p-Sylow subgroups.  (from the lower triangular matrices)
 
-Let $G = GL_n(\mathds{F}_p)$.
+Let P be a p-Sylow subgroup of $G = GL_n(\mathds{F}_p)$.  Let G act on the cosets of P.
 
-Let P be a p-Sylow subgroup of G.  Consider G acting on the set of cosets of P.
-
-Now, $Stab(gP) = gPg^{-1}$. (guest lecturer notation for stabilizer)
-
-Similarly, letting H act on $G \slash P$, $Stab(gP) = (gPg^{-1} \cap H)$
+Now, $G_{gP} = gPg^{-1}$. Similarly, when H acts on $G \slash P$, $G_{gP} = (gPg^{-1} \cap H)$
 
 This intersection is a p-group.
 
@@ -330,26 +306,23 @@ Since P is a p-Sylow subgroup of G, $|G\slash P| \not\equiv_{mod p} 0$.
 
 The sum of the orbits is $|G \slash P|$.
 
-Hence there must be some orbit with size coprime to p.\\
+Hence there must be some orbit with size coprime to p.
+
+The stabilizer of this orbit $gPg\inv \cap H$ is a p-Sylow subgroup $H_p$.\\
 
 \noindent
 Corollary: All p-subgroups of H are contained in a conjugate of P.
 
 Let $J \leq H$ be a p-subgroup.  Then $J \cap gPg\inv$ is a p-Sylow subgroup of $J$ for some $g \in G$.
 
-So since $J$ is a p-group $J \cap gPg\inv = J$, i.e. $J \subset gPg\inv$.
-
-(since a p-group can't contain a proper p-Sylow subgroup by definition)\\
+A p-group can't contain a proper p-Sylow subgroup, so $J \cap gPg\inv = J$ and $J \subset gPg\inv$.\\
 
 \noindent
 Corollary: (Sylow II) All p-Sylow groups are conjugate.
 
-\noindent
-Proof:
-
 Let $H \leq G$ and $P \leq G$ be p-Sylow subgroups.
 
-By the preceding corollary, $H \subset gPg\inv$ for some $g \in G$.
+By the preceding corollary ($G \leq G$, $H \leq G$, $P \leq G$), $H \subset gPg\inv$ for some $g \in G$.
 
 Since $|H| = |P| = |gPg^{-1}|$, $H \cap gPg\inv = H$.\\
 
@@ -361,11 +334,9 @@ By the above, each is contained in a conjugate of P, said conjugate being a p-Sy
 \noindent
 The p-Sylow subgroups in G are all conjugate, so that:
 
-If P is a p-Sylow of G then $G/N(P)$ is the set of p-Sylows in G.
+If P is a p-Sylow of G then ($N(P) =$ normalizer of P) $G/N(P) \leftrightarrow$ set of p-Sylows in G.
 
-Where $N(P)$ is the normalizer of P.
-
-So there are $(G: N(P))$ p-Sylows in total.\\
+There are $(G: N(P))$ p-Sylows in total.\\
 
 \noindent
 Lemma: If a finite p-group $\Gamma$ acts on a set X, then $\#(X) \equiv_{mod p} \#(X^{\Gamma})$
@@ -375,9 +346,9 @@ Lemma: If a finite p-group $\Gamma$ acts on a set X, then $\#(X) \equiv_{mod p} 
 \noindent
 Proof:
 
-$\#X = \sum_i \#Orb(x_i) = \sum_i \frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} \#X^{\Gamma}$
+Each $\frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} 1$ if $x_i$ fixed, else $\frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} 0$.
 
-Each $\frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} 1$ if $x_i$ fixed, else $\frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} 0$.\\
+Hence $\#X = \sum_i \#Orb(x_i) = \sum_i \frac{|\Gamma|}{|Stab(x_i)|} \equiv_{mod p} \#X^{\Gamma}$.\\
 
 \noindent
 Let $Syl_p(G)$ describe the p-Sylow subgroups of G and $n_p$ denote its cardinality.
