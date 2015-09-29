@@ -407,6 +407,10 @@ consistent $h$ satisfies, for nodes $n, n'$ and action $n \xrightarrow{a} n'$, $
 
 satisfies a triangle inequality; i.e., $h$ must be a metric on the state space
 
+key consequence of a consistent $h$: $f$ is always increasing along a path
+
+note: consistency implies admissibility
+
 A* is optimally efficient for a given $h$: $\not \exists$ an optimal, more efficient algorithm
 
 however, nodes in goal contour search space still increase exponentially, 
@@ -463,23 +467,384 @@ Learning to search better
 metalevel learning algorithm analyzes current method, seeks improvements\\
 
 \noindent
-Heuristics
+Admissible heuristic creation
 
+often solutions to relaxed problems, where new actions are available
 
+\noindent
+A heuristic $h$ dominates $h'$ if $h \geq h'$ on the state space
 
+higher admissible heuristics are stronger
 
+trade-off between computation on heuristic efficacy and in searching
 
+taking the maximum over a set of admissible heuristics can be useful
 
+\subsection{Local Search}
 
-\textbf{This is where we at.}\\
+\noindent
+In which the path does not matter, only the achievement of the goal state
 
-\section{9/8}
+also useful to solve pure optimization according to an objective function
 
-A heuristic $h_a$ is dominant over $h_c$, $h_a \geq h_c$ if $\forall n$ $h_a(n) \geq h_c(n)$
+\noindent
+state space lanscape: manifold of the objective function on the state space
 
-A dominant heuristic of an admissible heuristic, if still admissible, is preferable
+seek global extrema: completeness and optimality defined as before\\
 
-A maximum over admissible heuristics is a dominant heuristic, and still admissible
+\noindent
+hill-climbing search (greedy local search):
+
+take any actions that improve the situation
+
+foiled by local extrema, ridges, plateaux on the manifold
+
+dealing with shoulders: allow sideways moves, but need to limit, because of plateaus
+
+random-restart hill climbing guaranteed to eventually find goal state
+
+\noindent
+simulated annealing allows bad moves occasionally via thermodynamic principles
+
+randomly chooses an action, always goes ahead with improvements
+
+if a downgrade, accept it with probability dictated by a Boltzmann weighting
+
+start at high temperature, and slowly lower T
+
+the algorithm is guaranteed to find a global optimum with probability $\to 1$
+
+\noindent
+local beam search runs k copies of a local search algorithm
+
+at each step, generate all the successors, and choose the k best successors
+
+to keep diversity among states high, can use stochastic beam search
+
+stochastic beam search introduces some randomness, probability $\propto$ value
+
+\noindent
+genetic algorithms: successors are generated as combinations of parent states
+
+k randomly generated states, use evaluation function as a judge of fitness
+
+crossovers and mutations generate new states
+
+works well in some cases, but not others
+
+\subsection{Uncertain Search}
+
+\noindent
+contingency plans to account for nondeterminism, stochasticity
+
+branch for each possible result following a given action, form a conditional plan
+
+\noindent
+and-or search trees:
+
+or level on actions (only need 1 to work)
+
+and level on nondeterminism (need a plan to work for all branches)
+
+contingent solution cuts down on the tree by selecting actions
+
+all the leaves need to be goals
+
+can implement and-or search as corecursion with an and and an or function
+
+\noindent
+cyclic solution
+
+all leaves are goal states
+
+every point in the plan has a path to every leaf
+
+\noindent
+belief states to account for partial observability
+
+new transition model: predict based off of the action, update based off of the percepts
+
+\subsection{Adversarial Search}
+
+\textit{Textbook}
+
+\subsection{Constraint Satisfaction}
+
+\noindent
+constraint satisfaction problems start to upack the black box:
+
+search and game-playing are highly abstracted atomic representations
+
+constraint satisfaction problems, propositional logic are factored representations
+
+even more complex are structured representations such as first-order logic
+
+\noindent
+CSP breaks state down into variables $X_i$, each of which takes values from a domain $D$
+
+Goal test represented by a set of constraints upon allowed values
+
+expressible implicitly $Val(X) \neq Val(Y)$ or explicitly (enumerate all possibilities)
+
+explicit expression e.g. $(X, Y) \in \{(1, 2), (2, 3), \cdots \}$
+
+\noindent
+Binary CSP: each constraint relates at most two variables
+
+any non-binary CSP can be converted to a binary CSP
+
+can then be represented by a graph, vertices are variables, edges are constraints
+
+\noindent
+Characterizing a finite CSP: $n$ variables, $d$ the maximum domain size
+
+$\mathcal{O}(d^n)$ complete assignments exist
+
+generally no better than exponential time, in the worst case\\
+
+\noindent
+Search formulation for solving a CSP
+
+initial state: $\{\}$, action assigns a value to a variable
+
+continue until all variable assigned and all constraints satisfied
+
+prior methods (e.g. BFS, DFS) highly inefficient
+
+\noindent
+backtracking search is a depth-first search with the following alterations:
+
+variable assignment is commutative: apply assignment to variables in a fixed order
+
+reducing branching factor from $nd$ to $d$
+
+only considers values that do not conflict with previous assignments
+
+\noindent
+improvements to backtracking
+
+smallest domain first: variable ordering by minimum remaining values (MRV)
+
+break ties by degree heuristic: choose variable with most ties
+
+goal: fail as quickly as possible, to eliminate large sections of the tree
+
+least restrictive assignments: value ordering by least constraining value (LCV)
+
+\noindent
+making inferences about the domains, using filtering
+
+forward checking eliminates values of adjacent variables that violate a constraint
+
+\noindent
+better inferences: maintain arc consistency to detect failures earlier
+
+consistent arc $(X, Y)$: $\forall x$ $\in dom(X)$, $\exists y \in dom(Y)$ satisfying constraints
+
+repeatedly check arc consistency to pare down the domains
+
+\noindent
+can apply algorithm separately to connected components, independent
+
+breaking down greatly reduces complexity $\mathcal{O}(d^n) \to \mathcal{O}(\frac{n}{c}d^c) = \mathcal{O}(n)$\\
+
+\noindent
+Tree-Structured CSPs have graph representations which are trees
+
+Can be solved in $\mathcal{O}(nd^2)$ time, no longer exponential
+
+choose any ordering, pick a root, make a linear chain
+
+apply arc consistency (working backwards)
+
+make assignments (moving forwards)
+
+worst case: check d values against each of the d values, n checks up, n checks down
+
+\noindent
+simplify CSPs down to tree-structured CSPs if possible to reduce runtime
+
+set a value for some variables first if helps to reduce down to a tree-structure
+
+conditioning: instantiate a variable to affect the rest of the CSP favorably
+
+cutset conditioning: instantiate variables such that the remaining graph is a tree
+
+can then compute residual CSPs for each of the possible cutset value assignments
+
+\noindent
+local search for CSPs: min-conflicts algorithm
+
+while not solved, randomly select any conflicted variable
+
+value selection: heuristic by minimum resulting conflicts
+
+extremely good for problems dense in solutions
+
+CPSs are very good at dealing with randomly-generated CSPs
+
+although exists a critical ratio $R = \frac{constraints}{variables}$ at which becomes very very bad
+
+\subsection{Logic}
+
+\noindent
+Built off of a knowledge base: a set of sentences in some formal language
+
+Add sentences to the knowledge base
+
+Apply a process of inference to determine actions
+
+Inference engine independent of the knowledge on which it acts
+
+Inference algorithm/reasoning allows for universality: can act on any knowledge
+
+Reduces to a question of considering the knowledge base
+
+\noindent
+Syntax: rules for allowable sentences
+
+\noindent
+Semantics: possible worlds, truth relation between sentences and worlds
+
+\noindent
+E.g. Propositional Logic: possible worlds are assignments of TF to variables
+
+Semantics: $\alpha \wedge \beta$ is true in a world iff $\alpha$ is true and $\beta$ is true
+
+\noindent
+E.g. First-order logic
+
+Syntax $\forall x \exists y P(x, y) \wedge \neg Q(Joe, f(x)) \to f(x) = f(y)$
+
+Possible world:
+
+Objects $o_1, o_2, o_3$; $P$ holds for $\langle o_1, o_2 \rangle$; $Q$ holds for $\langle o_3 \rangle$; $f(o_1) = o_1$; $Joe = o_3$; etc.
+
+Semantics: $\phi(\sigma)$ is true if $\sigma=o_j$ and $\phi$ holds for $o_j$
+
+\noindent
+Entailment: $\alpha \models \beta$, $\alpha$ entails $\beta$ or $\beta$ follows from $\alpha$
+
+the $\alpha$-worlds are a subset of the $\beta$-worlds [models($\alpha$) $\subset$ models($\beta$)]
+
+the entailment of $\beta$ makes it at most as strong as $\alpha$, and possibly weaker
+
+\noindent
+A proof is a demonstration of entailment
+
+\noindent
+Method 1: check in every possible world, that if $\alpha$ is true then $\beta$ is true too
+
+Semi-decidable: if cannot be proven in this fashion, has no way of indicating such
+
+\noindent
+Method 2: exhibit a sequence of applications of inference rules taking $\alpha$ to $\beta$
+
+\noindent
+Sound inference algorithm: everything that it claims to prove is entailed
+
+\noindent
+Complete inference algorithm: everything that is entailed can be proven\\
+
+\noindent
+Propositional logic
+
+Have a set of symbols, with distinguished symbols 'True' and 'False'
+
+Sentences are generated by the set of symbols under $\neg, \wedge, \vee, \to, \leftrightarrow$
+
+Semantics: symbols have truth values, can recurse over syntax to evaluate sentences
+
+\noindent
+Forward chaining: given $X_1 \wedge X_2 \wedge \cdots X_n \to Y$ and $X_1, X_2, \cdots, X_n$, infer $Y$
+
+knowledge base only contains definite clauses (of the above form)
+
+therefore, cannot deal with disjunctions; no reasoning by cases
+
+forward chaining algorithm: have table counting number of symbols in each premise
+
+iterate over symbols, decrement count for each clause that has that symbol in premise
+
+allows for $\mathcal{O}(n)$ where $n$ is the size of the knowledge base
+
+sound (since Modus Ponens is sound) and complete for definite-clause KBs\\
+
+\noindent
+Simple model checking for entailment: recursive enumeration of all worlds
+
+go through all possible worlds (sets of TF assignments) to all symbols
+
+for all worlds where KB is true, make sure that $\alpha$ is true
+
+shows when $\alpha$ is entailed, woefully inefficient ($\mathcal{O}(2^n)$ time, linear space)
+
+\noindent
+A sentence is satisfiable if it is true in at least one world
+
+SAT solvers take a sentence in conjunctive normal form and determines satisfiability
+
+using a SAT (satisfiability) solver to check entailment
+
+if $\alpha \models \beta$, then $\alpha \to \beta$ in all worlds
+
+hence $\neg(\alpha \to \beta)$ is false in all worlds
+
+hence $\alpha \wedge \neg \beta$ is false in all worlds
+
+if can show that $\alpha \wedge \neg \beta$ is unsatisfiable then $\alpha \models \beta$
+
+analogous to an proof by contradiction
+
+\noindent
+DPLL SAT solver: backtracking search over models with:
+
+early termination: stop immediately if all clauses are satisfied, any clause is falsified
+
+conj. normal form will be e.g. $(A \vee B) \wedge (A \vee \neg C)$; this has 2 clauses
+
+pure literals: symbol always has same sign in to-go clauses, just assign it the value
+
+e.g. $(A \vee B) \wedge (A \vee \neg C) \wedge (C \vee \neg B)$ then set $A$ to be true
+
+unit clauses: clause left with single literal, set symbol to satisfy clause
+
+DPLL efficient enough to solve up to 100 variables
+
+Tricks to improve efficiency:
+
+order variables and values (just like CSPs)
+
+divide into pieces if you can see that two sections don't depend on each other
+
+cache unsolvable subcases as extra clauses to avoid redoing them
+
+with these improvements, can solve problems with ten million variables
+
+\subsection{Logical Agents}
+
+\noindent
+Knowledge-based agent:
+
+percepts added to knowledge base, after converted to some logical sentences
+
+figures out what its next action shall be, performs action
+
+then it adds to knowledge base the fact that it has performed this action
+
+\noindent
+Initial knowledge possessed by the agent
+
+Sensor model: how the current percept is generated from the current state
+
+transition model: how the next-state determined by action, current state
+
+initial conditions: initial state
+
+domain constraints: certain conditions that are generally satisfied
+
+\noindent
+Set the knowledge, and then the SAT-solver does all the work
 
 
 \end{document}
