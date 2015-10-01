@@ -1423,5 +1423,204 @@ Pf: Fields are integral domains.
 
 \section{9/29}
 
+\section{10/1}
+
+Commutative centre = integral domain.
+
+\noindent
+PIDs UFDs
+
+\noindent
+PID: Every ideal is principal, $I = (a)$
+
+generalization: every ideal is finitely generated $I = (a_1, \cdots, a_m) = \{\sum_{i=1}^mr_ia_i | r_i \in A\}$
+
+Noetherian
+
+\noindent
+equivalence of 3 conditions on a ring, for which, if holds, makes the ring Noetherian
+
+(1) each ideal is finitely generated
+
+(2) chains become stable
+
+(3) Every non-empty set of ideals of A contains a maximal element.
+
+\noindent
+Condition (2): stability of chains
+
+$I_1 \subset I_2 \subset I_3 \subset \cdots$ increasing chain of ideals in A
+
+$\exists N \geq 1$ so that $I_n = I_N$ for all $n \geq N$
+
+\noindent
+e.g. $\mathds{Z}$
+
+$(2^{100}) \subset (2^{99}) \subset \cdots$
+
+can have arbitrarily long chains in ring of integers
+
+but all of them terminate
+
+\noindent
+(1) implies (2)
+
+Consider a $I_1 \subset I_2 \subset \cdots$
+
+and take $I = \bigcup_{i = 1}^\infty I_i$
+
+$I$ finitely generated, each $a_i$ needs to be in some $I$
+
+eventually all of them are in some $I_N$, so $I \subset I_N$, we are done
+
+\noindent
+(2) implies (3)
+
+Take $I_1 \in S$.  If not a maximal elt of S, $I_1 \subset I_2$, $I_2 \in S$
+
+If $I_2$ not max, etc., continue and construct a chain
+
+can't go to infinity if (2) is assumed; must end, $I_N$ is maximal
+
+\noindent
+irreducible elements of A: elements that can't be factored
+
+an element $a \in A$, $a \neq 0$ and not a unit
+
+if $a = bc$ then $b$ is a unit or $c$ is a unit
+
+\noindent
+$(0) \subset (a) \subset A$
+
+maximal if A is a PID
+
+$(a) \subset I = (b) \subset A$
+
+$a \in (b)$, $a = bc$
+
+$b$ a unit then $I = A$ and if $c$ is a unit, $I = (a)$
+
+\noindent
+Proposition: If A is a PID, then every $t \in A$, $t \neq 0$, $t$ not a unit
+
+$t$ can be written as a product of irreducible elements
+
+\noindent
+Proof:
+
+Consider the set of (principal) ideals $(t)$ for which the proposition is false
+
+If $S = \emptyset$, done.  Else consider a maximum element $(m) \in S$
+
+but if $(m) \subsetneq (m')$ then $(m')$ can be factored
+
+if $m$ irreducible it can be factored, if not $m = m'm''$ where $m'$, $m''$ not units
+
+$(m) \subsetneq (m')$, $(m) \subsetneq (m'')$
+
+$(m'), (m'')$ not in $S$, they can be factored, we are done
+
+\noindent
+This proof also works for Noetherian rings generally
+
+\noindent
+common tactic by maximal counterexample\\
+
+\noindent
+prime elements of A
+
+$a \neq 0$, not a unit, $a$ prime $\leftrightarrow (a)$ is prime
+
+if $a | bc$ then $a | b$ or $a | c$
+
+\noindent
+Primes are irreducible:
+
+if $a$ is prime and $a = bc$ then $a|b$ or $a|c$
+
+if $a|b$ then $b$ is a multiple of $a$ and $a$ is a multiple of $b$
+
+so $a \sim b$: $b = u \cdot a$ and $a = u^{-1} \cdot b$, differ by a unit
+
+\noindent
+irreducible elements might not be prime
+
+$A = \mathds{Z}[\sqrt{-3}] = \{a + b\sqrt{-3} | a, b \in \mathds{Z}\}$
+
+$2 \cdot 2 = (1 + \sqrt{-3})(1 - \sqrt{-3})$
+
+$2$ is irreducible and not prime, $2 | 4$ but doesn't divide either on the right side
+
+exists norm $N: z \mapsto z\overline{z}$
+
+$a + b\sqrt{-3} \mapsto a^2 + 3b^2$
+
+$2$ is irreducible
+
+$2 = \alpha\beta$, $N(2) = N(\alpha)N(\beta)$, $4 = N(\alpha)N(\beta)$
+
+but norms can never be $2$ so one of these must be a unit ($N = 1$ implies $\pm 1$)
+
+\noindent
+In a PID, irreducible elements are prime
+
+an irred $\to (a)$ is maximal $\to (a)$ is prime $\to a$ is prime\\
+
+\noindent
+Unique factorization domain: every $a \neq 0$, unit has a factorization as a prod of irreducibles
+
+this is unique up to reordering and transformation by units
+
+$a \sim b$, a and b are associated, if $a = b \cdot u$ and $b = a \cdot u^{-1}$ for some unit $u$
+
+\noindent
+Theorem: PIDs are UFDs
+
+PID: $a = \pi_1 \cdots \pi_n = \sigma_1 \cdots \sigma_m$
+
+$\sigma_m$ prime so $\sigma_m$ dviides some $\pi_i$
+
+can assume $\sigma_m | \pi_n$, $\phi_n = \sigma_m \cdot c$, $c$ unit
+
+proceed by induction on indices, end
+
+\noindent
+A PID $a, b \in A$, $(a, b) = \{ax + by | x, y \in A\} = (g)$ since principal
+
+$g = gcd(a, b)$: $(g) = (a, b) \ni a, b$
+
+$a$ and $b$ are multiples of $g$, $g$ divides $a$, $b$
+
+\noindent
+t can't be factored as a product of irreducibles, $(t)$ is maximal in this property
+
+\noindent
+if t irreducible $t = t$; impossible
+
+if $t$ not irreducible, $t = r \cdot s$, $r, s$ non-units
+
+$(t) \subsetneq (r)$ $(t) \subsetneq (s)$
+
+\noindent
+$A = \mathds{Z}[\cdots (7)^{\frac{1}{2^N}} \cdots]$
+
+7 is not a unit in $A$
+
+\noindent
+Lemma: every element of A is ``integral''
+
+it satisfies an equation (monic polynomial) $x^n + c_{n-1}x^{n-1} + \cdots + c_0 = 0$
+
+monic: first coefficient $= 1$
+
+$c_i \in \mathds{Z}$
+
+integral ring
+
+\noindent
+$1/7$ satisfies no such polynomial
+
+\noindent
+7 can be factored on and on $n(7^{1/n})$; not a Noetherian ring
 
 \end{document}
