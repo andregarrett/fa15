@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  13 OCT 2015 18:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  14 OCT 2015 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1872,318 +1872,335 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 \c__siunitx_mathtt_int=\count154
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 26.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 28.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 211.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 206.
 
  (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--393
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
 [7]
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 637.
-
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
+Underfull \hbox (badness 10000) in paragraph at lines 670--671
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
+Underfull \hbox (badness 10000) in paragraph at lines 725--726
 
  []
 
 [9]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 872.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 870.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 872.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 870.
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 961--962
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
 [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1334
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1354
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
+Underfull \hbox (badness 10000) in paragraph at lines 1390--1391
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
+Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1554--1556
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1596
+Underfull \hbox (badness 10000) in paragraph at lines 1581--1582
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
+Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1739
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
+Underfull \hbox (badness 10000) in paragraph at lines 1754--1755
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1788--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1774--1776
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1852--1853
+Underfull \hbox (badness 10000) in paragraph at lines 1839--1840
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1924--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1911--1912
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1946--1947
+Underfull \hbox (badness 10000) in paragraph at lines 1933--1934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1981--1983
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1994--1996
+Underfull \hbox (badness 10000) in paragraph at lines 2033--2034
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2045--2046
-
- []
-
-[23]
-Overfull \hbox (6.91342pt too wide) in paragraph at lines 2070--2071
+Overfull \hbox (6.91342pt too wide) in paragraph at lines 2058--2059
 []\OT1/ppl/m/n/12 forgetful func-tors from for in-stance (groups) $\OMS/zplm/m/
 n/12 !$ \OT1/ppl/m/n/12 (sets) or ($\OML/zplm/m/it/12 A$\OT1/ppl/m/n/12 -module
 s $\OMS/zplm/m/n/12 !$ \OT1/ppl/m/n/12 (abelian groups) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2078--2079
+Underfull \hbox (badness 10000) in paragraph at lines 2066--2067
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 2094--2095
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2106--2107
+Underfull \hbox (badness 10000) in paragraph at lines 2118--2120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2135
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 2130--2132
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2146--2147
+Underfull \hbox (badness 10000) in paragraph at lines 2181--2182
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2171--2172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2193--2194
-
- []
-
-[25] [26] (./notes.aux) ) 
+[25] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 11376 strings out of 495028
- 248758 string characters out of 6181498
- 295781 words of memory out of 5000000
- 14402 multiletter control sequences out of 15000+600000
- 29112 words of font info for 85 fonts, out of 8000000 for 9000
+ 11372 strings out of 495028
+ 248700 string characters out of 6181498
+ 294781 words of memory out of 5000000
+ 14399 multiletter control sequences out of 15000+600000
+ 27696 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,10425b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on notes.pdf (26 pages, 198858 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
+atino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on notes.pdf (25 pages, 197194 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

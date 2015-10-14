@@ -25,12 +25,7 @@
 \noindent
 \textbf{Math 250A, Fall 2015}
 
-\subsubsection{Some simple facts (Lang Algebra)}
-
-\noindent
-
-
-\section{8/27}
+\subsection{8/27}
 
 \noindent
 A group G acts on a set S:
@@ -91,7 +86,7 @@ $Z(G) = \{g \in G : xg = gx$ $\forall x \in G\}$
 
 in a permutation group, $\sigma (a_1, a_2, a_3, ... a_k) \sigma^{-1} = (\sigma a_1, \sigma a_2, \sigma a_3, ... \sigma a_k)$
 
-\section{9/1}
+\subsection{9/1}
 
 \noindent
 Let $\Sigma$ be a set of representative elements of the orbits of S.
@@ -230,8 +225,9 @@ $g \mapsto L_g$ is a homomorphism $G \to GL(V)$
 
 Using $\mathds{F}_p$ instead of $\mathds{Z}$, get $G \hookrightarrow GL(n, \mathds{F}_p)$, an embedding into a finite group.
 
-\section{9/3}
+\subsection{9/3}
 
+\noindent
 Lagrange: If $H \leq G$ then $\#(H)|\#(G)$.
 
 $A_4$ with $n = 6$: a counterexample to the converse.\\
@@ -379,7 +375,7 @@ G acts on $Syl_p(G)$ as only one orbit since all p-Sylows in G are conjugate.
 
 $(G : P) = n_p$, $n_p = |G| = p^k \cdot r$, $n_p | p^k \cdot r$, but $n_p \nmid p$, so $n_p | r$.
 
-\section{9/8}
+\subsection{9/8}
 
 \noindent
 $P, Q$ p-Sylows and $P \subset N(Q)$ then $P = Q$
@@ -554,7 +550,7 @@ In multiset, order does not matter, and multiplicity does matter.
 \noindent
 Jordan-H\"{o}lder Theorem: Each composition yields the same multiset up to isomorphism.
 
-\section{9/10}
+\subsection{9/10}
 
 \noindent
 Proposition: Given $G$, $\exists G_0 \supset G_1 \supset G_2 \supset \cdots \supset G_n$, $G = G_0$, $G_{i + 1} \trianglelefteq G_i$, $G_i/G_{i+1}$ simple.
@@ -634,8 +630,9 @@ Have related two different filtrations that have are unrelated, by a common filt
 
 which depends on the intersection of these two filtrations.
 
-\subsection{Free Groups}
+\subsubsection{Free Groups}
 
+\noindent
 S a set, define the free abelian group on $S$, $\mathds{Z}^S = \mathds{Z}\langle S\rangle = \{\sum_{s \in S} n_s \cdot s | n_s \in \mathds{Z}\}$.
 
 Where all but finitely many of the $n_s$ are 0.
@@ -753,8 +750,9 @@ Multiplication on A by a positive integer is injective.
 
 A is isomorphic to NA by the mutliplication by n, since NA is free, A is free.
 
-\section{9/15}
+\subsection{9/15}
 
+\noindent
 Abelian group, finitely generated.
 
 \noindent
@@ -924,8 +922,9 @@ $A \approx \mathds{Z}|p^i \oplus \mathds{Z}|p^j \oplus \mathds{Z}|p^k \oplus \ma
 
 $i \leq j \leq k \leq l$, $i + j + k + l = 4$, $i, j, k, l, \geq 1$
 
-\section{9/17}
+\subsection{9/17}
 
+\noindent
 A arbitrary finitely generated group that we want to understand
 
 Pick some generators $g_1, \cdots, g_n$
@@ -1187,49 +1186,50 @@ so $X = \mathds{Z} \cdot (2, 3) \oplus 6 \cdot \mathds{Z}(1, 1)$
 
 $Y/X = \mathds{Z}/\mathds{Z} \oplus \mathds{Z}/6\mathds{Z} = \mathds{Z}/6\mathds{Z}$.
 
-\section{9/22}
+\subsection{9/22}
 
+\noindent
 Rings R, A ($=$ 'anneau')
 
-definition: whether or not $1 \in R$ is can vary
+definition: whether or not $1 \in R$ can vary
 
 Lang: $1 \in R$, Hungerford: $1 \not \in R$
 
 In the former, $2\mathds{Z}$ is not a ring, in the latter, it is
 
-gold standard of a ring, the ring of integers $\mathds{Z}$
-
 \noindent
-Ring: has an addition and a multiplication, modeled off of the integers
+Ring:
 
-under +, ring is an abelian group with distinguished element 0
+under +, an abelian group with distinguished element 0
 
-associative product (not necessarily commutative) with distinguished element 1
+under $\cdot$, associative (not necessarily commutative) with distinguished element 1
 
 distributive laws $(x + y)z = \cdots$ and $z(x + y) = zx + zy$
 
 \noindent
-Example, given A an abelian group, the ring of endomorphisms
+Integral domain:
+
+\noindent
+Field: under $\cdot$, commutative, and non-zero elements have inverses\\
+
+\noindent
+Examples
+
+\noindent
+For A an abelian group, the ring of endomorphisms.
 
 $R = End(A) = Hom(A, A)$, $(f + g)(a) = f(a) + g(a)$, $fg = f \circ g$
 
-End(A) can be viewed as a ring of matrices under matrix multiplication if $A = \mathds{Z}^n$
+If $A = \mathds{Z}^n$ End(A) can be viewed as a ring of matrices
 
 \noindent
-Example, any field e.g. $\mathds{Q}, \mathds{R}, \mathds{C}, \mathds{Z}/p\mathds{Z}, \mathds{Q}(i) = \{a + bi | a, b \in \mathds{Q}\}$
-
-Fields are commutative, and non-zero elements have multiplicative inverses
+$\mathds{Q}, \mathds{R}, \mathds{C}, \mathds{Z}/p\mathds{Z}, \mathds{Q}(i) = \{a + bi | a, b \in \mathds{Q}\}$ are fields.
 
 \noindent
-To be explored: X a set, $R = P(X)$, $r + s =$ symmetric difference, $r \cdot s$ = intersection
+The ``skew field'' of Hamilton quaternions over $\mathds{R}, \mathds{Q}$, $a + bi + cj + dk$ ($= (\frac{a - bi - cj - dk}{a^2 + b^2 + c^2 + d^2})\inv$)
 
 \noindent
-Hamilton quaternions over $\mathds{R}, \mathds{Q}$, $a + bi + cj + dk$ a ``skew field''
-
-An inverse is $\frac{a - bi - cj - dk}{a^2 + b^2 + c^2 + d^2}$
-
-\noindent
-G a group (written multiplicitavely), take $\mathds{Z}[G] = \mathds{Z}\langle G \rangle$ the free abelian group on G
+Group G (written multiplicatively), $\mathds{Z}[G] = \mathds{Z}\langle G \rangle$ the free abelian group on G
 
 elements $\sum n_g \cdot g, n_g \in \mathds{Z}$ the sum finite
 
@@ -1237,32 +1237,25 @@ can multiply
 
 $$(\sum n_g \cdot g)(\sum m_h \cdot h) = \sum_{x \in G} (\sum_{g, h, gh= x}n_g m_h)x$$
 
-$$c_x = \sum_g n_g m_{g^{-1}x}$$
-
-a convolution product
+The term $c_x = \sum_g n_g m_{g^{-1}x}$ represents a convolution product\\
 
 \noindent
-$G = \{x^i | i \in \mathds{Z}\}$, $x^ix^j = x^{i + j}$
+Ring Homomorphism
 
-typical element finite $\sum_i n_i x^i$, $n_i \in \mathds{Z}$
+a homomorphism of abelian groups respecting multiplication
 
-e.g. $x^{-3} + 2x^{-2} + 7x^{-1} + 9x^{100}$ a polynomial in $x, x^{-1}$\\
+$\varphi(xy) = \varphi(x)\varphi(y)$
 
-\noindent
-Ring Homomorphisms
+$\varphi(1) \neq 1$ is possible
 
-is a homomorphism of abelian groups, and respects the multiplication operation
-
-$\varphi(xy) = \varphi(x)\varphi(y)$, note $\varphi(1) \neq 1$ is possible
-
-$ker(\varphi) = \{r \in R | \varphi(r) = 0\}$
-
-Satisfies the property for being an ideal: $x \in R, r \in ker(\varphi) \to xr, rx \in ker(\varphi)$
+$ker(\varphi) = \{r \in R | \varphi(r) = 0\}$ is an ideal: $x \in R, r \in ker(\varphi) \to xr, rx \in ker(\varphi)$\\
 
 \noindent
 Ideals
 
-$xI \subset I$ left-sided , $Ix \subset I$ right-sided, 2-sided (bilateral)
+additive subgroup with ideal property:
+
+$xI \subset I$ left-sided , $Ix \subset I$ right-sided, both $\to$ 2-sided (bilateral)
 
 exact analogues of normal subgroups
 
@@ -1275,60 +1268,47 @@ $(r + I)(s + I) = r(s + i) + I = rs + ri + I$ and similarly
 
 $(r + I)(s + I) = (r + i)s + I = rs + is + I$
 
-ideals are kernels of ring homomorphisms
+therefore ideals are kernels of ring homomorphisms
 
 \noindent
-Principal Ideal $I = R \cdot a$ for some $a \in R$
+Principal Ideal $(a)$ is the minimal ideal containing $a$
 
-the Ideal that $a$ generates, $(a)$ (minimal ideal containing $a$)
-
-is exactly all multiples of $a$ in $R$
-
-for subset X, intersection of all ideals containing X (intersections of ideals are ideals)
-
-if $X = \{a_1, \cdots, a_t\}$, the ideal is $(a_1, \cdots, a_t)$
+is all multiples of $a$ in $R$: $I = Ra$, said to be generated by $a$
 
 \noindent
-the ideals of $\mathds{Z}$ are the additive subgroups of $\mathds{Z}$, $a\mathds{Z}$, $a \geq 0 = (a)$
+Ideal generated by a subset X is the intersection of all ideals containing X
 
-an ideal of R is an additive subgroup with ideal property
-
-\noindent
-K field, $R = K[x]$
-
-euclidean division
-
-all ideals of $R$ are principal
+if $X = \{a_1, \cdots, a_t\}$, is written $(a_1, \cdots, a_t)$
 
 \noindent
-$R = K[x, y]$ polynomials in x and y
-
-$R \xrightarrow{\varphi} K$, $f(x, y) \mapsto f(0, 0) \in K$ (the constant term of the polynomial)
-
-$(x, y) = ker(\varphi) = \{$polynomials with 0 constant term$\}$.
-
-this is \textit{not} principal
-
-elements look like $0 + ax + by + cx^2 + \cdots$
-
-\noindent
-Prime ideal $P \subset R$ shall be:
+Prime ideal $P \subset R$
 
 proper
 
-if $rs \in P$ then $r \in P$ or $s \in P$
-
-If $P$ divides $rs$ then $P$ divides $r$ or $s$
+if $rs \in P$ then $r \in P$ or $s \in P$\\
 
 \noindent
-Prime ideals of $\mathds{Z}$
-
-$(0)$, $(p) = p\mathds{Z}$, p prime.
+Examples
 
 \noindent
-If $\varphi: R \to S$ is a ring homomorphism and $S$ contains a prime ideal $P$
+$\mathds{Z}$ has as ideals the additive subgroups $a\mathds{Z}$, $a \geq 0 = (a)$; if $a=0$ or $a$ is prime, $(a)$ is prime
 
-then $\varphi^{-1}(P)$ is a prime ideal of $R$
+\noindent
+$R = K[x]$ where $K$ is a field: by Euclidean division, all ideals are principal
+
+\noindent
+$R = K[x, y]$
+
+$R \xrightarrow{\varphi} K$, $f(x, y) \mapsto f(0, 0) \in K$, $ker(\varphi) = \{$polynomials with constant term of 0$\}$
+
+this is \textit{not} principal
+
+elements $0 + ax + by + cx^2 + \cdots$\\
+
+\noindent
+$\varphi: R \to S$ a ring homomorphism and $P$ a prime ideal of $S$
+
+$\varphi^{-1}(P)$ is a prime ideal of $R$
 
 \noindent
 Proof:
@@ -1338,9 +1318,9 @@ Let $x, y \in R$ and suppose $xy \in \varphi^{-1}(P) = P'$
 then $\varphi(x)\varphi(y) = \varphi(xy) \in P \to \varphi(x) \in P$ or $\varphi(y) \in P$ $\square$
 
 \noindent
-Corollary: Suppose $\varphi: R \to S$ a non-trivial homomorphism of rings and $(0)$ is prime in $S$
+Corollary: $\varphi: R \to S$ a non-trivial homomorphism of rings and $(0)$ prime in $S$
 
-Then the kernel of $\varphi$ is prime.\\
+the kernel of $\varphi$ is prime\\
 
 \noindent
 S is called an integral domain if 
@@ -1353,7 +1333,11 @@ if $xy = 0$ then $x = 0$ or $y = 0$
 Proposition: $P \subset R$ is a prime ideal $\leftrightarrow R/P$ is an integral domain\\
 
 \noindent
-Maximal ideal $M \subset R$ if $M \neq R$ and $M \subset M'$ a proper ideal, $M = M'$
+Maximal ideal $M \subset R$
+
+$M \neq R$
+
+$M \subset M' \to M = M'$ or $M' = R$
 
 \noindent
 Proposition: M is maximal $\leftrightarrow$ $R/M$ is a field
@@ -1366,10 +1350,11 @@ Corollary: Maximal ideals are prime
 
 Pf: Fields are integral domains.
 
-\section{9/24: Midterm}
+\subsection{9/24: Midterm}
 
-\section{9/29}
+\subsection{9/29}
 
+\noindent
 (Charlie)
 
 \noindent
@@ -1451,8 +1436,9 @@ $1 \in S$, $x, y \in S \to xy \in S$
 
 $S\inv A = $ equivalence class
 
-\section{10/1}
+\subsection{10/1}
 
+\noindent
 Commutative centre = integral domain.
 
 \noindent
@@ -1651,7 +1637,7 @@ $1/7$ satisfies no such polynomial
 \noindent
 7 can be factored on and on $n(7^{1/n})$; not a Noetherian ring
 
-\section{10/6}
+\subsection{10/6}
 
 \noindent
 A-Modules (left modules)
@@ -1809,8 +1795,9 @@ this functor/construction is ``left exact'' but not ``right exact/fully exact''
 
 the class of modules with full exactness are the projective modules
 
-\section{10/8}
+\subsection{10/8}
 
+\noindent
 (Tal)
 
 \noindent
@@ -2013,8 +2000,9 @@ $II\inv \subset A$, in fact $II\inv = A$
 \noindent
 Theorem: If $I$ is a nonzero ideal in a Dedekind Domain $A$, $I$ is a projective.
 
-\section{10/13}
+\subsection{10/13}
 
+\noindent
 Category
 
 notation e.g. $\mathcal{A}$, (sets)
@@ -2215,5 +2203,7 @@ We do some amount of work to show this construction is possible
 Then we can abstract away this work because of the universality of $T$
 
 (last line unsure; maybe ask about it again)
+
+\subsection{10/15}
 
 \end{document}
