@@ -566,7 +566,65 @@ new transition model: predict based off of the action, update based off of the p
 
 \subsection{Adversarial Search}
 
-\textit{Textbook}
+\noindent
+Formally define game as a search problem with:
+
+initial state
+
+successor function from states to (move, state) pairs
+
+terminal test
+
+utility function or objective function (i.e. a score)
+
+these first two yield a game tree
+
+\noindent
+an strategy is considered optimal relative to an infallible opponent
+
+\noindent
+the minimax value of a node is its utility assuming mutual infallibility
+
+algorithm computes best decision from current state, using recursion
+
+\noindent
+$\alpha$-$\beta$ pruning
+
+$\alpha$ is the value of the current best for max
+
+$\beta$ is the value of the current best for min
+
+if choosing better node ordering for pruning possible, $\mathcal{O}(b^d) \to \mathcal{O}(b^{d/2})$
+
+random order for pruning leads to approximately $\mathcal{O}(b^{3d/4})$
+
+a transposition table is a hash table of previously seen positions
+
+\noindent
+evaluation function: a heuristic for when depth is large
+
+a weighted linear (or nonlinear) function of features
+
+quiescent position: unlikely to exchibit wild swings in value in near future
+
+it is best to expand until you are at quiescent states
+
+horizon effect: minimax avoids a very good move for the opponent
+
+even when it must eventually happen
+
+better algorithms can see if there's a horizon effect present, accept it and move forward
+
+forward pruning is also possible, but dangerous (could prune best paths)
+
+\noindent
+impact of chance $\to$ chance nodes
+
+expectiminimax: use expected value over chance nodes
+
+decisions invariant under positive linear transformations of the evaluation function
+
+by contrast, any isotone transformation preserves the decisions of minimax
 
 \subsection{Constraint Satisfaction}
 
@@ -845,6 +903,7 @@ domain constraints: certain conditions that are generally satisfied
 
 \noindent
 Set the knowledge, and then the SAT-solver does all the work
+
 
 
 \end{document}

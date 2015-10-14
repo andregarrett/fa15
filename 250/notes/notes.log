@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  6 OCT 2015 15:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  13 OCT 2015 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2048,75 +2048,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 1352--1354
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1403--1404
+Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1508--1510
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1550
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1595--1596
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1723
+Underfull \hbox (badness 10000) in paragraph at lines 1738--1739
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1742--1744
+Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
 
  []
 
-[20] (./notes.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1788--1790
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1852--1853
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1924--1925
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1946--1947
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1994--1996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2045--2046
+
+ []
+
+[23]
+Overfull \hbox (6.91342pt too wide) in paragraph at lines 2070--2071
+[]\OT1/ppl/m/n/12 forgetful func-tors from for in-stance (groups) $\OMS/zplm/m/
+n/12 !$ \OT1/ppl/m/n/12 (sets) or ($\OML/zplm/m/it/12 A$\OT1/ppl/m/n/12 -module
+s $\OMS/zplm/m/n/12 !$ \OT1/ppl/m/n/12 (abelian groups) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2078--2079
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2107
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 2130--2132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2146--2147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2171--2172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2193--2194
+
+ []
+
+[25] [26] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
  11376 strings out of 495028
  248758 string characters out of 6181498
- 293781 words of memory out of 5000000
+ 295781 words of memory out of 5000000
  14402 multiletter control sequences out of 15000+600000
  29112 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,12n,42p,10425b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
-atino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on notes.pdf (20 pages, 182986 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
+plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on notes.pdf (26 pages, 198858 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

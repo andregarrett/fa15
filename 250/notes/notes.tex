@@ -1370,6 +1370,8 @@ Pf: Fields are integral domains.
 
 \section{9/29}
 
+(Charlie)
+
 \noindent
 $A$ a ring, $I$ an ideal in $A$
 
@@ -1404,6 +1406,50 @@ Proof by Zorn's Lemma.\\
 
 \noindent
 Chinese Remainder Theorem
+
+a ring A with ideals $I_1, \cdots, I_k$, $k \geq 2$
+
+the ideals coprime: that is, $I_i + I_j = A$.
+
+then there exists a surjective map $A \to A/I_1 \times \cdots \times A/I_k$
+
+\noindent
+example
+
+$r\mathds{Z} + s\mathds{Z} = gcd(r, s)\mathds{Z}$
+
+$(r\mathds{Z})(s\mathds{Z}) = r\cdot s\mathds{Z}$
+
+$r\mathds{Z} \cap s\mathds{Z} = lcm(r, s)\mathds{Z}$
+
+$(lcm)(gcd) = rs$
+
+\noindent
+for two: $IJ$, $A/(IJ) \leftrightarrow (A/I) \times (A/J)$
+
+($IJ = I \cap J$)
+
+\noindent
+Proof:
+
+Assume $I, J \subset A$, $I + J = A$
+
+$A \to A/I \times A/J$
+
+let $x + y = 1$
+
+$x \to (0, 1)$ and $y \to (1, 0)$, $cx + dy \to (c, d)$\\
+
+\noindent
+Quotient Fields
+
+e.g. $\mathds{Z} \to \mathds{Q}$
+
+$A$ an integral domain and $S$ a ``multiplicative subset'' of A
+
+$1 \in S$, $x, y \in S \to xy \in S$
+
+$S\inv A = $ equivalence class
 
 \section{10/1}
 
@@ -1763,7 +1809,411 @@ this functor/construction is ``left exact'' but not ``right exact/fully exact''
 
 the class of modules with full exactness are the projective modules
 
+\section{10/8}
 
+(Tal)
 
+\noindent
+A a ring and M, N modules
+
+$Hom_A(M, N)$ is an abelian (group?/ring?)
+
+if $A$ is commutative, then it is an $A-module$
+
+\noindent
+$0 \to X \xrightarrow{f} Y \xrightarrow{g} Z \to 0$ (exact?)
+
+$0 \to Hom_A(N, X) \to Hom_A(N, Y) \to Hom_A(N, Z) \to 0$ 
+
+this sequence is left exact and exact at the center
+
+\noindent
+surjectivity of the map $Hom_A(N, Y) \to Hom_A(N, Z)$
+
+$Y \twoheadrightarrow Z$ via $G$, $h: N \to Z$
+
+does $H$ exists such that $g \circ H = h$?
+
+the same question, rephrased:
+
+suppose we map $Hom_A(N, Y) \to Hom_A(N, Z)$, taking $H$ to $h$
+
+is this map surjective?
+
+\noindent
+an example of a case where it does not lift
+
+take $h > 1$
+
+$\mathds{Z} \to \mathds{Z}/h\mathds{Z}$ surjective
+
+identity $\mathds{Z}/h\mathds{Z}$, look for map $\mathds{Z}/h\mathds{Z} \to \mathds{Z}$
+
+map doesn't exist, no lifting\\
+
+\noindent
+(1) Suppose $y \xrightarrow{g} Z$ is surjective.
+
+If $Hom_A(N, Y) \xrightarrow{g_*} Hom_A(N, Z)$ is also surjective, we say $N$ is projective
+
+an equivalent statement: the functor $Hom_A(N, \cdot)$ is right exact
+
+another equivalent statement: for all $g, h$ there is a lifting $H$
+
+$g: y \twoheadrightarrow Z$, $h: N \to Z$, $H: N \to y$
+
+\noindent
+(2) given a sequence $0 \to X \xrightarrow{f} Y \xrightarrow{g} N \to 0$
+
+if $\exists s$ such that $g \circ s = id_N$ we say that the sequence splits
+
+all exact sequences split (misreading notes?)
+
+given $y \xrightarrow{g} N \to 0$, we can find $s$ such that $g \circ s = id$
+
+\noindent
+(1) implies (2)
+
+if $N$ is projective, then the exact sequence $0 \to X \xrightarrow{f} Y \xrightarrow{g} N \to 0$ splits
+
+take $h = id \to Z = N$
+
+$y \xrightarrow{g} N$, $id: N \to N$, $N \to Y$
+
+\noindent
+(3) the module $N$ is a direct summand of a free module:
+
+$\exists M$ such that $N \oplus M \cong F$ where $F = A\langle S \rangle$
+
+\noindent
+(2) implies (3)
+
+choose a set of generators of $N$, call it $S$.  You can have $N \subset S$
+
+induces $A\langle S \rangle \to N$ surjective
+
+we have $f: N \to A\langle S\rangle$ by hypothesis
+
+so $A\langle S\rangle = Ker(g) \oplus f(N)$
+
+\noindent
+(3) implies (1)
+
+$F = M \oplus N$ where $F$ is free
+
+want to show that if $g: Y \twoheadrightarrow Z$ then $Hom_A(N, Y) \xrightarrow{g_*} Hom_A(N, Z)$ is surjective
+
+$F = A\langle S \rangle$ same as $Hom_A(F, X) = Maps(S, X)$
+
+$S$ generates $F$, so a map $F \to X$ is determined by $S$
+
+$Hom_A(F, Y) = Maps(S, Y)$ and $Hom_A(F, Z) = Maps(S, Z)$
+
+$Maps(S, Y) \to Maps(S, Z)$ obviously surjects, $Hom_A(F, y) \to Hom_A(F, Z)$ surjects
+
+$s \to z \in Z$ and $Y \ni y \to z \in Z$
+
+$Hom_A(M \oplus N, y) = Hom_A(M, Y) \times Hom_A(N, Y)$
+
+have surjective $Hom_A(M \oplus N, y) \xrightarrow{\sigma} Hom_A(M \oplus N, Z)$
+
+$Hom_A(M, Y) \times Hom_A(N, Y) \xrightarrow{(g_*, g_*)} Hom_A(M, Z) \times Hom_Z(N, Z)$
+
+since $\sigma$ surjective, $(g_*, g_*)$ surjective and $g_*$ surjective
+
+Thus $Hom_A(N, Y) \xrightarrow{g_*} Hom_A(N, Z)$ surjective.\\
+
+\noindent
+Diagram
+
+$Hom(M \oplus N, y) \to Hom(N, Y)$ by $h \mapsto h \circ i$
+
+$Hom(M \oplus N, y) \xrightarrow{g_*} Hom(M \oplus N, Z)$
+
+$Hom(N, Y) \to Hom(N, Z)$
+
+$Hom(M \oplus N, Z) \to Hom(N, Z)$
+
+$g \circ h \mapsto (g \circ h) \circ i = g \circ (h \circ i)$
+
+\noindent
+Diagram
+
+$N \xrightarrow{h \circ i} Y$
+
+$N \hookrightarrow M \oplus N$
+
+$M \oplus N \xrightarrow{h} Y$\\
+
+\noindent
+Examples: free modules are projective.
+
+Any free module is a summand of another module that generates (word unsure) a free module
+
+If A is a field, all A-modules are free.
+
+\noindent
+$A = K \oplus K = \{(a, b) | a, b \in K\}$, $K$ a field
+
+$F = A = N \oplus M$ where $N = \{(a, 0)| a \in K\}$ and $M = \{(0, b) | b \in K\}$
+
+Projective, but not free over A.
+
+Suppose $N \cong A\langle S\rangle$, basis over $A \leftrightarrow S$
+
+$N \cong A^n$, $dim_kN = 2h = 1$ (not sure about these figures)
+
+$n > 1$, $A = M(n, k)$, $F = A$
+
+$M \in A$, $x \in F$
+
+$M_1x$ matrix (not sure if right), $x = (c_1 \cdots c_n)$ n columns
+
+$M \circ X = (M_{c_1}, \cdots, M_{c_n})$
+
+$F = K^n \oplus \cdots \oplus K^n$
+
+$K^n$ projective, not free.
+
+\noindent
+example (justification left for homework)
+
+$k$ a number field; that is, contains $Q$ ($\mathds{Q}$?) and $dim_Qk < \infty$
+
+let $\alpha \in \mathds{C}$ and $\alpha$ algebraic
+
+$k = span(1, \alpha, \alpha^2, \cdots, \alpha^{n - 1})$
+
+$k$ field
+
+\noindent
+Diagram
+
+$A \subset k$, $\mathds{Z} \subset \mathds{Q}$, A assoc with $\mathds{Z}$, k with $\mathds{Q}$
+
+\noindent
+$A = \{\beta \in k| \beta$ satisfies a monic polynomial with integer coefficients$\}$\\
+
+\noindent
+Theorem: the ring $A$ is a Dedekind domain.
+
+\noindent
+Definition of a Dedekind domain
+
+$I$ an ideal in $A$, then there exists $J \subset A$ (is it an ideal?) such that$$IJ = \{\sum_{r = 1}^t x_r y_r | x_r \in I, y_r \in J, t \geq 0\}$$ is principal
+
+What is J?
+
+Define $I\inv = \{y \in k | yI \subset A\} \supset A$
+
+$I\inv$ is an $A$-submodule of $k$.
+
+$II\inv \subset A$, in fact $II\inv = A$
+
+\noindent
+Theorem: If $I$ is a nonzero ideal in a Dedekind Domain $A$, $I$ is a projective.
+
+\section{10/13}
+
+Category
+
+notation e.g. $\mathcal{A}$, (sets)
+
+objects, and $Mor(A, B)$ a set of morphisms from the object $A$ to the object $B$
+
+axioms: every object has an identity morphism
+
+composition of which preserves morphisms, etc.
+
+define isomorphisms in terms of the existence of inverses
+
+in some categories, bijections are not isomorphisms
+
+\noindent
+Examples
+
+for $A$ a ring, the category of $A$-modules
+
+morphisms of which are the $A$-linear homomorphisms $X \to Y$, $Hom_A(X, Y)$
+
+pointed sets $(X, x)$ in which a morphism is an $f:(X, x) \to (Y, y)$, $f(x) = y$
+
+$A$-modules $X, Y, Z, W$ and fixed $X$ take as objects pairs $(Y, f)$ where $f: Y \to X$
+
+we have created a new category relative to $X$
+
+category of partially ordered sets, whose morphisms are isotone maps\\
+
+\noindent
+Functor
+
+takes objects to objects, and also morphisms to morphisms
+
+\noindent
+Diagram($F$ is the functor, $f$ is a morphism, $A, A'$ are objects)
+
+$A \xrightarrow{F} F(A)$
+
+$A \xrightarrow{f} A'$
+
+$A \xrightarrow{F} F(A')$
+
+$F(A) \xrightarrow{Ff} F(A')$
+
+since the arrows go in the same direction, this desribes a covariant functor
+
+if, say, $F(A') \xrightarrow{Ff} F(A)$, this would be a contravariant functor
+
+\noindent
+Examples
+
+forgetful functors from for instance (groups) $\to$ (sets) or ($A$-modules $\to$ (abelian groups)
+
+Fix $X$. Functor from $A \in Ob(A) \to Mor(X, A)$ (morphisms in the category of sets)
+
+or, contravariantly $A \in Ob(A) \to Mor(A, X)$
+
+in $A$-modules, fix $X$ and take $N$ to $N \oplus X$
+
+or from (sets) to (abelian groups) using the free group construction\\
+
+\noindent
+Representable Functors
+
+covariant $\mathcal{A} \xrightarrow{F}$ (sets)
+
+Fix $X$.  By the hom-functor $h_X$, $A \mapsto Mor(X, A)$.
+
+Given an $F$, can it be written as a hom-functor?
+
+That is, for some $X$, is $F \cong h_X$?
+
+Those which can be are said to be represented by $X$ (not a complete definition)
+
+\noindent
+Fully defining a representable functor $F$
+
+we need an $X \in \mathcal{A}$ and a $u \in F(X)$ such that for all $A$ have a bijection $$Mor(X, A) \to F(A)$$
+
+if we have an $h: X \to A$, it induces a morphism $h_*: F(X) \to F(A)$
+
+the lower-star signifies a covariant (push-forward)
+
+a contravariant (pull-back) would be represented by an upper-star
+
+can associate $h \in Mor(X, A)$ with $h(u)$ and this $h \mapsto h(u)$ is a bijection
+
+epithet: to give an element of $F(A)$ is to give a map $X \to A$\\
+
+\noindent
+Example of a Representable Functors
+
+Fix a set S, let $\mathcal{A}$ be the category of abelian groups
+
+Take $G \mapsto F(G) = Maps(S, G)$
+
+Want an abelian group $X$ such that $Maps(S, G) \cong Hom(X, G)$
+
+Take $X$ to be the free abelian group on $S$
+
+The universal element $u$ is the set map taking $s$ to $1 \cdot s$
+
+\noindent
+Diagram:
+
+$X = \mathds{Z}\langle S \rangle \xrightarrow{h} G$
+
+$S \xrightarrow{u} \mathds{Z}\langle S \rangle$
+
+$S \xrightarrow{h_*(u)} G$
+
+\noindent
+a set map in the category of sets is given by a group map from the free group\\
+
+\noindent
+Another example
+
+From $\mathcal{A}$ the category of abelian groups to sets
+
+Fix $M, N \in \mathcal{A}$.  Define the functor $A \mapsto Hom(M, A) \times Hom(N, A)$
+
+to give a pair of maps $M \to A$, $N \to A$ is to give a map from the direct sum to $A$
+
+Take $X = M \oplus N$ and $u \in F(X) = Hom(M, X) \times Hom(N, X)$
+
+$u$ is a universal pair of inclusions
+
+to give a map of the direct sum is to give a map of the first and a map of the second\\
+
+\noindent
+The uniqueness of $(X, u)$
+
+if they represent the same functor, they are isomorphic in a canonical sense
+
+no choice involved in the formulation of isomorphism
+
+say $(X, u)$ and $(X', u')$ represent the functor $F$
+
+then $Mor(X, A) \ni h \mapsto h_*(u) \in F(A)$ and $Mor(X', A) \ni h' \mapsto h_*'(u') \in F(A)$
+
+taking the particular cases when $A = X'$, $A = X$
+
+\textit{not totally sure if the next two lines are totally right}
+
+\textit{I remember he said in class that these are ``the same'' h as those in the above line}
+
+there is a bijection $Mor(X, X') \to F(X')$; so for some $h \in Mor(X, X')$, $h(u) = u'$
+
+there is a bijection $Mor(X', X) \to F(X)$ so for some $h' \in Mor(X', X)$, $h'(u') = u$
+
+the representing property of $X$ and $X'$ gives two morphisms
+
+their compositions are the identity on $X$ and the identity on $X'$ (why?)\\
+
+\noindent
+Tensor Products
+
+can be defined on noncommutative rings
+
+one must be a left-module and the other a right-module
+
+will be defined on a commutative ring $\mathcal{A}$ for simplicity
+
+$A$-modules $X, Y, Z, M, N, T$
+
+bilinear maps $Bil(X \times Y, Z)$: linear in each variable
+
+i.e. $Bil(X \times Y, Z) = Hom_A(X, Hom_A(Y, Z))$
+
+\noindent
+two examples of bilinear maps
+
+$X, Y = k^n$ for $k$ a field, $f(x, y) = det(x | y | c_1 | \cdots | c_{n - 2}) \in k$
+
+$x \in X$, $Y = Hom_A(X, A) \ni \varphi$ a linear form, $(x, \varphi) \mapsto \varphi(x)$\\
+
+\noindent
+Define a functor whose representing element is $T$ a tensor product.
+
+Fix $X, Y$ in the category of $A$-modules and have $F: Z \mapsto Bil(X \times Y, Z)$
+
+$F(Z) = Mor(T, Z) = Hom_A(T, Z)$
+
+$u \in F(T)$ gives the universal bilinear map $u: X \times Y \to T$
+
+A homomorphism $T \to Z$ gives a bilinear map $X \times Y \to Z$
+
+i.e. there is a set bijection $Bil(X \times Y, Z) \leftrightarrow Mor(T, Z)$
+
+How one constructs such a $T$: next lecuture.
+
+\noindent
+$T$ has uniqueness property by canonical isomorphism.
+
+We do some amount of work to show this construction is possible
+
+Then we can abstract away this work because of the universality of $T$
+
+(last line unsure; maybe ask about it again)
 
 \end{document}
