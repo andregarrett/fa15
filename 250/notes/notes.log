@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  14 OCT 2015 11:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.2)  15 OCT 2015 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2055,6 +2055,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1318--1319
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
 
  []
@@ -2065,118 +2070,183 @@ Underfull \hbox (badness 10000) in paragraph at lines 1332--1334
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1379
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
+Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1421
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1494--1495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1512--1514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1529--1530
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1581--1582
+Underfull \hbox (badness 10000) in paragraph at lines 1548--1549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1553--1554
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1696--1697
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1727
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1754--1755
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1774--1776
+Underfull \hbox (badness 10000) in paragraph at lines 1746--1748
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1839--1840
+Underfull \hbox (badness 10000) in paragraph at lines 1811--1812
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1884
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1911--1912
+Underfull \hbox (badness 10000) in paragraph at lines 1905--1906
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1933--1934
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1981--1983
+Underfull \hbox (badness 10000) in paragraph at lines 1953--1955
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 2033--2034
+Underfull \hbox (badness 10000) in paragraph at lines 2005--2006
 
  []
 
 
-Overfull \hbox (6.91342pt too wide) in paragraph at lines 2058--2059
+Overfull \hbox (6.91342pt too wide) in paragraph at lines 2030--2031
 []\OT1/ppl/m/n/12 forgetful func-tors from for in-stance (groups) $\OMS/zplm/m/
 n/12 !$ \OT1/ppl/m/n/12 (sets) or ($\OML/zplm/m/it/12 A$\OT1/ppl/m/n/12 -module
 s $\OMS/zplm/m/n/12 !$ \OT1/ppl/m/n/12 (abelian groups) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2067
+Underfull \hbox (badness 10000) in paragraph at lines 2038--2039
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 2094--2095
+Underfull \hbox (badness 10000) in paragraph at lines 2066--2067
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2120
+Underfull \hbox (badness 10000) in paragraph at lines 2090--2092
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2134--2135
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2131--2132
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 2159--2160
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2181--2182
+Underfull \hbox (badness 10000) in paragraph at lines 2197--2198
 
  []
 
-[25] (./notes.aux) ) 
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 2225--2226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2242--2243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2291--2292
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 2329--2330
+
+ []
+
+[27] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
  11372 strings out of 495028
  248700 string characters out of 6181498
@@ -2197,10 +2267,10 @@ c/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
 atino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on notes.pdf (25 pages, 197194 bytes).
+Output written on notes.pdf (27 pages, 202673 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

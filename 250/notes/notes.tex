@@ -1315,7 +1315,7 @@ Proof:
 
 Let $x, y \in R$ and suppose $xy \in \varphi^{-1}(P) = P'$
 
-then $\varphi(x)\varphi(y) = \varphi(xy) \in P \to \varphi(x) \in P$ or $\varphi(y) \in P$ $\square$
+then $\varphi(x)\varphi(y) = \varphi(xy) \in P \to \varphi(x) \in P$ or $\varphi(y) \in P$\\
 
 \noindent
 Corollary: $\varphi: R \to S$ a non-trivial homomorphism of rings and $(0)$ prime in $S$
@@ -1350,8 +1350,6 @@ Corollary: Maximal ideals are prime
 
 Pf: Fields are integral domains.
 
-\subsection{9/24: Midterm}
-
 \subsection{9/29}
 
 \noindent
@@ -1360,29 +1358,25 @@ Pf: Fields are integral domains.
 \noindent
 $A$ a ring, $I$ an ideal in $A$
 
-have a correspondence between ideals $J$, $I \subset J \subset A$ and the ideals of $A/I$
+have a correspondence between ideals $J$ of $A$ containing $I$ and the ideals of $A/I$
 
-$\pi: A \to A/I$ and $\pi(J) = J/I \subset A/I$
+$\pi: A \to A/I$ and $\pi(J) = J/I$ an ideal of $A/I$
 
-for $K$ ideal of $A/I$, consider $\pi^{-1}(K) \subset A$
-
-$I \subset \pi^{-1}(K)$, show that is an ideal
+for $K$ ideal of $A/I$, $\pi^{-1}(K)$ is an ideal of $ A$\\
 
 \noindent
 $A$ a ring, its group of units $A^* = \{u \in A | \exists v \in A, uv = 1\}$
 
-$\mathds{Z}[i]^* = \{1, -1, i, -i\} \cong \mathds{Z}/4\mathds{Z}$
+$(\mathds{Z}[i])^* = \{1, -1, i, -i\} \cong \mathds{Z}/4\mathds{Z}$
 
-$\mathds{R}[x]^* = \mathds{R}^*$
+$(\mathds{R}[x])^* = \mathds{R}^*$
 
-$\mathds{Z}[\sqrt{5}] \ni 1, -1, 2 + \sqrt{5}, 2 - \sqrt{5}$\\
+$(\mathds{Z}[\sqrt{5}])^* \ni 1, -1, 2 + \sqrt{5}, 2 - \sqrt{5}$\\
 
 \noindent
 $A$ a field $\leftrightarrow$ $A^* = A - \{0\}$ and $A \neq \{0\}$
 
-a field is an integral domain
-
-the ideal $\{0\}$ is maximal in a field\\
+$\{0\}$ is a maximal ideal\\
 
 \noindent
 Every proper ideal of $A$ is contained in a maximal ideal.
@@ -1439,106 +1433,84 @@ $S\inv A = $ equivalence class
 \subsection{10/1}
 
 \noindent
-Commutative centre = integral domain.
+Principal Ideal Domain: $\forall$ ideals $I$, $I = (a)$
 
 \noindent
-PIDs UFDs
+Noetherian ring
+
+every ideal is finitely generated $I = (a_1, \cdots, a_m) = \{\sum_{i=1}^mr_ia_i | r_i \in A\}$
 
 \noindent
-PID: Every ideal is principal, $I = (a)$
+$I_1 \subset I_2 \subset I_3 \subset \cdots$ increasing chain of ideals in A
 
-generalization: every ideal is finitely generated $I = (a_1, \cdots, a_m) = \{\sum_{i=1}^mr_ia_i | r_i \in A\}$
+becomes stable: $\exists N \geq 1$ so that $I_n = I_N$ for all $n \geq N$
 
-Noetherian
+e.g. in $\mathds{Z}$, have $(2^{100}) \subset (2^{99}) \subset \cdots$ (arbitrarily long chains exist, but all terminate)\\
 
 \noindent
-equivalence of 3 conditions on a ring, for which, if holds, makes the ring Noetherian
+the following are equivalent
 
 (1) each ideal is finitely generated
 
 (2) chains become stable
 
-(3) Every non-empty set of ideals of A contains a maximal element.
-
-\noindent
-Condition (2): stability of chains
-
-$I_1 \subset I_2 \subset I_3 \subset \cdots$ increasing chain of ideals in A
-
-$\exists N \geq 1$ so that $I_n = I_N$ for all $n \geq N$
-
-\noindent
-e.g. $\mathds{Z}$
-
-$(2^{100}) \subset (2^{99}) \subset \cdots$
-
-can have arbitrarily long chains in ring of integers
-
-but all of them terminate
+(3) every non-empty set of ideals of A contains a maximal element.
 
 \noindent
 (1) implies (2)
 
-Consider a $I_1 \subset I_2 \subset \cdots$
-
-and take $I = \bigcup_{i = 1}^\infty I_i$
+given, $I_1 \subset I_2 \subset \cdots$ take $I = \bigcup_{i = 1}^\infty I_i$
 
 $I$ finitely generated, each $a_i$ needs to be in some $I$
 
-eventually all of them are in some $I_N$, so $I \subset I_N$, we are done
+eventually all of them are in some $I_N$, so $I \subset I_N$ and we are done
 
 \noindent
 (2) implies (3)
 
-Take $I_1 \in S$.  If not a maximal elt of S, $I_1 \subset I_2$, $I_2 \in S$
+$S$ some set of ideals, $I_1 \in S$.  If $I_1$ not maximal, $I_1 \subset I_2$, $I_2 \in S$, iterate to construct a chain
 
-If $I_2$ not max, etc., continue and construct a chain
-
-can't go to infinity if (2) is assumed; must end, $I_N$ is maximal
+by (2), becomes stable; $I_N$ is maximal
 
 \noindent
-irreducible elements of A: elements that can't be factored
+(3) implies (1)
 
-an element $a \in A$, $a \neq 0$ and not a unit
+$I$ an ideal, $a_0 \in I$, $I \neq (a_0)$, $\exists a_1$, $a_0 \subsetneq a_1$
+
+iterate $\to$ ascending sequence: has a maximal element $(a_0, \cdots, a_r) = I$\\
+
+\noindent
+irreducible elements of A cannot be factored
+
+$a \in A$, not a unit and $\neq 0$
 
 if $a = bc$ then $b$ is a unit or $c$ is a unit
 
 \noindent
-$(0) \subset (a) \subset A$
+$(0) \subset (a) \subset A$; if A is a principal ideal domain, $(a)$ is maximal
 
-maximal if A is a PID
+$I \supset (a) = (b) \subset A \to a \in (b)$, $a = bc$
 
-$(a) \subset I = (b) \subset A$
-
-$a \in (b)$, $a = bc$
-
-$b$ a unit then $I = A$ and if $c$ is a unit, $I = (a)$
+$b$ a unit $\to I = A$, $c$ a unit $\to I = (a)$\\
 
 \noindent
-Proposition: If A is a PID, then every $t \in A$, $t \neq 0$, $t$ not a unit
+Principal ideal domain $A$, $t \in A$, $t \neq 0$, $t$ not a unit
 
-$t$ can be written as a product of irreducible elements
+Proposition: $t$ can be written as a product of irreducible elements
 
 \noindent
 Proof:
 
-Consider the set of (principal) ideals $(t)$ for which the proposition is false
+Let $S=$ the set of (principal) ideals $(t)$ for which the proposition is false
 
-If $S = \emptyset$, done.  Else consider a maximum element $(m) \in S$
+If nonempty, has maximal element $(m)$; if $(m) \subsetneq (m')$, $(m')$ can be factored
 
-but if $(m) \subsetneq (m')$ then $(m')$ can be factored
+$m$ irreducible else $m = m'm''$ where $m'$, $m''$ not units
 
-if $m$ irreducible it can be factored, if not $m = m'm''$ where $m'$, $m''$ not units
-
-$(m) \subsetneq (m')$, $(m) \subsetneq (m'')$
-
-$(m'), (m'')$ not in $S$, they can be factored, we are done
+$(m) \subsetneq (m')$, $(m) \subsetneq (m'')$, hence neither are in $S$
 
 \noindent
-This proof also works for Noetherian rings generally
-
-\noindent
-common tactic by maximal counterexample\\
+Proof works for Noetherian rings generally\\
 
 \noindent
 prime elements of A
@@ -1554,7 +1526,7 @@ if $a$ is prime and $a = bc$ then $a|b$ or $a|c$
 
 if $a|b$ then $b$ is a multiple of $a$ and $a$ is a multiple of $b$
 
-so $a \sim b$: $b = u \cdot a$ and $a = u^{-1} \cdot b$, differ by a unit
+so $a \sim b$: $b = u \cdot a$ and $a = u^{-1} \cdot b$, differ by a unit\\
 
 \noindent
 irreducible elements might not be prime
@@ -1573,12 +1545,12 @@ $2$ is irreducible
 
 $2 = \alpha\beta$, $N(2) = N(\alpha)N(\beta)$, $4 = N(\alpha)N(\beta)$
 
-but norms can never be $2$ so one of these must be a unit ($N = 1$ implies $\pm 1$)
+but norms can never be $2$ so one of these must be a unit ($N = 1$ implies $\pm 1$)\\
 
 \noindent
-In a PID, irreducible elements are prime
+In a principal ideal domain, irreducible elements are prime
 
-an irred $\to (a)$ is maximal $\to (a)$ is prime $\to a$ is prime\\
+$(a)$ irreducible $\to (a)$ maximal $\to (a)$ is prime $\to a$ is prime\\
 
 \noindent
 Unique factorization domain: every $a \neq 0$, unit has a factorization as a prod of irreducibles
@@ -1592,7 +1564,7 @@ Theorem: PIDs are UFDs
 
 PID: $a = \pi_1 \cdots \pi_n = \sigma_1 \cdots \sigma_m$
 
-$\sigma_m$ prime so $\sigma_m$ dviides some $\pi_i$
+$\sigma_m$ prime so $\sigma_m$ divides some $\pi_i$
 
 can assume $\sigma_m | \pi_n$, $\phi_n = \sigma_m \cdot c$, $c$ unit
 
@@ -2205,5 +2177,168 @@ Then we can abstract away this work because of the universality of $T$
 (last line unsure; maybe ask about it again)
 
 \subsection{10/15}
+
+\noindent
+$T$ a universal object: is $u \in F(T)$
+
+$\forall z \in F(A)$ exists unique $h \in Mor(T, A)$ such that $z = h_*u$
+
+\noindent
+Representable Functor: example
+
+$\mathcal{A} =$ (rings), $F: \mathcal{A} \to$ (sets) 'forgetful', $F(A) = A$
+
+want a ring $T$ and $u \in T$ such that $h \in Mor(T, A)$ corresponds to $h(u) \in A$
+
+Take $T = \mathds{Z}[x]$, $u = x$
+
+$Hom(\mathds{Z}[x], A)$ determined by image of $x$
+
+so mapping $\mathds{Z}[x]$ to $A$ $\leftrightarrow$ choosing elt of $A$\\
+
+\noindent
+A non-representable functor: example
+
+$\mathcal{A} =$ (rings) and $F(A) = \{a \in A | a = b^2, b \in A\}$
+
+representability corresponds to automorphisms!
+
+\noindent
+non-representability
+
+$A = \mathds{Z}[x]$, $A \xrightarrow{\alpha} A$ an involution ($\alpha^2 = Id$) defined $f \mapsto (x \mapsto f(-x))$
+
+Assume $F$ representable by $(T, u)$; say $u = v^2$.
+
+In definition, take $A = \mathds{Z}[x]$, $z \in F(A)$, $z = x^2$.
+
+Exists a unique homomorphism $h: T \to \mathds{Z}[x]$ such that $h(u) = x^2$
+
+Here we're not using the notation $h_*$ since $h_*$ is the restriction of $h$ to the squares
+
+$(\alpha h)(u) = (-x)^2 = x^2$
+
+$h(u) = h(v^2) = x^2 \to (h(v))^2 = x^2 \to h(v) = x$ or $h(v) = -x$
+
+$((\alpha h)(v))^2 = x^2 \to (\alpha h)(v) = -x$ when $h(v) = x$ and $(\alpha h)(v) = x$ when $h(v) = -x$
+
+$\alpha h$ and $h$ differ on $v$ so they are distinct, violating uniqueness of $h$\\
+
+\noindent
+Tensors again
+
+Commutative ring $A$; $\mathcal{A} =$ ($A$-modules); $M, N$ fixed $A$-modules
+
+$F(X) = Bil(M \times N, X)$
+
+Theorem (construction): $F$ representable by $T = M \otimes_A N$ and $u: M \times N \to M \otimes_A N$
+
+all bilinear maps $M \times N \xrightarrow{b} X$:
+
+unique homomorphism of $A$-modules $T \xrightarrow{h} X$, $h \circ u = b$
+
+$(m, n) \mapsto m \otimes n$ pure tensors
+
+Fact: all elements of $T$ are sums of pure tensors\\
+
+\noindent
+Example from linear algebra
+
+$A = K$ a field, $V = M$, $W = N$
+
+If $V$ has dimension $m$ we have a basis $v_1, \cdots, v_m$, similarly $w_1, \cdots, w_n$
+
+$V \otimes_K W$ has dimension $mn$, basis $v_i \otimes w_j$
+
+A similar expression can be found if we have rings and $v_i, w_j$ finitely generate them\\
+
+\noindent
+Tensor identities
+
+\noindent
+$A \otimes _A N$: consider $Bil(A \times N, X) \leftrightarrow Hom_A(A, Hom_A(N, X)) = Hom_A(N, X)$
+
+$T = N$, $u \in Bil(A \times N, N): (a, n) \mapsto an$
+
+Conclusion: $A \otimes_A N = N$ with universal bilinear map $u$
+
+\noindent
+$(M_1 \oplus M_2) \otimes_A N \cong (M_1 \otimes_A N) \oplus (M_2 \otimes_A N)$
+
+$Bil((M_1 \oplus M_2) \otimes N, X) = Hom_A(M_1 \oplus M_2, Hom_A(N, X))$
+
+$= Hom_A(M_1, Hom_A(N, X)) \times Hom_A(M_2, Hom_A(N, X))$
+
+$= Bil(M_1 \times N, X) \times Bil(M_2 \times N, X) = Hom_A(M_1 \otimes_A N, X) \times Hom_A(M_2 \otimes_A N, X)$
+
+$=Hom_A((M_1 \otimes_A N) \oplus (M_2 \otimes_A N), X)$
+
+tensor products commute with direct sums\\
+
+\noindent
+Tensor Product: the construction
+
+$Bil(M \times N, X) \subset Maps(M \times N, X) = Hom_A(A\langle M \times N \rangle, X)$
+
+pass to a quotient of $A\langle M \times N \rangle$ satisfying conditions
+
+conditions include $h((am, n)) = h(a(m, n))$
+
+take $T$ to be the largest quotient of $A\langle M \times N\rangle$ in which $(am, n) = a(m, n)$
+
+this is the quotient by the submodule generated by $(am, n) - a(m, n)$, etc.
+
+$u: M \times N \to T$ taking $(m, n)$ to the image of $(m, n)$ in the free module $:= m \otimes n$\\
+
+\noindent
+$A = K$, $V = K \otimes \cdots \otimes K$ (m times), $W = K^n$
+
+$V \otimes_K W = (K \otimes \cdots \otimes K) \otimes (K \oplus \cdots \oplus K)$ = big sum of $K \otimes K$s, $K \otimes_K K = K$
+
+\noindent
+$M \otimes_A N \cong N \otimes_A M$, $m \otimes n \mapsto n \otimes n$
+
+Consider bilinear maps $M \times N \to N \otimes_A M$, $(m, n) \mapsto n \otimes m$
+
+universality: bilinear maps f factor through unique map $h: m \otimes n \mapsto n \otimes m$
+
+$b: (m, n) \mapsto m \otimes n$ 
+
+\noindent
+Tensors and sequences
+
+$X \xrightarrow{f} Y$, $N$ $\to$ $X \otimes N \to Y \otimes N$ defined $f \otimes id$
+
+Proposition: If $f$ is onto, then $f \otimes id$ is surjective.
+
+Need it to make all pure tensors in $Y \otimes N$, since these are generators
+
+This is simple
+
+\noindent
+A short exact sequence $0 \to X \xrightarrow{f} Y \xrightarrow{g} Z \to 0$, ($f$ injective, $g$ onto, $Im(f) = Ker(g)$)
+
+$X \otimes N \xrightarrow{f \otimes id} Y \otimes N \xrightarrow{g \otimes id} Z \otimes N \to 0$
+
+call $F = f\otimes id$ and $G = g \otimes id$
+
+$G \circ F = 0$, $Im(F) \subset Ker(G)$
+
+proposition: this new sequence is exact; i.e. $Ker(G) \subset Im(F)$
+
+thus the tensor product is right-exact\\
+
+\noindent
+$\mathds{Z}/a\mathds{Z} \otimes \mathds{Z}/b\mathds{Z} = \mathds{Z}/g\mathds{Z}$ where $g = gcd(a, b)$
+
+\noindent
+Example
+
+$A = \mathds{Z}$.  $0 \to \mathds{Z} \to \mathds{Z} \to \mathds{Z}/2\mathds{Z} \to 0$, first map is multiplication by two
+
+$N = \mathds{Z}/2\mathds{Z}$.
+
+Get an exact sequence of $\mathds{Z}/2\mathds{Z}$s.
+
 
 \end{document}
