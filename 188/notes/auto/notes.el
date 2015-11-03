@@ -9,7 +9,6 @@
     "latex2e"
     "article"
     "art12"
-    "mathptmx"
     "mathpazo"
     "amsfonts"
     "amsmath"

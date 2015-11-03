@@ -587,7 +587,7 @@ Yes.  $S_3 \supset A_3 \supset \{e\}.$ Quotients $\mathds{Z}/2\mathds{Z}$ and $\
 
 Also $\mathds{Z}/6\mathds{Z} \supset 3\mathds{Z}/6\mathds{Z} \supset 6\mathds{Z}/6\mathds{Z}$, same quotients but radically different structure.
 
-``Knowing the building blocks does not confer knowledge of the building''.\\
+``Knowing the building blocks does not confer knowledge of the building.''\\
 
 \noindent
 Jordan-H\"{o}lder Theorem: Proof.
@@ -596,17 +596,15 @@ Base case $n = 1$, $G \supset \{e\}$, $G/\{e\}$ simple and G simple.
 
 Supposing $G \supset G_1 \supset \cdots \supset G_n \supset \{e\} = G_{n + 1}$ and $G \supset G_1' \supset \cdots \supset G_m' \supset \{e\} = G_{m + 1}'$.
 
-? $m = n$, $\{G_i / G_{i + 1}\} = \{G_j'/G_{j + 1}'\}$ ... If $G_1' = G_1$, then done by induction.
+If $G_1' = G_1$, by induction, filtrations of $G/G_1$ and $G/G_1'$ are unique.
 
-Assume $G_1, G_1'$ are distinct.  Then $G_1 \cap G_1'$ is smaller than $G_1$ or $G_1'$.
+If $G_1, G_1'$ distinct, $G_1 \cap G_1' \subsetneq G_1$ and $G_1 \cap G_1' \subsetneq G$
 
-Also, $G_1G_1'$ is a subgroup since its factors are normal by hypothesis.
+Since $G_1$ and $G_1'$ are normal, $G_1G_1'$ is a subgroup; it is certainly normal
 
-Indeed, it is also a normal subgroup since $G_1$ and $G_1'$ are invariant under conjugation.
+Since $G_1G_1'$ is a proper superset of $G_1$ and $G_1'$ and $G/G_1, G/G_1'$ are simple, $G_1G_1' = G$
 
-Additionally, $G_1G_1'$ is of size larger than $G_1$ and $G_1'$.  Thus it must be equal to G.
-
-Can map $G_1'/(G_1 \cap G_1') \to G_1G_1'/G_1$.  Kernel is exactly $G_1 \cap G_1'$, hence injection.
+Define a map $G_1'/(G_1 \cap G_1') \to G_1G_1'/G_1$; since its kernel is $G_1 \cap G_1'$, it is injective.
 
 This defines $G_1'/(G_1 \cap G_1') \hookrightarrow G/G_1$.  Symmetrically, $G_1/(G_1 \cap G_1') = G/G_1'$.
 
@@ -1775,12 +1773,12 @@ the class of modules with full exactness are the projective modules
 \noindent
 A a ring and M, N modules
 
-$Hom_A(M, N)$ is an abelian (group?/ring?)
+$Hom_A(M, N)$ is an abelian group (addition pointwise)
 
-if $A$ is commutative, then it is an $A-module$
+if $A$ is commutative, then it is an $A$-module
 
 \noindent
-$0 \to X \xrightarrow{f} Y \xrightarrow{g} Z \to 0$ (exact?)
+$0 \to X \xrightarrow{f} Y \xrightarrow{g} Z \to 0$ an exact sequence
 
 $0 \to Hom_A(N, X) \to Hom_A(N, Y) \to Hom_A(N, Z) \to 0$ 
 
@@ -2055,7 +2053,7 @@ Fully defining a representable functor $F$
 
 we need an $X \in \mathcal{A}$ and a $u \in F(X)$ such that for all $A$ have a bijection $$Mor(X, A) \to F(A)$$
 
-if we have an $h: X \to A$, it induces a morphism $h_*: F(X) \to F(A)$
+corresponding an $h: X \to A$ to a morphism $h_*: F(X) \to F(A)$
 
 the lower-star signifies a covariant (push-forward)
 
@@ -2340,5 +2338,201 @@ $N = \mathds{Z}/2\mathds{Z}$.
 
 Get an exact sequence of $\mathds{Z}/2\mathds{Z}$s.
 
+\subsection{11/3}
+
+\noindent
+$A =$ UFD (e.g. $\mathds{Z}$, ...), will show that $A[x]$ is UFD.
+
+$p$ prime of A irreducible element (up to mult by units)
+
+$A \subset K$ quotient field
+
+$a \in A$, $a \neq 0$: $a = p^n$ (elt not div by $p$), $n \geq 0$.
+
+Def: $n = ord_pa$.
+
+$t \in K^*$, $t = \frac{a}{b}$, $ord_pt := ord_pa - ord_pb$, $ord: K^* \to \mathds{Z}$
+
+$ord_p(0) = \infty$
+
+for $f(x) \in K[x]$, $ord_pf(x) =$...
+
+$\infty$ if $f(x) = 0$
+
+otherwise the minimum of the $ord_p$ of the coefficients of $f(x)$
+
+$K = \mathds{Q}$
+
+$f(x) = (\frac{1}{3}x^3 + \frac{1}{2}x^2 + x + 7)10^3$
+
+$ord_pf(x) = $
+
+for $p \geq 5$, $0$
+
+for $p = 2$, 2 (division of $1/2 \cdot 10^3$)
+
+for $p = -3$, -1 (division of $1/3 \cdot 10^3$)
+
+for $p = 5$, 3
+
+\noindent
+Content cont(f) = $\prod_p p^{ord_{p}f(x)}$
+
+take the positive primes or the negatives, but not both
+
+e.g. $cont(f(x)) = 2^2 \cdot 3^{-1} \cdot 5^3$\\
+
+\noindent
+$\frac{f(x)}{cont(f)} \in A[x]$, has content 1
+
+\noindent
+$cont(c \cdot f(x)) = c \cdot cont(f)$
+
+\noindent
+Gauss's Lemma
+
+$cont(f \cdot g) = cont(f) \cdot cont(g)$
+
+proof: replace $f$ by $\frac{f}{cont(f)}$, $g$ similarly
+
+$fg \in A[x]$, need $cont(fg) = 1$
+
+$(p)$ prime ideal $A \to A/(p)$ = integral domain contained in its quotient field
+
+$h(x) \in A[x] \mapsto \bar{h}(x) \in A/(p) [x]$
+
+Want $p \not | fg$ (all p)
+
+Hyp: $p \not |f$ and $p \not |g$
+
+$\bar{f}, \bar{g} \neq 0 \to \bar{fg} \neq 0$ since in integral domain\\
+
+\noindent
+Cor: If a poly in $A[x]$ factors non-trivially in $K[x]$, it factors in $A[x]$ as a product of polynomials of positive degree
+
+factors non-trivially: $f(x) = g(x)h(x)$ where degrees of $g, h$ are positive
+
+replace $f$ by dividing out its content, now has content 1
+
+$f(x) = g(x)h(x)$
+
+certainly $\frac{f(x)}{cont(g)cont(h)}$ factors nontrivially in $A[x]$
+
+has factors $\frac{g(x)}{cont(g)}$ and $\frac{h(x)}{cont(h)}$
+
+think through: why it is that a poly with content 1 is in $A[x]$
+
+has to do with unique factorization and ord = 0 for all primes
+
+\noindent
+Observation: $A$ UFD $\to$ $A[x]$ UFD with primes:
+
+primes of $A$
+
+irreducible polys in $K[x]$ scaled to have content 1\\
+
+\noindent
+$f(x) \in A[x]$, not constant
+
+$f(x) = p_1(x) \cdots p_t(x)$ in $K[x]$
+
+this is equal to $\frac{p_1(x)}{cont(p_1)} \cdots \frac{p_t(x)}{cont(p_t)} \cdot cont(f)$
+
+have to check if there are two different ways to write poly, essentially the same\\
+
+\noindent
+$A[x_1, \cdots, x_n]$ is a UFD
+
+this equal to $(A[x_1, \cdots, x_{n - 1}])[x_n]$
+
+$x^2 + y^2 - 1$
+
+$K[x, y]$ x is irred $(x)$ is prime
+
+$(x) \subset (x, y) \subset K[x, y]$
+
+$(x, y)$ maximal
+
+thing is no longer a PID
+
+$0 \to (x, y) \to K[x, y] \to K$
+
+$f(x, y) \mapsto f(0, 0)$
+
+$\mathds{Z}[x]$ PID UFD 
+
+prime ideal $(7) \subset (7, x)$ (not maximal)
+
+easy to find PID that are not UFD
+
+going to rings that are not dimension 1
+
+\noindent
+Exercise: if $A$ is a Dedekind domain (Dedekind ring), $A$ is a PID $\leftrightarrow$ $A$ is a UFD\\
+
+\noindent
+Eisenstein's criterion
+
+$f(x) \in A[x]$, $p$ prime, $f(x)$ non-constant
+
+say $f(x)$ has degree $n$
+
+$p \not | a_n$, $p | a_k$ for $k \neq n$, $p^2 \not | a_0$
+
+conclusion: $f(x)$ irreducible in $K[x]$
+
+\noindent
+Proving Eisenstein's criterion (proving irreducibility by p-adic methods)
+
+Assume reducible; $f(x) = g(x)h(x)$ give $g$ coefficients up to $b_m$, $h$ coefficients up to $c_d$
+
+and $g, h \in A[x]$ by Gauss's Lemma
+
+now, $m, d \geq 1$ and $m + d = n$
+
+either $p |b_0$ and $p \not | c_0$ or vice versa, assume wlog former
+
+$f(x): p \not | b_m$, $b_mc_d = a_n$ not divisible by $p$\\
+
+$t \leq m$, $m < n$
+
+$a_t = b_tc_0 + b_{t - 1}c_1 + \cdots b_0c_t$
+
+by hypothesis, all of these in sum divisible by $p$
+
+by hypothesis, $a_t$ is divisible by $p$
+
+contradiction, $b_t$ and $c_0$ are not divisible by $p$\\
+
+\noindent
+Example: over $\mathds{Q}$. $p$ a prime number
+
+$x^p - 1$ with roots $e^{\frac{2\pi i}{p}}$ etc.
+
+Prop: $\sum_{k = 1}^{p - 1}x^k$ is irreducible
+
+$f(x) = g(x + 1) = 1 + (x + 1) + \cdots + (x + 1)^{p - 1} = x^{p - 1} + a_{p - 2}x^{p - 2} + \cdots + a_1x + p$
+
+highest coefficient is 1 and the constant coefficient div by $p$ but not $p^2$
+
+Lemma: intermediate coefficients $a_1, a_2, \cdots a_{p - 2}$ all div by $p$
+
+take $f(x) mod p$ this is equal to $x^{p-1}$
+
+then $g(x + 1) mod P = x^{p - 1}$ and $g(x) mod p$ = $(x - 1)^{p - 1}$
+
+$g(x) = \frac{x^{p} - 1}{x - 1}$
+
+$f(x) = \frac{(x + 1)^p - 1}{(x + 1) - 1} = \frac{(x + 1)^p - 1}{x}$
+
+$(x + 1)^p - 1 = xf(x)$ now think mod p
+
+mod p, $(x + 1)^p = x^p + 1$
+
+mod p $(x + 1)^p - 1 = x^p$ and mod p $xf(x) = x \bar{f}(x)$
+
+$\mathds{Z}/p\mathds{Z}[x]$
+
+leading to $\bar{f}(x) = x^{p - 1}$
 
 \end{document}

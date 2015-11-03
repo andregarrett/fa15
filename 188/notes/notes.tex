@@ -1,6 +1,5 @@
 \documentclass[12pt]{article}
 
-\usepackage{mathptmx}
 \usepackage{mathpazo}
 
 \usepackage{amsfonts}
@@ -903,6 +902,168 @@ domain constraints: certain conditions that are generally satisfied
 
 \noindent
 Set the knowledge, and then the SAT-solver does all the work
+
+\subsection{Probabilistic Reasoning}
+
+\noindent
+Probabilities: statements about limitations on our knowledge of the world
+
+\noindent
+Decision theory is informed by utility theory and probability theory
+
+We seek to maximize expected utility, given the probabilities available to us.
+
+Where $a*$ is the chosen action, $argmax$ is over actions, and $s$ represents states, want:
+
+$$a* = argmax_a \sum_s P(s|a) U(s)$$
+
+\noindent
+Axioms of probability
+
+$\Omega$: the set of possible worlds
+
+A probability model is a function $P: \Omega \to [0, 1]$ such that $\sum_{\omega \in \Omega}P(\omega) = 1$
+
+A random variable is a function $X: \Omega \to E$ where $E$ is measurable
+
+A probability distribution assigns probabilities to random variables
+
+Marginalize a distribution = sum over a variable: $P(X = x_1) = \sum_{y'} P(x = x_1, Y = y')$
+
+\noindent
+Definitions of conditional probability: $P(a | b) = \frac{P(a, b)}{P(b)}$
+
+To make a conditional distribution, take the values satisfying $b$
+
+Then normalize those probabilities so that they sum to $1$
+
+Chain Rule: $P(x_1, \cdots, x_n) = \prod_i P(x_i|x_1, \cdots, x_{i - 1})$
+
+\noindent
+Bayes' Rule:
+
+derive via chain rule: $P(a|b)P(b) = P(a, b) = P(b|a)P(a)$ therefore
+
+$P(a|b) = \frac{P(b|a)P(a)}{P(b)}$
+
+\noindent
+Independence of variables $X$ and $Y$ (notation $X \coprod Y$); equivalent conditions
+
+$\forall x, y$ $P(x, y) = P(x)P(y)$
+
+$\forall x, y$ $P(x|y) = P(x)$
+
+$\forall x, y$ $P(y|x) = P(y)$
+
+more commonly, conditional independence of X, Y given Z, i.e. $P(x |y, z) = P(x|z)$
+
+\subsection{Bayes Nets}
+
+\noindent
+Visual representation of independence relations
+
+allows for the simplification of joint distribution computations
+
+nodes are random variables, arrows are dependence relations
+
+directed acyclic graph, conditional distributions for each node, given parent variables
+
+CPT is a conditional probability table: a distribution given some parent configuration
+
+\noindent
+Sparse BN, with $n$ variables, maximum domain size $d$, maximum number of parents $k$
+
+Full joint distribution is $\mathcal{O}(d^n)$
+
+Bayes net is $\mathcal{O}(n \cdot d^k)$ (local causal structure)
+
+\noindent
+Factorizing a joint distribution given a Bayes net
+
+$$P(X_1, \cdots, X_n) = \prod_iP(X_i|Parents(X_i))$$
+
+results from applications of chain rule, independence assumptions
+
+Every variable is conditionally independent of non-descendants, given parents
+
+Given a node $N$, may not have $A \coprod B | N$ for parents $A, B$ of $N$
+
+However, note independence holds in the general case ($A \coprod B$)
+
+\noindent
+Markov blanket of a variable: parents, children, parents of children
+
+Conditional independence from all other variables if Markov blanket given
+
+\noindent
+Probabilistic inference
+
+sum over unknown variables, given evidence (enumeration)
+
+using Bayes nets; can extract constant factors over these sums (variable elimination)
+
+\noindent
+Variable elimination
+
+determine sum over joint distribution; move all summations as far inwards as possible
+
+calculate summations over various factors (e.g. $P(a|B, e)$)
+
+factors are the various joint and conditional probabilities which remain
+
+operations to combine factors include pointwise multiplications, sums over variables
+
+``enumeration with caching''
+
+\noindent
+Computational and space complexity of variable elimination
+
+determined by the largest factor; limiting consideration is space
+
+does not always exist an ordering resulting in small factors
+
+Bayesian inference is NP-hard (expressible as an SAT)
+
+satisfiability the canonical NP-hard problem
+
+in fact, it is $\#$P-hard (number-P hard) which is even worse
+
+\noindent
+Polytree: a directed graph with no undirected cycles
+
+polytrees have variable elimination linear in the network size
+
+eliminate from the leaves to the roots
+
+\subsection{Approximate Inference}
+
+\noindent
+Sample from the distribution to compute an approximation
+
+faster than fully solving the problem
+
+in the limit (number of samples), approximates converge to the actual probabilities
+
+\noindent
+Prior sampling, rejection sampling, likelihood weighting, gibbs sampling\\
+
+\noindent
+Prior sampling: start from the root, simply move forward
+
+Bayes net as a stochastic machine for generating samples according to its distributions
+
+generates samples with probability $S_{PS}(x_1, \cdots, x_n) = \prod_i P(x_i| parents(X_i)) = P(x_1, \cdots, x_n)$
+
+estimate is $Q_N = N_{PS}/N$ which converges to $P$ as $N \to \infty$
+
+the procedure is consistent (satisfies this convergence requirement)
+
+\noindent
+Rejection sampling: generate many, only keep those corresponding to evidence
+
+also consistent
+
+problem: does not scale well, many samples may not agree with evidence
 
 
 
