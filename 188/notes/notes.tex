@@ -1065,7 +1065,217 @@ also consistent
 
 problem: does not scale well, many samples may not agree with evidence
 
+\noindent
+Likelihood weighting
 
+Fix the evidence variables to have the right values
+
+Have to correct these samples to make sure they have the right distribution
+
+Solution: weight each sample by probability of evidence variables given parents
+
+Weighting gives consistent overall results, if $Z$ sampled and $e$ fixed evidence:
+
+$$S_{WS}(z, e) = \prod_i P(z_i | parents(Z_i))$$
+
+$$w(z, e) = \prod_i P(e_j | parents(E_j))$$
+
+$$S_{WS}(z, e) \cdot w(z, e) = \prod_i P(z_i | parents(Z_i)) \prod_i P(e_j | parents(E_j)) = P(z, e)$$
+
+every single sample gets used
+
+values of downstream variables influenced by upstream evidence
+
+however, values of upstream variables unaffected by downstream evidence
+
+with evidence in $k$ leaf nodes, weights will be $\mathcal{O}(2^k)$
+
+stochastic processes with extremely low-weight samples
+
+consequence: by chance, one sample can have exponentially larger weight
+
+this weight disparity overshadows all the evidence of the sampling
+
+\noindent
+Gibbs sampling: a form of Markov Chain Monte Carlo
+
+Markov chain: randomly chosen states, each state depends only on previous
+
+Monte Carlo algorithms are approximation algorithms with chance of deviation
+
+Las Vegas algorithms produce a right answer in an indeterminate amount of time
+
+Gibbs sampling: states are complete assignments to all variables
+
+Fix evidence, vary other variables
+
+State generation: pick variable, sample value, conditioned on all other variables
+
+$$X_i' \sim P(X_i | x_1, \cdots, x_{i - 1}, x_{i + 1}, \cdots, x_n)$$
+
+In a Bayes net, $P(X_i | x_i, \cdots, x_{i-1}, x_{i + 1}, \cdots, x_n) = P(X_i | markov\_blanket(X_i))$
+
+Theorem: Gibbs sampling is consistent if:
+
+all Gibbs distributions bounded away from 0 and 1
+
+variable distribution is fair (will sample each variable eventually)\\
+
+variable sampling, where $u_i$ are parents and $y_i$ are children
+
+$$P(X_i| markov\_blanket(X_i)) = \alpha P(X_i|u_i, \cdots, u_m) \prod_j P(y_j | parents(Y_j))$$
+
+Proof that this works: AIMA 14.5.2
+
+\subsection{Markov Models}
+
+\noindent
+Time-indexed states $X_t$
+
+states composed of up to many different variables
+
+transition model: $P(X_t|X_{t-1})$
+
+an assumption of stationarity: $P(X_t|X_{t-1})$ invariant with $t$
+
+Markov assumption: $X_t, X_s$ independent for $s < t - 1$ (simple linear Bayes net)
+
+first-order Markov model uses the Markov assumption
+
+a k\textsuperscript{th}-order model supposes independence for $s < t - k$
+
+hence the joint distribution is $P(X_0, \cdots, X_{\tau}) = P(X_0) \prod_{t=1}^{\tau} P(X_t | X_{t - 1})$
+
+\noindent
+Comparison to Bayes nets
+
+is a directed acyclic graph where the joint distribution is a product of conditionals
+
+however, infinitely many variables (need a Kolmogorov extension theorem)
+
+Random walk! Getting back to origin: 1D, 2D $P = 1$, 3D $P = 0.34053733$
+
+\noindent
+Transition model in linear algebra; transition matrix $X_{t-1}$ by $P(X_t|X_{t-1})$
+
+progression is multiplication by the transpose of the transition matrix
+
+the stationary distribution is the limiting case
+
+in the limiting case, $P_{\infty} = T^TP_{\infty}$ (eigenvectors with eigenvalue 1)
+
+\subsection{Hidden Markov Models}
+
+\noindent
+True state not observed directly; have states $X$ but only see evidence $E$
+
+$X_t$ is a single discrete variable; $E_t$ may be continuous, multivariate
+
+$X_0 \to X_1 \to X_2 \to X_3 \to \cdots$ and for each $t$, $X_t \to E_t$
+
+Hidden Markov model joint distribution:
+
+$$P(X_0, X_1, E_1, \cdots, X_T, E_T) = P(X_0)\prod_{t = 1}^TP(X_t|X_{t- 1}) P(E_t|X_t)$$
+
+Notation: $X_{a:b} = X_a, X_{a + 1}, \cdots, X_b$\\
+
+\noindent
+Inference Tasks
+
+Filtering: determine a belief state (distribution over possiblities) : $P(X_t|e_{1:t})$
+
+Prediction: evaluate potential futures: $P(X_{t + k}|e_{1:t})$, $k>0$
+
+Smoothing: forming better estimates of past states $P(X_k|e_{1:t})$, $0 \leq k < t$
+
+Most likely explanation: (determine by most probable) $arg max_{X_{1:t}}P(X_{1:t}|e_{1:t})$
+
+\noindent
+Filtering/monitoring/state estimation
+
+maintenance of the distribution $f_{1:t} = P(X_t|e_{1:t})$ over time
+
+initialize $f_0$, often uniformly
+
+track current belief state via a predict/update cycle
+
+$$P(X_{t+1}|e_{1:t+1}) = \alpha P(e_{t+1}|X_{t+1}) \sum_{X_t}P(X_{t+1}|X_t)P(x_t|e_{1:t})$$
+
+$\alpha$: normalization, $P(e_{t+1}|X_{t+1})$ update, $\sum_{X_t}$ predict
+
+update: how likely the observation results, given the state
+
+predict: how likely the state occurs, given probable previous states
+
+\subsection{Dynamic Bayes Nets and Particle Filters}
+
+\noindent
+Particle Filtering
+
+depending on scale, exact inference (likelihood weighting) can be intractable
+
+can instead sample states instead of analyzing distribution directly
+
+represent belief state by a set of samples, called particles
+
+distribution of particles at any time gives an estimate of the probability distribution
+
+propagate particles forward: develop each state in a randomized fashion
+
+then weight each particle based on the evidence (with normalized weights)
+
+obtain next particles by resampling from this weighted sample distribution
+
+\noindent
+Dynamic Bayes Nets
+
+Multiple variables over time, multiple evidence variables
+
+Have a copy of a Bayes net structure for each time
+
+Variables from time $t$ depend on the variables from time $t - 1$
+
+\subsection{Utility and Decision Networks}
+
+\noindent
+Maximize expected utility, given knowledge
+
+Utility; function from states to $\mathds{R}$ describing agent preferences
+
+Notation: $>$ preference, $\sim$ indifference
+
+\noindent
+Axioms for rational utilities
+
+Utility transitive
+
+Total ordering of states
+
+Continuity $A>B>C \to \exists p [p, A; 1-p, C] \sim B$ (taking expected value over $A, C$)
+
+Substitutability: $A \sim B \to [p, A; 1-p, C] \sim [p, B; 1-p, C]$
+
+Monotonicity: $A>B \to (p \geq q) \leftrightarrow [p, A; 1-p, B] \geq [q, A; 1-q, B]$
+
+\noindent
+
+Given prefences satisfying these axioms, there exists an $\mathds{R}$-valued function $U$:
+
+$$U(A) \geq U(B) \leftrightarrow A \geq B$$
+
+$$U([p_1, S_1; \cdots ; p_n, S_n]) = p_1U(S_1) + \cdots + p_nU(S_n)$$
+
+optimal policy invariant under positive affine transformation $U' = aU + b, a>0$
+
+\noindent
+Decision Networks
+
+Bayes nets, adjoined with action nodes and utility nodes
+
+decision algorithm: fix evidence $e$, find set of actions that maximizes EU
+
+
+d
 
 \end{document}
 
